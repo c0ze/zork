@@ -1,0 +1,1075 @@
+game: zork1
+default_region: above_ground
+start_room: West of House
+scenes:
+- id: West of House
+  room: WEST-OF-HOUSE
+  slug: west-of-house
+  region: above_ground
+  anchors:
+  - white-house
+  - mailbox
+  scene_description: 'You are standing in an open field west of a white house, with a boarded
+    front door.
+
+    '
+  scene_core: 'Wide establishing shot of an open grassy field before a boarded-up white house
+    at the edge of a dark forest; a small mailbox on a post in the foreground; grey overcast
+    melancholy daylight; no people.
+
+    '
+  rooms:
+  - WEST-OF-HOUSE
+- id: Stone Barrow
+  room: STONE-BARROW
+  rooms:
+  - STONE-BARROW
+  slug: stone-barrow
+  region: above_ground
+  anchors: []
+  scene_description: You are standing in front of a massive barrow of stone. In the east face
+    is a huge stone door which is open. You cannot see into the dark of the tomb.
+  scene_core: You are standing in front of a massive barrow of stone. In the east face is a
+    huge stone door which is open. You cannot see into the dark of the tomb.
+- id: North of House
+  room: NORTH-OF-HOUSE
+  rooms:
+  - NORTH-OF-HOUSE
+  slug: north-of-house
+  region: above_ground
+  anchors: []
+  scene_description: You are facing the north side of a white house. There is no door here,
+    and all the windows are boarded up. To the north a narrow path winds through the trees.
+  scene_core: You are facing the north side of a white house. There is no door here, and all
+    the windows are boarded up. To the north a narrow path winds through the trees.
+- id: South of House
+  room: SOUTH-OF-HOUSE
+  rooms:
+  - SOUTH-OF-HOUSE
+  slug: south-of-house
+  region: above_ground
+  anchors: []
+  scene_description: You are facing the south side of a white house. There is no door here,
+    and all the windows are boarded.
+  scene_core: You are facing the south side of a white house. There is no door here, and all
+    the windows are boarded.
+- id: Behind House
+  room: EAST-OF-HOUSE
+  slug: behind-house
+  region: above_ground
+  anchors:
+  - white-house
+  scene_description: 'You are behind the white house. A path leads into the forest to the east.
+    In one corner of the house there is a small window which is slightly ajar.
+
+    '
+  scene_core: 'Viewed from behind the white house: its weathered back wall faces us, a small
+    window in the wall standing slightly ajar; a dirt path leads away into dense dark forest;
+    overcast melancholy light; no people.
+
+    '
+  rooms:
+  - EAST-OF-HOUSE
+- id: Forest
+  room: FOREST-1
+  rooms:
+  - FOREST-1
+  - FOREST-2
+  - MOUNTAINS
+  - FOREST-3
+  slug: forest
+  region: above_ground
+  anchors: []
+  scene_description: This is a forest, with trees in all directions. To the east, there appears
+    to be sunlight.
+  scene_core: This is a forest, with trees in all directions. To the east, there appears to
+    be sunlight.
+- id: Forest Path
+  room: PATH
+  rooms:
+  - PATH
+  slug: forest-path
+  region: above_ground
+  anchors: []
+  scene_description: This is a path winding through a dimly lit forest. The path heads north-south
+    here. One particularly large tree with some low branches stands at the edge of the path.
+  scene_core: This is a path winding through a dimly lit forest. The path heads north-south
+    here. One particularly large tree with some low branches stands at the edge of the path.
+- id: Up a Tree
+  room: UP-A-TREE
+  rooms:
+  - UP-A-TREE
+  slug: up-a-tree
+  region: above_ground
+  anchors: []
+  scene_description: You are about 10 feet above the ground nestled among some large branches.
+    The nearest branch above you is above your reach. On the ground below you can see.
+  scene_core: You are about 10 feet above the ground nestled among some large branches. The
+    nearest branch above you is above your reach. On the ground below you can see.
+- id: Clearing
+  room: GRATING-CLEARING
+  rooms:
+  - GRATING-CLEARING
+  - CLEARING
+  slug: clearing
+  region: above_ground
+  anchors: []
+  scene_description: You are in a clearing, with a forest surrounding you on all sides. A path
+    leads south. There is an open grating, descending into darkness. There is a grating securely
+    fastened into the ground.
+  scene_core: You are in a clearing, with a forest surrounding you on all sides. A path leads
+    south. There is an open grating, descending into darkness. There is a grating securely fastened
+    into the ground.
+- id: Kitchen
+  room: KITCHEN
+  slug: kitchen
+  region: above_ground
+  anchors: []
+  scene_description: 'You are in the kitchen of the white house. A table seems to have been
+    used recently for the preparation of food. A passage leads to the west and a dark staircase
+    can be seen leading upward. A dark chimney leads down and to the east is a small window
+    which is slightly ajar.
+
+    '
+  scene_core: 'Interior of an old farmhouse kitchen; a wooden table with the remnants of recently
+    prepared food; a passage leading west, a dark staircase leading upward, a dark chimney;
+    a small window slightly ajar to the east; dim grey daylight; no people.
+
+    '
+  rooms:
+  - KITCHEN
+- id: Attic
+  room: ATTIC
+  rooms:
+  - ATTIC
+  slug: attic
+  region: above_ground
+  anchors: []
+  scene_description: This is the attic. The only exit is a stairway leading down.
+  scene_core: This is the attic. The only exit is a stairway leading down.
+- id: Living Room
+  room: LIVING-ROOM
+  slug: living-room
+  region: above_ground
+  anchors:
+  - trophy-case
+  - oriental-rug
+  - trap-door
+  scene_description: 'You are in the living room. There is a doorway to the east, a wooden door
+    with strange gothic lettering to the west, which appears to be nailed shut, a trophy case,
+    and a large oriental rug in the center of the room.
+
+    '
+  scene_core: 'A wood-panelled living room; an open doorway to the east; a heavy wooden door
+    to the west carved with strange gothic lettering, nailed shut; a glass trophy case on the
+    wall; a large oriental rug centred on the floor; warm dim interior light; no people.
+
+    '
+  rooms:
+  - LIVING-ROOM
+- id: Cellar
+  room: CELLAR
+  slug: cellar
+  region: underground
+  anchors:
+  - trap-door
+  scene_description: 'You are in a dark and damp cellar with a narrow passageway leading north,
+    and a crawlway to the south. On the west is the bottom of a steep metal ramp which is unclimbable.
+
+    '
+  scene_core: 'A dark, damp stone cellar; a narrow passageway leading north; a low crawlway
+    to the south; a steep, unclimbable metal ramp against the west wall; faint light falling
+    from above; claustrophobic and shadowy; no people.
+
+    '
+  rooms:
+  - CELLAR
+- id: The Troll Room
+  room: TROLL-ROOM
+  slug: troll-room
+  region: peril
+  anchors:
+  - troll
+  scene_description: 'This is a small room with passages to the east and south and a forbidding
+    hole leading west. Bloodstains and deep scratches (perhaps made by an axe) mar the walls.
+
+    '
+  scene_core: 'A small rough stone chamber; dark passages east and south and a forbidding hole
+    leading west; bloodstains and deep axe-scratches gouged into the walls; a hulking troll
+    gripping a bloody axe blocks the way; flickering torchlight, claustrophobic and threatening.
+
+    '
+  rooms:
+  - TROLL-ROOM
+- id: East of Chasm
+  room: EAST-OF-CHASM
+  rooms:
+  - EAST-OF-CHASM
+  slug: east-of-chasm
+  region: underground
+  anchors: []
+  scene_description: You are on the east edge of a chasm, the bottom of which cannot be seen.
+    A narrow passage goes north, and the path you are on continues to the east.
+  scene_core: You are on the east edge of a chasm, the bottom of which cannot be seen. A narrow
+    passage goes north, and the path you are on continues to the east.
+- id: Gallery
+  room: GALLERY
+  rooms:
+  - GALLERY
+  slug: gallery
+  region: wonder
+  anchors: []
+  scene_description: This is an art gallery. Most of the paintings have been stolen by vandals
+    with exceptional taste. The vandals left through either the north or west exits.
+  scene_core: This is an art gallery. Most of the paintings have been stolen by vandals with
+    exceptional taste. The vandals left through either the north or west exits.
+- id: Studio
+  room: STUDIO
+  rooms:
+  - STUDIO
+  slug: studio
+  region: underground
+  anchors: []
+  scene_description: This appears to have been an artist's studio. The walls and floors are
+    splattered with paints of 69 different colors. Strangely enough, nothing of value is hanging
+    here. At the south end of the room is an open door (also covered with paint). A dark and
+    narrow chimney leads up from a fireplace; although you might be able to get up it, it seems
+    unlikely you could get back down.
+  scene_core: This appears to have been an artist's studio. The walls and floors are splattered
+    with paints of 69 different colors. Strangely enough, nothing of value is hanging here.
+    At the south end of the room is an open door (also covered with paint). A dark and narrow
+    chimney leads up from a fireplace; although you might be able to get up it, it seems unlikely
+    you could get back down.
+- id: Maze
+  room: MAZE-1
+  rooms:
+  - MAZE-1
+  - MAZE-2
+  - MAZE-3
+  - MAZE-4
+  - MAZE-5
+  - MAZE-6
+  - MAZE-7
+  - MAZE-8
+  - MAZE-9
+  - MAZE-10
+  - MAZE-11
+  - MAZE-12
+  - MAZE-13
+  - MAZE-14
+  - MAZE-15
+  slug: maze
+  region: underground
+  anchors: []
+  scene_description: This is part of a maze of twisty little passages, all alike.
+  scene_core: This is part of a maze of twisty little passages, all alike.
+- id: Dead End
+  room: DEAD-END-1
+  rooms:
+  - DEAD-END-1
+  - DEAD-END-2
+  - DEAD-END-3
+  - DEAD-END-4
+  - DEAD-END-5
+  slug: dead-end
+  region: underground
+  anchors: []
+  scene_description: You have come to a dead end in the maze.
+  scene_core: You have come to a dead end in the maze.
+- id: Grating Room
+  room: GRATING-ROOM
+  rooms:
+  - GRATING-ROOM
+  slug: grating-room
+  region: underground
+  anchors: []
+  scene_description: You are in a small room near the maze. There are twisty passages in the
+    immediate vicinity. Above you is an open grating with sunlight pouring in. Above you is
+    a grating. Above you is a grating locked with a skull-and-crossbones lock.
+  scene_core: You are in a small room near the maze. There are twisty passages in the immediate
+    vicinity. Above you is an open grating with sunlight pouring in. Above you is a grating.
+    Above you is a grating locked with a skull-and-crossbones lock.
+- id: Cyclops Room
+  room: CYCLOPS-ROOM
+  rooms:
+  - CYCLOPS-ROOM
+  slug: cyclops-room
+  region: peril
+  anchors: []
+  scene_description: This room has an exit on the northwest, and a staircase leading up. The
+    cyclops is sleeping blissfully at the foot of the stairs. The east wall, previously solid,
+    now has a cyclops-sized opening in it. A cyclops, who looks prepared to eat horses (much
+    less mere adventurers), blocks the staircase. From his state of health, and the bloodstains
+    on the walls, you gather that he is not very friendly, though he likes people. The cyclops
+    is standing in the corner, eyeing you closely. I don't think he likes you very much. He
+    looks extremely hungry, even for a cyclops. The cyclops, having eaten the hot peppers, appears
+    to be gasping. His enflamed tongue protrudes from his man-sized mouth.
+  scene_core: This room has an exit on the northwest, and a staircase leading up. The cyclops
+    is sleeping blissfully at the foot of the stairs. The east wall, previously solid, now has
+    a cyclops-sized opening in it. A cyclops, who looks prepared to eat horses (much less mere
+    adventurers), blocks the staircase. From his state of health, and the bloodstains on the
+    walls, you gather that he is not very friendly, though he likes people. The cyclops is standing
+    in the corner, eyeing you closely. I don't think he likes you very much. He looks extremely
+    hungry, even for a cyclops. The cyclops, having eaten the hot peppers, appears to be gasping.
+    His enflamed tongue protrudes from his man-sized mouth.
+- id: Strange Passage
+  room: STRANGE-PASSAGE
+  rooms:
+  - STRANGE-PASSAGE
+  slug: strange-passage
+  region: underground
+  anchors: []
+  scene_description: This is a long passage. To the west is one entrance. On the east there
+    is an old wooden door, with a large opening in it (about cyclops sized).
+  scene_core: This is a long passage. To the west is one entrance. On the east there is an old
+    wooden door, with a large opening in it (about cyclops sized).
+- id: Treasure Room
+  room: TREASURE-ROOM
+  rooms:
+  - TREASURE-ROOM
+  slug: treasure-room
+  region: peril
+  anchors: []
+  scene_description: This is a large room, whose east wall is solid granite. A number of discarded
+    bags, which crumble at your touch, are scattered about on the floor. There is an exit down
+    a staircase.
+  scene_core: This is a large room, whose east wall is solid granite. A number of discarded
+    bags, which crumble at your touch, are scattered about on the floor. There is an exit down
+    a staircase.
+- id: Reservoir South
+  room: RESERVOIR-SOUTH
+  rooms:
+  - RESERVOIR-SOUTH
+  slug: reservoir-south
+  region: underground
+  anchors: []
+  scene_description: You are in a long room, to the north of which was formerly a lake. However,
+    with the water level lowered, there is merely a wide stream running through the center of
+    the room. You are in a long room. To the north is a large lake, too deep to cross. You notice,
+    however, that the water level appears to be dropping at a rapid rate. Before long, it might
+    be possible to cross to the other side from here. You are in a long room, to the north of
+    which is a wide area which was formerly a reservoir, but now is merely a stream. You notice,
+    however, that the level of the stream is rising quickly and that before long it will be
+    impossible to cross here. You are in a long room on the south shore of a large lake, far
+    too deep and wide for crossing. There is a path along the stream to the east or west, a
+    steep pathway climbing southwest along the edge of a chasm, and a path leading into a canyon
+    to the southeast.
+  scene_core: You are in a long room, to the north of which was formerly a lake. However, with
+    the water level lowered, there is merely a wide stream running through the center of the
+    room. You are in a long room. To the north is a large lake, too deep to cross. You notice,
+    however, that the water level appears to be dropping at a rapid rate. Before long, it might
+    be possible to cross to the other side from here. You are in a long room, to the north of
+    which is a wide area which was formerly a reservoir, but now is merely a stream. You notice,
+    however, that the level of the stream is rising quickly and that before long it will be
+    impossible to cross here. You are in a long room on the south shore of a large lake, far
+    too deep and wide for crossing. There is a path along the stream to the east or west, a
+    steep pathway climbing southwest along the edge of a chasm, and a path leading into a canyon
+    to the southeast.
+- id: Reservoir
+  room: RESERVOIR
+  rooms:
+  - RESERVOIR
+  slug: reservoir
+  region: underground
+  anchors: []
+  scene_description: You are on what used to be a large lake, but which is now a large mud pile.
+    There are to the north and south. You are on the lake. Beaches can be seen north and south.
+    Upstream a small stream enters the lake through a narrow cleft in the rocks. The dam can
+    be seen downstream.
+  scene_core: You are on what used to be a large lake, but which is now a large mud pile. There
+    are to the north and south. You are on the lake. Beaches can be seen north and south. Upstream
+    a small stream enters the lake through a narrow cleft in the rocks. The dam can be seen
+    downstream.
+- id: Reservoir North
+  room: RESERVOIR-NORTH
+  rooms:
+  - RESERVOIR-NORTH
+  slug: reservoir-north
+  region: underground
+  anchors: []
+  scene_description: You are in a large cavernous room, the south of which was formerly a lake.
+    However, with the water level lowered, there is merely a wide stream running through there.
+    You are in a large cavernous area. To the south is a wide lake, whose water level appears
+    to be falling rapidly. You are in a cavernous area, to the south of which is a very wide
+    stream. The level of the stream is rising rapidly, and it appears that before long it will
+    be impossible to cross to the other side. You are in a large cavernous room, north of a
+    large lake. There is a slimy stairway leaving the room to the north. SUBTITLE WATER, WATER
+    EVERYWHERE...
+  scene_core: You are in a large cavernous room, the south of which was formerly a lake. However,
+    with the water level lowered, there is merely a wide stream running through there. You are
+    in a large cavernous area. To the south is a wide lake, whose water level appears to be
+    falling rapidly. You are in a cavernous area, to the south of which is a very wide stream.
+    The level of the stream is rising rapidly, and it appears that before long it will be impossible
+    to cross to the other side. You are in a large cavernous room, north of a large lake. There
+    is a slimy stairway leaving the room to the north. SUBTITLE WATER, WATER EVERYWHERE...
+- id: Stream View
+  room: STREAM-VIEW
+  rooms:
+  - STREAM-VIEW
+  slug: stream-view
+  region: underground
+  anchors: []
+  scene_description: You are standing on a path beside a gently flowing stream. The path follows
+    the stream, which flows from west to east.
+  scene_core: You are standing on a path beside a gently flowing stream. The path follows the
+    stream, which flows from west to east.
+- id: Stream
+  room: IN-STREAM
+  rooms:
+  - IN-STREAM
+  slug: stream
+  region: underground
+  anchors: []
+  scene_description: You are on the gently flowing stream. The upstream route is too narrow
+    to navigate, and the downstream route is invisible due to twisting walls. There is a narrow
+    beach to land on.
+  scene_core: You are on the gently flowing stream. The upstream route is too narrow to navigate,
+    and the downstream route is invisible due to twisting walls. There is a narrow beach to
+    land on.
+- id: Mirror Room
+  room: MIRROR-ROOM-1
+  rooms:
+  - MIRROR-ROOM-1
+  - MIRROR-ROOM-2
+  slug: mirror-room
+  region: underground
+  anchors: []
+  scene_description: You are in a large square room with tall ceilings. On the south wall is
+    an enormous mirror which fills the entire wall. There are exits on the other three sides
+    of the room. Unfortunately, the mirror has been destroyed by your recklessness.
+  scene_core: You are in a large square room with tall ceilings. On the south wall is an enormous
+    mirror which fills the entire wall. There are exits on the other three sides of the room.
+    Unfortunately, the mirror has been destroyed by your recklessness.
+- id: Cave
+  room: SMALL-CAVE
+  rooms:
+  - SMALL-CAVE
+  - TINY-CAVE
+  slug: cave
+  region: underground
+  anchors: []
+  scene_description: This is a tiny cave with entrances west and north, and a staircase leading
+    down.
+  scene_core: This is a tiny cave with entrances west and north, and a staircase leading down.
+- id: Cold Passage
+  room: COLD-PASSAGE
+  rooms:
+  - COLD-PASSAGE
+  slug: cold-passage
+  region: underground
+  anchors: []
+  scene_description: This is a cold and damp corridor where a long east-west passageway turns
+    into a southward path.
+  scene_core: This is a cold and damp corridor where a long east-west passageway turns into
+    a southward path.
+- id: Narrow Passage
+  room: NARROW-PASSAGE
+  rooms:
+  - NARROW-PASSAGE
+  slug: narrow-passage
+  region: underground
+  anchors: []
+  scene_description: This is a long and narrow corridor where a long north-south passageway
+    briefly narrows even further.
+  scene_core: This is a long and narrow corridor where a long north-south passageway briefly
+    narrows even further.
+- id: Winding Passage
+  room: WINDING-PASSAGE
+  rooms:
+  - WINDING-PASSAGE
+  slug: winding-passage
+  region: underground
+  anchors: []
+  scene_description: This is a winding passage. It seems that there are only exits on the east
+    and north.
+  scene_core: This is a winding passage. It seems that there are only exits on the east and
+    north.
+- id: Twisting Passage
+  room: TWISTING-PASSAGE
+  rooms:
+  - TWISTING-PASSAGE
+  slug: twisting-passage
+  region: underground
+  anchors: []
+  scene_description: This is a winding passage. It seems that there are only exits on the east
+    and north.
+  scene_core: This is a winding passage. It seems that there are only exits on the east and
+    north.
+- id: Atlantis Room
+  room: ATLANTIS-ROOM
+  rooms:
+  - ATLANTIS-ROOM
+  slug: atlantis-room
+  region: wonder
+  anchors: []
+  scene_description: This is an ancient room, long under water. There is an exit to the south
+    and a staircase leading up.
+  scene_core: This is an ancient room, long under water. There is an exit to the south and a
+    staircase leading up.
+- id: East-West Passage
+  room: EW-PASSAGE
+  rooms:
+  - EW-PASSAGE
+  slug: east-west-passage
+  region: underground
+  anchors: []
+  scene_description: This is a narrow east-west passageway. There is a narrow stairway leading
+    down at the north end of the room.
+  scene_core: This is a narrow east-west passageway. There is a narrow stairway leading down
+    at the north end of the room.
+- id: Round Room
+  room: ROUND-ROOM
+  rooms:
+  - ROUND-ROOM
+  slug: round-room
+  region: underground
+  anchors: []
+  scene_description: This is a circular stone room with passages in all directions. Several
+    of them have unfortunately been blocked by cave-ins.
+  scene_core: This is a circular stone room with passages in all directions. Several of them
+    have unfortunately been blocked by cave-ins.
+- id: Deep Canyon
+  room: DEEP-CANYON
+  rooms:
+  - DEEP-CANYON
+  slug: deep-canyon
+  region: underground
+  anchors: []
+  scene_description: You are on the south edge of a deep canyon. Passages lead off to the east,
+    northwest and southwest. A stairway leads down. You can hear a loud roaring sound, like
+    that of rushing water, from below. You can hear the sound of flowing water from below. SUBTITLE
+    A SEEDY LOOKING GENTLEMAN... I-THIEF moved to DEMONS SUBTITLE THINGS THIEF MIGHT DO INTERACTION
+    WITH ADVENTURER -- RETURNS T IF THIEF FINISHED.
+  scene_core: You are on the south edge of a deep canyon. Passages lead off to the east, northwest
+    and southwest. A stairway leads down. You can hear a loud roaring sound, like that of rushing
+    water, from below. You can hear the sound of flowing water from below. SUBTITLE A SEEDY
+    LOOKING GENTLEMAN... I-THIEF moved to DEMONS SUBTITLE THINGS THIEF MIGHT DO INTERACTION
+    WITH ADVENTURER -- RETURNS T IF THIEF FINISHED.
+- id: Damp Cave
+  room: DAMP-CAVE
+  rooms:
+  - DAMP-CAVE
+  slug: damp-cave
+  region: underground
+  anchors: []
+  scene_description: This cave has exits to the west and east, and narrows to a crack toward
+    the south. The earth is particularly damp here.
+  scene_core: This cave has exits to the west and east, and narrows to a crack toward the south.
+    The earth is particularly damp here.
+- id: Loud Room
+  room: LOUD-ROOM
+  rooms:
+  - LOUD-ROOM
+  slug: loud-room
+  region: underground
+  anchors: []
+  scene_description: This is a large room with a ceiling which cannot be detected from the ground.
+    There is a narrow passage from east to west and a stone stairway leading upward. The room
+    is eerie in its quietness. The room is deafeningly loud with an undetermined rushing sound.
+    The sound seems to reverberate from all of the walls, making it difficult even to think.
+    It is unbearably loud here, with an ear-splitting roar seeming to come from all around you.
+    There is a pounding in your head which won't stop. With a tremendous effort, you scramble
+    out of the room.
+  scene_core: This is a large room with a ceiling which cannot be detected from the ground.
+    There is a narrow passage from east to west and a stone stairway leading upward. The room
+    is eerie in its quietness. The room is deafeningly loud with an undetermined rushing sound.
+    The sound seems to reverberate from all of the walls, making it difficult even to think.
+    It is unbearably loud here, with an ear-splitting roar seeming to come from all around you.
+    There is a pounding in your head which won't stop. With a tremendous effort, you scramble
+    out of the room.
+- id: North-South Passage
+  room: NS-PASSAGE
+  rooms:
+  - NS-PASSAGE
+  slug: north-south-passage
+  region: underground
+  anchors: []
+  scene_description: This is a high north-south passage, which forks to the northeast.
+  scene_core: This is a high north-south passage, which forks to the northeast.
+- id: Chasm
+  room: CHASM-ROOM
+  rooms:
+  - CHASM-ROOM
+  slug: chasm
+  region: underground
+  anchors: []
+  scene_description: A chasm runs southwest to northeast and the path follows it. You are on
+    the south side of the chasm, where a crack opens into a passage.
+  scene_core: A chasm runs southwest to northeast and the path follows it. You are on the south
+    side of the chasm, where a crack opens into a passage.
+- id: Entrance to Hades
+  room: ENTRANCE-TO-HADES
+  rooms:
+  - ENTRANCE-TO-HADES
+  slug: entrance-to-hades
+  region: dread
+  anchors: []
+  scene_description: You are outside a large gateway, on which is inscribed Abandon every hope
+    all ye who enter here! The gate is open; through it you can see a desolation, with a pile
+    of mangled bodies in one corner. Thousands of voices, lamenting some hideous fate, can be
+    heard. The way through the gate is barred by evil spirits, who jeer at your attempts to
+    pass.
+  scene_core: You are outside a large gateway, on which is inscribed Abandon every hope all
+    ye who enter here! The gate is open; through it you can see a desolation, with a pile of
+    mangled bodies in one corner. Thousands of voices, lamenting some hideous fate, can be heard.
+    The way through the gate is barred by evil spirits, who jeer at your attempts to pass.
+- id: Land of the Dead
+  room: LAND-OF-LIVING-DEAD
+  rooms:
+  - LAND-OF-LIVING-DEAD
+  slug: land-of-the-dead
+  region: dread
+  anchors: []
+  scene_description: You have entered the Land of the Living Dead. Thousands of lost souls can
+    be heard weeping and moaning. In the corner are stacked the remains of dozens of previous
+    adventurers less fortunate than yourself. A passage exits to the north.
+  scene_core: You have entered the Land of the Living Dead. Thousands of lost souls can be heard
+    weeping and moaning. In the corner are stacked the remains of dozens of previous adventurers
+    less fortunate than yourself. A passage exits to the north.
+- id: Engravings Cave
+  room: ENGRAVINGS-CAVE
+  rooms:
+  - ENGRAVINGS-CAVE
+  slug: engravings-cave
+  region: wonder
+  anchors: []
+  scene_description: You have entered a low cave with passages leading northwest and east.
+  scene_core: You have entered a low cave with passages leading northwest and east.
+- id: Egyptian Room
+  room: EGYPT-ROOM
+  rooms:
+  - EGYPT-ROOM
+  slug: egyptian-room
+  region: wonder
+  anchors: []
+  scene_description: This is a room which looks like an Egyptian tomb. There is an ascending
+    staircase to the west.
+  scene_core: This is a room which looks like an Egyptian tomb. There is an ascending staircase
+    to the west.
+- id: Dome Room
+  room: DOME-ROOM
+  rooms:
+  - DOME-ROOM
+  slug: dome-room
+  region: wonder
+  anchors: []
+  scene_description: You are at the periphery of a large dome, which forms the ceiling of another
+    room below. Protecting you from a precipitous drop is a wooden railing which circles the
+    dome. Hanging down from the railing is a rope which ends about ten feet from the floor below.
+  scene_core: You are at the periphery of a large dome, which forms the ceiling of another room
+    below. Protecting you from a precipitous drop is a wooden railing which circles the dome.
+    Hanging down from the railing is a rope which ends about ten feet from the floor below.
+- id: Torch Room
+  room: TORCH-ROOM
+  rooms:
+  - TORCH-ROOM
+  slug: torch-room
+  region: wonder
+  anchors: []
+  scene_description: This is a large room with a prominent doorway leading to a down staircase.
+    Above you is a large dome. Up around the edge of the dome (20 feet up) is a wooden railing.
+    In the center of the room sits a white marble pedestal. A piece of rope descends from the
+    railing above, ending some five feet above your head.
+  scene_core: This is a large room with a prominent doorway leading to a down staircase. Above
+    you is a large dome. Up around the edge of the dome (20 feet up) is a wooden railing. In
+    the center of the room sits a white marble pedestal. A piece of rope descends from the railing
+    above, ending some five feet above your head.
+- id: Temple
+  room: NORTH-TEMPLE
+  rooms:
+  - NORTH-TEMPLE
+  slug: temple
+  region: wonder
+  anchors: []
+  scene_description: This is the north end of a large temple. On the east wall is an ancient
+    inscription, probably a prayer in a long-forgotten language. Below the prayer is a staircase
+    leading down. The west wall is solid granite. The exit to the north end of the room is through
+    huge marble pillars.
+  scene_core: This is the north end of a large temple. On the east wall is an ancient inscription,
+    probably a prayer in a long-forgotten language. Below the prayer is a staircase leading
+    down. The west wall is solid granite. The exit to the north end of the room is through huge
+    marble pillars.
+- id: Altar
+  room: SOUTH-TEMPLE
+  rooms:
+  - SOUTH-TEMPLE
+  slug: altar
+  region: wonder
+  anchors: []
+  scene_description: This is the south end of a large temple. In front of you is what appears
+    to be an altar. In one corner is a small hole in the floor which leads into darkness. You
+    probably could not get back up it.
+  scene_core: This is the south end of a large temple. In front of you is what appears to be
+    an altar. In one corner is a small hole in the floor which leads into darkness. You probably
+    could not get back up it.
+- id: Dam
+  room: DAM-ROOM
+  rooms:
+  - DAM-ROOM
+  slug: dam
+  region: underground
+  anchors: []
+  scene_description: 'You are standing on the top of the Flood Control Dam #3, which was quite
+    a tourist attraction in times far distant. There are paths to the north, south, and west,
+    and a scramble down. The water level behind the dam is low: The sluice gates have been opened.
+    Water rushes through the dam and downstream. The sluice gates are open, and water rushes
+    through the dam. The water level behind the dam is still high. The sluice gates are closed.
+    The water level in the reservoir is quite low, but the level is rising quickly. The sluice
+    gates on the dam are closed. Behind the dam, there can be seen a wide reservoir. Water is
+    pouring over the top of the now abandoned dam. There is a control panel here, on which a
+    large metal bolt is mounted. Directly above the bolt is a small green plastic bubble which
+    is glowing serenely .'
+  scene_core: 'You are standing on the top of the Flood Control Dam #3, which was quite a tourist
+    attraction in times far distant. There are paths to the north, south, and west, and a scramble
+    down. The water level behind the dam is low: The sluice gates have been opened. Water rushes
+    through the dam and downstream. The sluice gates are open, and water rushes through the
+    dam. The water level behind the dam is still high. The sluice gates are closed. The water
+    level in the reservoir is quite low, but the level is rising quickly. The sluice gates on
+    the dam are closed. Behind the dam, there can be seen a wide reservoir. Water is pouring
+    over the top of the now abandoned dam. There is a control panel here, on which a large metal
+    bolt is mounted. Directly above the bolt is a small green plastic bubble which is glowing
+    serenely .'
+- id: Dam Lobby
+  room: DAM-LOBBY
+  rooms:
+  - DAM-LOBBY
+  slug: dam-lobby
+  region: underground
+  anchors: []
+  scene_description: This room appears to have been the waiting room for groups touring the
+    dam. There are open doorways here to the north and east marked
+  scene_core: This room appears to have been the waiting room for groups touring the dam. There
+    are open doorways here to the north and east marked
+- id: Maintenance Room
+  room: MAINTENANCE-ROOM
+  rooms:
+  - MAINTENANCE-ROOM
+  slug: maintenance-room
+  region: underground
+  anchors: []
+  scene_description: 'This is what appears to have been the maintenance room for Flood Control
+    Dam #3. Apparently, this room has been ransacked recently, for most of the valuable equipment
+    is gone. On the wall in front of you is a group of buttons colored blue, yellow, brown,
+    and red. There are doorways to the west and south.'
+  scene_core: 'This is what appears to have been the maintenance room for Flood Control Dam
+    #3. Apparently, this room has been ransacked recently, for most of the valuable equipment
+    is gone. On the wall in front of you is a group of buttons colored blue, yellow, brown,
+    and red. There are doorways to the west and south.'
+- id: Dam Base
+  room: DAM-BASE
+  rooms:
+  - DAM-BASE
+  slug: dam-base
+  region: underground
+  anchors: []
+  scene_description: 'You are at the base of Flood Control Dam #3, which looms above you and
+    to the north. The river Frigid is flowing by here. Along the river are the White Cliffs
+    which seem to form giant walls stretching from north to south along the shores of the river
+    as it winds its way downstream.'
+  scene_core: 'You are at the base of Flood Control Dam #3, which looms above you and to the
+    north. The river Frigid is flowing by here. Along the river are the White Cliffs which seem
+    to form giant walls stretching from north to south along the shores of the river as it winds
+    its way downstream.'
+- id: Frigid River
+  room: RIVER-1
+  rooms:
+  - RIVER-1
+  - RIVER-2
+  - RIVER-3
+  - RIVER-4
+  - RIVER-5
+  slug: frigid-river
+  region: above_ground
+  anchors: []
+  scene_description: You are on the Frigid River in the vicinity of the Dam. The river flows
+    quietly here. There is a landing on the west shore.
+  scene_core: You are on the Frigid River in the vicinity of the Dam. The river flows quietly
+    here. There is a landing on the west shore.
+- id: White Cliffs Beach
+  room: WHITE-CLIFFS-NORTH
+  rooms:
+  - WHITE-CLIFFS-NORTH
+  - WHITE-CLIFFS-SOUTH
+  slug: white-cliffs-beach
+  region: above_ground
+  anchors: []
+  scene_description: You are on a narrow strip of beach which runs along the base of the White
+    Cliffs. There is a narrow path heading south along the Cliffs and a tight passage leading
+    west into the cliffs themselves.
+  scene_core: You are on a narrow strip of beach which runs along the base of the White Cliffs.
+    There is a narrow path heading south along the Cliffs and a tight passage leading west into
+    the cliffs themselves.
+- id: Shore
+  room: SHORE
+  rooms:
+  - SHORE
+  slug: shore
+  region: above_ground
+  anchors: []
+  scene_description: You are on the east shore of the river. The water here seems somewhat treacherous.
+    A path travels from north to south here, the south end quickly turning around a sharp corner.
+  scene_core: You are on the east shore of the river. The water here seems somewhat treacherous.
+    A path travels from north to south here, the south end quickly turning around a sharp corner.
+- id: Sandy Beach
+  room: SANDY-BEACH
+  rooms:
+  - SANDY-BEACH
+  slug: sandy-beach
+  region: above_ground
+  anchors: []
+  scene_description: You are on a large sandy beach on the east shore of the river, which is
+    flowing quickly by. A path runs beside the river to the south here, and a passage is partially
+    buried in sand to the northeast.
+  scene_core: You are on a large sandy beach on the east shore of the river, which is flowing
+    quickly by. A path runs beside the river to the south here, and a passage is partially buried
+    in sand to the northeast.
+- id: Sandy Cave
+  room: SANDY-CAVE
+  rooms:
+  - SANDY-CAVE
+  slug: sandy-cave
+  region: underground
+  anchors: []
+  scene_description: This is a sand-filled cave whose exit is to the southwest.
+  scene_core: This is a sand-filled cave whose exit is to the southwest.
+- id: Aragain Falls
+  room: ARAGAIN-FALLS
+  rooms:
+  - ARAGAIN-FALLS
+  slug: aragain-falls
+  region: above_ground
+  anchors: []
+  scene_description: You are at the top of Aragain Falls, an enormous waterfall with a drop
+    of about 450 feet. The only path here is on the north end. A solid rainbow spans the falls.
+    A beautiful rainbow can be seen over the falls and to the west.
+  scene_core: You are at the top of Aragain Falls, an enormous waterfall with a drop of about
+    450 feet. The only path here is on the north end. A solid rainbow spans the falls. A beautiful
+    rainbow can be seen over the falls and to the west.
+- id: On the Rainbow
+  room: ON-RAINBOW
+  rooms:
+  - ON-RAINBOW
+  slug: on-the-rainbow
+  region: above_ground
+  anchors: []
+  scene_description: You are on top of a rainbow (I bet you never thought you would walk on
+    a rainbow), with a magnificent view of the Falls. The rainbow travels east-west here.
+  scene_core: You are on top of a rainbow (I bet you never thought you would walk on a rainbow),
+    with a magnificent view of the Falls. The rainbow travels east-west here.
+- id: End of Rainbow
+  room: END-OF-RAINBOW
+  rooms:
+  - END-OF-RAINBOW
+  slug: end-of-rainbow
+  region: above_ground
+  anchors: []
+  scene_description: You are on a small, rocky beach on the continuation of the Frigid River
+    past the Falls. The beach is narrow due to the presence of the White Cliffs. The river canyon
+    opens here and sunlight shines in from above. A rainbow crosses over the falls to the east
+    and a narrow path continues to the southwest.
+  scene_core: You are on a small, rocky beach on the continuation of the Frigid River past the
+    Falls. The beach is narrow due to the presence of the White Cliffs. The river canyon opens
+    here and sunlight shines in from above. A rainbow crosses over the falls to the east and
+    a narrow path continues to the southwest.
+- id: Canyon Bottom
+  room: CANYON-BOTTOM
+  rooms:
+  - CANYON-BOTTOM
+  slug: canyon-bottom
+  region: above_ground
+  anchors: []
+  scene_description: You are beneath the walls of the river canyon which may be climbable here.
+    The lesser part of the runoff of Aragain Falls flows by below. To the north is a narrow
+    path.
+  scene_core: You are beneath the walls of the river canyon which may be climbable here. The
+    lesser part of the runoff of Aragain Falls flows by below. To the north is a narrow path.
+- id: Rocky Ledge
+  room: CLIFF-MIDDLE
+  rooms:
+  - CLIFF-MIDDLE
+  slug: rocky-ledge
+  region: above_ground
+  anchors: []
+  scene_description: You are on a ledge about halfway up the wall of the river canyon. You can
+    see from here that the main flow from Aragain Falls twists along a passage which it is impossible
+    for you to enter. Below you is the canyon bottom. Above you is more cliff, which appears
+    climbable.
+  scene_core: You are on a ledge about halfway up the wall of the river canyon. You can see
+    from here that the main flow from Aragain Falls twists along a passage which it is impossible
+    for you to enter. Below you is the canyon bottom. Above you is more cliff, which appears
+    climbable.
+- id: Canyon View
+  room: CANYON-VIEW
+  rooms:
+  - CANYON-VIEW
+  slug: canyon-view
+  region: above_ground
+  anchors: []
+  scene_description: You are at the top of the Great Canyon on its west wall. From here there
+    is a marvelous view of the canyon and parts of the Frigid River upstream. Across the canyon,
+    the walls of the White Cliffs join the mighty ramparts of the Flathead Mountains to the
+    east. Following the Canyon upstream to the north, Aragain Falls may be seen, complete with
+    rainbow. The mighty Frigid River flows out from a great dark cavern. To the west and south
+    can be seen an immense forest, stretching for miles around. A path leads northwest. It is
+    possible to climb down into the canyon from here.
+  scene_core: You are at the top of the Great Canyon on its west wall. From here there is a
+    marvelous view of the canyon and parts of the Frigid River upstream. Across the canyon,
+    the walls of the White Cliffs join the mighty ramparts of the Flathead Mountains to the
+    east. Following the Canyon upstream to the north, Aragain Falls may be seen, complete with
+    rainbow. The mighty Frigid River flows out from a great dark cavern. To the west and south
+    can be seen an immense forest, stretching for miles around. A path leads northwest. It is
+    possible to climb down into the canyon from here.
+- id: Mine Entrance
+  room: MINE-ENTRANCE
+  rooms:
+  - MINE-ENTRANCE
+  slug: mine-entrance
+  region: underground
+  anchors: []
+  scene_description: You are standing at the entrance of what might have been a coal mine. The
+    shaft enters the west wall, and there is another exit on the south end of the room.
+  scene_core: You are standing at the entrance of what might have been a coal mine. The shaft
+    enters the west wall, and there is another exit on the south end of the room.
+- id: Squeaky Room
+  room: SQUEEKY-ROOM
+  rooms:
+  - SQUEEKY-ROOM
+  slug: squeaky-room
+  region: underground
+  anchors: []
+  scene_description: You are in a small room. Strange squeaky sounds may be heard coming from
+    the passage at the north end. You may also escape to the east.
+  scene_core: You are in a small room. Strange squeaky sounds may be heard coming from the passage
+    at the north end. You may also escape to the east.
+- id: Bat Room
+  room: BAT-ROOM
+  rooms:
+  - BAT-ROOM
+  slug: bat-room
+  region: underground
+  anchors: []
+  scene_description: You are in a small room which has doors only to the east and south.
+  scene_core: You are in a small room which has doors only to the east and south.
+- id: Shaft Room
+  room: SHAFT-ROOM
+  rooms:
+  - SHAFT-ROOM
+  slug: shaft-room
+  region: underground
+  anchors: []
+  scene_description: This is a large room, in the middle of which is a small shaft descending
+    through the floor into darkness below. To the west and the north are exits from this room.
+    Constructed over the top of the shaft is a metal framework to which a heavy iron chain is
+    attached.
+  scene_core: This is a large room, in the middle of which is a small shaft descending through
+    the floor into darkness below. To the west and the north are exits from this room. Constructed
+    over the top of the shaft is a metal framework to which a heavy iron chain is attached.
+- id: Smelly Room
+  room: SMELLY-ROOM
+  rooms:
+  - SMELLY-ROOM
+  slug: smelly-room
+  region: underground
+  anchors: []
+  scene_description: This is a small nondescript room. However, from the direction of a small
+    descending staircase a foul odor can be detected. To the south is a narrow tunnel.
+  scene_core: This is a small nondescript room. However, from the direction of a small descending
+    staircase a foul odor can be detected. To the south is a narrow tunnel.
+- id: Gas Room
+  room: GAS-ROOM
+  rooms:
+  - GAS-ROOM
+  slug: gas-room
+  region: underground
+  anchors: []
+  scene_description: This is a small room which smells strongly of coal gas. There is a short
+    climb up some stairs and a narrow tunnel leading east.
+  scene_core: This is a small room which smells strongly of coal gas. There is a short climb
+    up some stairs and a narrow tunnel leading east.
+- id: Ladder Top
+  room: LADDER-TOP
+  rooms:
+  - LADDER-TOP
+  slug: ladder-top
+  region: underground
+  anchors: []
+  scene_description: This is a very small room. In the corner is a rickety wooden ladder, leading
+    downward. It might be safe to descend. There is also a staircase leading upward.
+  scene_core: This is a very small room. In the corner is a rickety wooden ladder, leading downward.
+    It might be safe to descend. There is also a staircase leading upward.
+- id: Ladder Bottom
+  room: LADDER-BOTTOM
+  rooms:
+  - LADDER-BOTTOM
+  slug: ladder-bottom
+  region: underground
+  anchors: []
+  scene_description: This is a rather wide room. On one side is the bottom of a narrow wooden
+    ladder. To the west and the south are passages leaving the room.
+  scene_core: This is a rather wide room. On one side is the bottom of a narrow wooden ladder.
+    To the west and the south are passages leaving the room.
+- id: Timber Room
+  room: TIMBER-ROOM
+  rooms:
+  - TIMBER-ROOM
+  slug: timber-room
+  region: underground
+  anchors: []
+  scene_description: This is a long and narrow passage, which is cluttered with broken timbers.
+    A wide passage comes from the east and turns at the west end of the room into a very narrow
+    passageway. From the west comes a strong draft.
+  scene_core: This is a long and narrow passage, which is cluttered with broken timbers. A wide
+    passage comes from the east and turns at the west end of the room into a very narrow passageway.
+    From the west comes a strong draft.
+- id: Drafty Room
+  room: LOWER-SHAFT
+  rooms:
+  - LOWER-SHAFT
+  slug: drafty-room
+  region: underground
+  anchors: []
+  scene_description: This is a small drafty room in which is the bottom of a long shaft. To
+    the south is a passageway and to the east a very narrow passage. In the shaft can be seen
+    a heavy iron chain.
+  scene_core: This is a small drafty room in which is the bottom of a long shaft. To the south
+    is a passageway and to the east a very narrow passage. In the shaft can be seen a heavy
+    iron chain.
+- id: Machine Room
+  room: MACHINE-ROOM
+  rooms:
+  - MACHINE-ROOM
+  slug: machine-room
+  region: underground
+  anchors: []
+  scene_description: This is a large, cold room whose sole exit is to the north. In one corner
+    there is a machine which is reminiscent of a clothes dryer. On its face is a switch which
+    is labelled . The switch does not appear to be manipulable by any human hand (unless the
+    fingers are about 1/16 by 1/4 inch). On the front of the machine is a large lid, which is
+    open. closed.
+  scene_core: This is a large, cold room whose sole exit is to the north. In one corner there
+    is a machine which is reminiscent of a clothes dryer. On its face is a switch which is labelled
+    . The switch does not appear to be manipulable by any human hand (unless the fingers are
+    about 1/16 by 1/4 inch). On the front of the machine is a large lid, which is open. closed.
+- id: Coal Mine
+  room: MINE-1
+  rooms:
+  - MINE-1
+  - MINE-2
+  - MINE-3
+  - MINE-4
+  slug: coal-mine
+  region: underground
+  anchors: []
+  scene_description: This is a nondescript part of a coal mine.
+  scene_core: This is a nondescript part of a coal mine.
+- id: Slide Room
+  room: SLIDE-ROOM
+  rooms:
+  - SLIDE-ROOM
+  slug: slide-room
+  region: underground
+  anchors: []
+  scene_description: This is a small chamber, which appears to have been part of a coal mine.
+    On the south wall of the chamber the letters
+  scene_core: This is a small chamber, which appears to have been part of a coal mine. On the
+    south wall of the chamber the letters

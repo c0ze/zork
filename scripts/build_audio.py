@@ -22,7 +22,7 @@ import yaml
 from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_SCENES = ROOT / "zork1" / "scenes" / "opening.yaml"
+DEFAULT_SCENES = ROOT / "zork1" / "scenes" / "zork1.yaml"
 
 
 def main():

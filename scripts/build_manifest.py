@@ -15,7 +15,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 STYLES_FILE = ROOT / "styles.yaml"
-DEFAULT_SCENES = ROOT / "zork1" / "scenes" / "opening.yaml"
+DEFAULT_SCENES = ROOT / "zork1" / "scenes" / "zork1.yaml"
 SECTIONS = ["above_ground", "underground", "peril", "wonder", "dread"]
 
 

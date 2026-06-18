@@ -37,7 +37,7 @@ from google import genai
 ROOT = Path(__file__).resolve().parent.parent
 STYLES_FILE = ROOT / "styles.yaml"
 JOBS_DIR = Path(__file__).resolve().parent / ".batch_jobs"
-DEFAULT_SCENES = ROOT / "zork1" / "scenes" / "opening.yaml"
+DEFAULT_SCENES = ROOT / "zork1" / "scenes" / "zork1.yaml"
 
 # Nano Banana: batch-eligible, ~$0.0195/image in batch. Alt: "gemini-3-pro-image-preview".
 MODEL = "gemini-2.5-flash-image"
