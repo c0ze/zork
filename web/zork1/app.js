@@ -6,7 +6,10 @@
    - Narration: pre-baked per-voice MP3s (assets/audio/<voice>/<slug>.mp3). Switching
      voice re-reads the current room. No browser token, fully static.
    - Music: per-region playlist of 2 tracks played successively, looping.
-   - Theme: dark/light, applied to this page and synced into the iframe. */
+   - Theme: dark/light, applied to this page and synced into the iframe.
+   - Continuity: the Z-machine autosaves per turn (Parchment do_vm_autosave), so a
+     reload resumes the same game; we persist the narration "visited" set alongside
+     it. Restart wipes both; death resets the visited set so the scene re-narrates. */
 
 const qs = (s) => document.querySelector(s);
 
@@ -15,6 +18,7 @@ const STATE = {
   narrationOn: true, ttsVol: 1, started: false,
   visited: new Set(), current: null,
 };
+let roomSource = null;
 
 const Music = {
   el: null, section: null, list: [], idx: 0, on: true,
@@ -42,6 +46,7 @@ async function init() {
   const params = new URLSearchParams(location.search);
   STATE.style = params.get('style') || STATE.manifest.default_style || STATE.manifest.styles[0];
   STATE.theme = localStorage.getItem('zork-theme') || 'dark';
+  loadProgress();
   applyTheme(STATE.theme);
 
   buildStyleSelect();
@@ -50,10 +55,12 @@ async function init() {
   Music.init();
   wireAudioControls();
   wireStart();
+  wireRestart();
 
-  const source = new IframeRoomSource(qs('#game-frame'), Object.keys(STATE.manifest.scenes), STATE.manifest.start_room);
-  source.onRoom(handleRoom);
-  source.start();
+  roomSource = new IframeRoomSource(qs('#game-frame'), Object.keys(STATE.manifest.scenes), STATE.manifest.start_room);
+  roomSource.onRoom(handleRoom);
+  roomSource.onDeath(handleDeath);
+  roomSource.start();
 
   setupInterpreterNudge();
 }
@@ -99,6 +106,7 @@ function audioSrc(slug) {
 function maybeNarrate(name, scene) {
   if (scene && !STATE.visited.has(name)) {
     STATE.visited.add(name);
+    saveProgress();
     playNarration(scene);
   }
 }
@@ -113,6 +121,52 @@ function playNarration(scene) {
 
 function narrateCurrent() {
   if (STATE.current) playNarration(STATE.manifest.scenes[STATE.current]);
+}
+
+/* ---------- progress / continuity ---------- */
+// The narration "visited" set is the app's slice of world state. The Z-machine VM
+// itself autosaves per turn (Parchment), so reloading resumes the same game; we
+// persist visited so already-narrated rooms stay silent across that reload.
+function saveProgress() {
+  try { localStorage.setItem('zork-visited', JSON.stringify([...STATE.visited])); } catch (e) {}
+}
+function loadProgress() {
+  try {
+    const raw = localStorage.getItem('zork-visited');
+    if (raw) STATE.visited = new Set(JSON.parse(raw));
+  } catch (e) {}
+}
+
+// Death/resurrection drops the player back at the start. Reset world progress so
+// the landing room re-renders and re-narrates: the room source has cleared its
+// _last, so the next scan re-fires handleRoom for wherever the game put us.
+function handleDeath() {
+  STATE.visited.clear();
+  STATE.current = null;
+  saveProgress();
+}
+
+/* ---------- restart ---------- */
+function wireRestart() {
+  const btn = qs('#restart-btn');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    if (!confirm('Are you sure you want to start a new game and lose current progress?')) return;
+    restartGame();
+  });
+}
+function restartGame() {
+  // Wipe the VM autosave (Parchment keeps it under dialog_* keys) and the app's
+  // world progress, then reload the interpreter so it boots a brand-new game.
+  try {
+    Object.keys(localStorage).forEach((k) => { if (/^dialog|autosave/i.test(k)) localStorage.removeItem(k); });
+  } catch (e) {}
+  STATE.visited.clear();
+  STATE.current = null;
+  saveProgress();
+  if (roomSource) roomSource._last = null;
+  const f = qs('#game-frame');
+  try { f.contentWindow.location.reload(); } catch (e) { f.src = f.getAttribute('src'); }
 }
 
 /* ---------- theme ---------- */
@@ -223,12 +277,15 @@ function setupInterpreterNudge() {
 }
 
 /* ---------- room source: read the room name from the iframe's game buffer ---------- */
+const DEATH_RE = /\byou have died\b|\byou are dead\b|\*{2,}\s*you have died/i;
+
 class IframeRoomSource {
   constructor(iframe, roomNames, startRoom) {
     this.iframe = iframe; this.rooms = new Set(roomNames); this.startRoom = startRoom;
-    this._cb = null; this._obs = null; this._last = null;
+    this._cb = null; this._onDeath = null; this._obs = null; this._last = null; this._dead = false;
   }
   onRoom(cb) { this._cb = cb; }
+  onDeath(cb) { this._onDeath = cb; }
   start() {
     const attach = () => {
       let doc = null;
@@ -239,6 +296,15 @@ class IframeRoomSource {
       if (this.startRoom && this._cb) { this._last = this.startRoom; this._cb(this.startRoom); }
       const scan = () => {
         const lines = doc.querySelectorAll('.BufferWindow .BufferLine');
+        // Death/resurrection: when the death banner shows, drop _last (so the room
+        // the player lands in re-fires) and tell the app to reset world progress.
+        let recent = '';
+        for (let i = lines.length - 1; i >= 0 && i > lines.length - 12; i--) recent += ' ' + lines[i].textContent;
+        if (DEATH_RE.test(recent)) {
+          if (!this._dead) { this._dead = true; this._last = null; if (this._onDeath) this._onDeath(); }
+        } else {
+          this._dead = false;
+        }
         for (let i = lines.length - 1; i >= 0 && i > lines.length - 10; i--) {
           const t = lines[i].textContent.replace(/\s+/g, ' ').trim();
           if (this.rooms.has(t)) { if (t !== this._last) { this._last = t; this._cb(t); } return; }
