@@ -1,0 +1,66 @@
+# Style bibles for the Zork graphic-text-adventure project (shared across games).
+#
+# Final image prompt is assembled by scripts/generate_images.py as:
+#   world_preamble
+#   + <style>.prefix
+#   + scene.scene_core
+#   + "Consistent elements:" + descriptions of the scene's anchors
+#   + "Avoid:" + <style>.negative + global_negative
+#
+# Swap only the <style> to re-render the entire game in a different look.
+
+world_preamble: >
+  World: Zork, a lonely 1980s fantasy in and around an abandoned white house at
+  the edge of a dark forest. Mood: melancholy, mysterious, a little menacing.
+  Depict only what the scene itself describes, viewed from eye level as if
+  standing there - never a cutaway, cross-section, or any view of what lies
+  beneath the ground. No people unless the scene names a character. A single
+  establishing composition, wide 16:9 framing.
+
+# Appended to every prompt on top of each style's own negative. Kills the common
+# failure modes: captions, signatures, and the engine "helpfully" drawing the
+# underground empire beneath an above-ground scene.
+global_negative: >
+  text, letters, numbers, captions, labels, signature, artist mark, watermark,
+  logo, border frame; cutaway or cross-section views; any exposed underground,
+  cave, ruins or basement beneath an outdoor scene; modern objects, vehicles or
+  electronics; people unless specified
+
+styles:
+  ink_engraving:
+    label: Ink & engraving
+    prefix: >
+      Pen-and-ink engraving in the style of a vintage woodcut book
+      illustration. Dense cross-hatching and fine linework on a warm
+      aged-paper tone; high-contrast black ink with ONE muted accent colour
+      (warm lantern-amber) reserved strictly for light sources. Flat etched
+      depth, no gradients, no photographic detail. Literary, atmospheric,
+      faintly eerie.
+    negative: photorealism, 3D render, saturated colour, smooth gradient shading, glossy
+
+  retro_pixel:
+    label: Retro pixel art
+    prefix: >
+      16-colour pixel art in the style of late-1980s EGA / early-VGA
+      adventure games (Sierra and Lucasfilm era). Chunky visible pixels, a
+      limited dithered palette, hard edges, flat simple shading, low
+      resolution charm, strong readable silhouettes.
+    negative: anti-aliasing, high-resolution detail, photorealism, smooth gradients, 3D render
+
+  painted_pulp:
+    label: Painted pulp fantasy
+    prefix: >
+      Richly painted fantasy book-cover illustration, oil-on-canvas feel, in
+      the tradition of 1980s paperback cover art. Warm dramatic lighting, deep
+      saturated jewel tones, visible brushwork, a romantic and adventurous
+      mood, one strong focal subject, cinematic composition.
+    negative: flat vector, pixelation, photograph, muddy colour, modern objects
+
+  cinematic_painterly:
+    label: Cinematic painterly
+    prefix: >
+      Moody cinematic concept art, digital painterly rendering. A desaturated
+      cold palette lit by a single warm key light, volumetric fog and haze,
+      dramatic chiaroscuro, painterly brush detail, a strong sense of scale
+      and solitude, modern dark-fantasy game art.
+    negative: pixel art, flat cartoon, stock-photo realism, cheerful bright colour, busy clutter

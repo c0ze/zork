@@ -1,0 +1,99 @@
+game: zork1
+slice: opening
+aspect: "16:9"
+default_region: above_ground
+
+# scene_description = verbatim first-visit room text (extracted from ZIL) -> fed to TTS.
+# scene_core       = style-agnostic image content; the script prepends a style bible.
+# anchors          = entities (see anchors.yaml) whose descriptions get injected for consistency.
+# region           = music section (above_ground | underground | peril | wonder | dread).
+# slug             = output filename; image written to zork1/images/<style>/<slug>.webp
+
+scenes:
+  - id: "West of House"
+    room: WEST-OF-HOUSE
+    slug: west-of-house
+    region: above_ground
+    anchors: [white-house, mailbox]
+    scene_description: >
+      You are standing in an open field west of a white house, with a boarded
+      front door.
+    scene_core: >
+      Wide establishing shot of an open grassy field before a boarded-up white
+      house at the edge of a dark forest; a small mailbox on a post in the
+      foreground; grey overcast melancholy daylight; no people.
+
+  - id: "Behind House"
+    room: EAST-OF-HOUSE
+    slug: behind-house
+    region: above_ground
+    anchors: [white-house]
+    scene_description: >
+      You are behind the white house. A path leads into the forest to the
+      east. In one corner of the house there is a small window which is
+      slightly ajar.
+    scene_core: >
+      Viewed from behind the white house: its weathered back wall faces us, a
+      small window in the wall standing slightly ajar; a dirt path leads away
+      into dense dark forest; overcast melancholy light; no people.
+
+  - id: "Kitchen"
+    room: KITCHEN
+    slug: kitchen
+    region: above_ground
+    anchors: []
+    scene_description: >
+      You are in the kitchen of the white house. A table seems to have been
+      used recently for the preparation of food. A passage leads to the west
+      and a dark staircase can be seen leading upward. A dark chimney leads
+      down and to the east is a small window which is slightly ajar.
+    scene_core: >
+      Interior of an old farmhouse kitchen; a wooden table with the remnants of
+      recently prepared food; a passage leading west, a dark staircase leading
+      upward, a dark chimney; a small window slightly ajar to the east; dim
+      grey daylight; no people.
+
+  - id: "Living Room"
+    room: LIVING-ROOM
+    slug: living-room
+    region: above_ground
+    anchors: [trophy-case, oriental-rug, trap-door]
+    scene_description: >
+      You are in the living room. There is a doorway to the east, a wooden door
+      with strange gothic lettering to the west, which appears to be nailed
+      shut, a trophy case, and a large oriental rug in the center of the room.
+    scene_core: >
+      A wood-panelled living room; an open doorway to the east; a heavy wooden
+      door to the west carved with strange gothic lettering, nailed shut; a
+      glass trophy case on the wall; a large oriental rug centred on the floor;
+      warm dim interior light; no people.
+
+  - id: "Cellar"
+    room: CELLAR
+    slug: cellar
+    region: underground
+    anchors: [trap-door]
+    scene_description: >
+      You are in a dark and damp cellar with a narrow passageway leading north,
+      and a crawlway to the south. On the west is the bottom of a steep metal
+      ramp which is unclimbable.
+    scene_core: >
+      A dark, damp stone cellar; a narrow passageway leading north; a low
+      crawlway to the south; a steep, unclimbable metal ramp against the west
+      wall; faint light falling from above; claustrophobic and shadowy; no
+      people.
+
+  - id: "The Troll Room"
+    room: TROLL-ROOM
+    slug: troll-room
+    region: peril
+    anchors: [troll]
+    scene_description: >
+      This is a small room with passages to the east and south and a forbidding
+      hole leading west. Bloodstains and deep scratches (perhaps made by an axe)
+      mar the walls.
+    scene_core: >
+      A small rough stone chamber; dark passages east and south and a forbidding
+      hole leading west; bloodstains and deep axe-scratches gouged into the
+      walls; a hulking troll gripping a bloody axe blocks the way; flickering
+      torchlight, claustrophobic and threatening.

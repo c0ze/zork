@@ -1,0 +1,32 @@
+# Recurring entities to keep visually consistent across Zork I scenes.
+#
+# Workflow: generate these reference images FIRST, then later runs can feed
+# them back to the engine as reference images for true visual lock-in.
+# For text-only batches, generate_images.py injects these descriptions into
+# any scene prompt whose `anchors:` list names them.
+
+anchors:
+  white-house:
+    description: >
+      A small white colonial farmhouse with boarded-up windows, weathered
+      white clapboard and a sagging front porch, isolated in an overgrown
+      field at the edge of a dark forest. Abandoned, faintly sinister.
+  mailbox:
+    description: >
+      A small black metal mailbox on a short wooden post, standing in the
+      field in front of the white house.
+  trophy-case:
+    description: >
+      An empty glass-fronted wooden trophy case mounted on a panelled wall.
+  oriental-rug:
+    description: >
+      A large ornate oriental rug in deep reds and golds with an intricate
+      woven border.
+  trap-door:
+    description: >
+      A heavy square wooden trap door set into a plank floor, with an iron
+      ring handle.
+  troll:
+    description: >
+      A hulking, nasty troll with coarse greenish hide and small cruel eyes,
+      gripping a blood-stained axe, blocking a rough stone passage.

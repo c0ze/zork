@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+scripts/.batch_jobs/
+.DS_Store
+config.js
+*.wav
+sources/

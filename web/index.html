@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zork — illustrated &amp; narrated</title>
+  <meta name="description" content="The classic Zork text adventures, playable in the browser with AI-generated scene art, narration, and music.">
+  <style>
+    :root{
+      --bg:#0e0d12; --panel:#16151c; --ink:#e8e4da; --muted:#8e8a80;
+      --accent:#d98a2b; --border:#2a2832;
+      --font:ui-sans-serif,system-ui,-apple-system,sans-serif;
+      --mono:ui-monospace,Menlo,Consolas,monospace;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.7;}
+    .wrap{max-width:760px;margin:0 auto;padding:4rem 1.5rem 5rem;}
+    h1{font-size:34px;font-weight:500;letter-spacing:0.18em;margin:0 0 0.25rem;}
+    .tag{color:var(--muted);font-size:17px;margin:0 0 2.5rem;}
+    h2{font-size:18px;font-weight:500;letter-spacing:0.04em;margin:2.5rem 0 0.75rem;color:var(--ink);}
+    p{color:#cfcabd;}
+    a{color:var(--accent);}
+    .games{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:1.5rem 0;}
+    .game{display:block;text-decoration:none;color:inherit;background:var(--panel);
+      border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.2rem;transition:border-color .15s;}
+    .game.live:hover{border-color:var(--accent);}
+    .game.soon{opacity:0.55;cursor:default;}
+    .game h3{margin:0 0 0.3rem;font-size:17px;font-weight:500;}
+    .game .meta{font-size:13px;color:var(--muted);}
+    .game .play{display:inline-block;margin-top:0.7rem;font-size:13px;color:var(--accent);}
+    ul{color:#cfcabd;padding-left:1.2rem;}
+    li{margin:0.3rem 0;}
+    code{font-family:var(--mono);font-size:0.9em;color:#e8e4da;background:#1f1d27;padding:1px 5px;border-radius:4px;}
+    footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);color:var(--muted);font-size:13px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>ZORK</h1>
+    <p class="tag">The Great Underground Empire — illustrated, narrated, and playable in your browser.</p>
+
+    <p>The original Zork trilogy, modernized into a graphic text adventure: every location is
+    rendered as AI-generated art, scenes are narrated aloud, and atmospheric music follows you
+    underground — all running entirely in the browser, no install, no backend.</p>
+
+    <div class="games">
+      <a class="game live" href="zork1/">
+        <h3>Zork I</h3>
+        <div class="meta">The Great Underground Empire</div>
+        <span class="play">▶ Play</span>
+      </a>
+      <div class="game soon">
+        <h3>Zork II</h3>
+        <div class="meta">The Wizard of Frobozz</div>
+        <span class="play">Coming soon</span>
+      </div>
+      <div class="game soon">
+        <h3>Zork III</h3>
+        <div class="meta">The Dungeon Master</div>
+        <span class="play">Coming soon</span>
+      </div>
+    </div>
+
+    <h2>How it was made</h2>
+    <ul>
+      <li>The original Zork source was released by Microsoft/Activision under the <strong>MIT License</strong> in 2025. The game runs from its compiled Z-machine story file via <a href="https://github.com/curiousdannii/parchment">Parchment</a> (the Bocfel interpreter compiled to WebAssembly).</li>
+      <li>Each room's text was extracted from the source; the location art is <strong>AI-generated</strong> from those descriptions, with four interchangeable styles (ink engraving, retro pixel, painted pulp, cinematic). Pick one with the in-game <code>Style</code> menu.</li>
+      <li>Narration is <strong>pre-rendered text-to-speech</strong>; background music is original, switching by region as you explore.</li>
+      <li>The whole thing is a <strong>static site</strong> — the interpreter, art, audio, and a small scene-controller are all that's shipped.</li>
+    </ul>
+
+    <footer>
+      Zork I/II/III source &copy; Infocom / Activision, released under the MIT License.
+      &ldquo;Zork&rdquo; is a trademark of Activision. This is an educational fan project, not an official product.
+    </footer>
+  </div>
+</body>
+</html>

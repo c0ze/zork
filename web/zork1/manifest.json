@@ -1,0 +1,114 @@
+{
+  "game": "zork1",
+  "styles": [
+    "ink_engraving",
+    "retro_pixel",
+    "painted_pulp",
+    "cinematic_painterly"
+  ],
+  "default_style": "ink_engraving",
+  "default_region": "above_ground",
+  "start_room": "West of House",
+  "music": {
+    "above_ground": [
+      "assets/music/above_ground-1.mp3",
+      "assets/music/above_ground-2.mp3"
+    ],
+    "underground": [
+      "assets/music/underground-1.mp3",
+      "assets/music/underground-2.mp3"
+    ],
+    "peril": [
+      "assets/music/peril-1.mp3",
+      "assets/music/peril-2.mp3"
+    ],
+    "wonder": [
+      "assets/music/wonder-1.mp3",
+      "assets/music/wonder-2.mp3"
+    ],
+    "dread": [
+      "assets/music/dread-1.mp3",
+      "assets/music/dread-2.mp3"
+    ]
+  },
+  "scenes": {
+    "West of House": {
+      "slug": "west-of-house",
+      "room": "WEST-OF-HOUSE",
+      "region": "above_ground",
+      "narration": "You are standing in an open field west of a white house, with a boarded front door.",
+      "audio": "assets/audio/west-of-house.mp3",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/west-of-house.webp",
+        "retro_pixel": "assets/images/retro_pixel/west-of-house.webp",
+        "painted_pulp": "assets/images/painted_pulp/west-of-house.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/west-of-house.webp"
+      }
+    },
+    "Behind House": {
+      "slug": "behind-house",
+      "room": "EAST-OF-HOUSE",
+      "region": "above_ground",
+      "narration": "You are behind the white house. A path leads into the forest to the east. In one corner of the house there is a small window which is slightly ajar.",
+      "audio": "assets/audio/behind-house.mp3",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/behind-house.webp",
+        "retro_pixel": "assets/images/retro_pixel/behind-house.webp",
+        "painted_pulp": "assets/images/painted_pulp/behind-house.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/behind-house.webp"
+      }
+    },
+    "Kitchen": {
+      "slug": "kitchen",
+      "room": "KITCHEN",
+      "region": "above_ground",
+      "narration": "You are in the kitchen of the white house. A table seems to have been used recently for the preparation of food. A passage leads to the west and a dark staircase can be seen leading upward. A dark chimney leads down and to the east is a small window which is slightly ajar.",
+      "audio": "assets/audio/kitchen.mp3",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/kitchen.webp",
+        "retro_pixel": "assets/images/retro_pixel/kitchen.webp",
+        "painted_pulp": "assets/images/painted_pulp/kitchen.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/kitchen.webp"
+      }
+    },
+    "Living Room": {
+      "slug": "living-room",
+      "room": "LIVING-ROOM",
+      "region": "above_ground",
+      "narration": "You are in the living room. There is a doorway to the east, a wooden door with strange gothic lettering to the west, which appears to be nailed shut, a trophy case, and a large oriental rug in the center of the room.",
+      "audio": "assets/audio/living-room.mp3",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/living-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/living-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/living-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/living-room.webp"
+      }
+    },
+    "Cellar": {
+      "slug": "cellar",
+      "room": "CELLAR",
+      "region": "underground",
+      "narration": "You are in a dark and damp cellar with a narrow passageway leading north, and a crawlway to the south. On the west is the bottom of a steep metal ramp which is unclimbable.",
+      "audio": "assets/audio/cellar.mp3",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/cellar.webp",
+        "retro_pixel": "assets/images/retro_pixel/cellar.webp",
+        "painted_pulp": "assets/images/painted_pulp/cellar.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/cellar.webp"
+      }
+    },
+    "The Troll Room": {
+      "slug": "troll-room",
+      "room": "TROLL-ROOM",
+      "region": "peril",
+      "narration": "This is a small room with passages to the east and south and a forbidding hole leading west. Bloodstains and deep scratches (perhaps made by an axe) mar the walls.",
+      "audio": "assets/audio/troll-room.mp3",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/troll-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/troll-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/troll-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/troll-room.webp"
+      }
+    }
+  }
+}
