@@ -87,6 +87,11 @@ def plan_requests(style_filter, styles, scenes, anchors, world, game, global_neg
                 {
                     "contents": [{"role": "user", "parts": [{"text": prompt}]}],
                     "config": {"response_modalities": ["TEXT", "IMAGE"]},
+                    # Correlate each response to its request by metadata, NOT list
+                    # position: the Batch API can return inlined_responses out of
+                    # order and/or drop failed entries, which silently mis-files
+                    # every image after the first gap if you zip by index.
+                    "metadata": {"style": style_name, "slug": scene["slug"]},
                 }
             )
             meta.append(
@@ -114,17 +119,50 @@ def load_state(run_id: str):
     return json.loads(p.read_text()) if p.exists() else None
 
 
+def _meta_to_dict(md):
+    """InlinedResponse.metadata may come back as a dict or a pydantic-ish object."""
+    if md is None:
+        return None
+    if isinstance(md, dict):
+        return md
+    for attr in ("model_dump", "to_dict", "dict"):
+        fn = getattr(md, attr, None)
+        if callable(fn):
+            try:
+                return fn()
+            except Exception:  # noqa: BLE001
+                pass
+    return {k: getattr(md, k, None) for k in ("style", "slug")}
+
+
 def save_images(job, meta, overwrite=False):
-    """Dissect inline batch results into target folders. Returns (saved, failed, skipped)."""
+    """Dissect batch results into target folders by request METADATA (order-independent).
+
+    Each response is routed to its file via the {style, slug} metadata it echoes,
+    not its position in the list - so out-of-order or dropped responses can never
+    mis-file an image. Returns (saved, failed, skipped, missing) where `missing`
+    lists the (style, slug) requests that produced no usable image.
+    """
     saved = failed = skipped = 0
     dest = getattr(job, "dest", None)
     responses = list(getattr(dest, "inlined_responses", None) or [])
+    expected = {(m["style"], m["slug"]): m for m in meta}
     if len(responses) != len(meta):
-        print(f"  ! warning: {len(responses)} responses for {len(meta)} requests")
-    for i, item in enumerate(responses):
-        if i >= len(meta):
-            break
-        m = meta[i]
+        print(f"  ! note: {len(responses)} responses for {len(meta)} requests "
+              f"(routing by metadata, not position)")
+    seen = set()
+    for item in responses:
+        md = _meta_to_dict(getattr(item, "metadata", None))
+        key = (md.get("style"), md.get("slug")) if md else None
+        m = expected.get(key)
+        if m is None:
+            failed += 1
+            print(f"  ! response with unmappable metadata: {md}")
+            continue
+        if key in seen:
+            print(f"  ! duplicate response for {key[0]}/{key[1]} - ignoring")
+            continue
+        seen.add(key)
         out = ROOT / m["output"]
         if out.exists() and not overwrite:
             skipped += 1
@@ -151,7 +189,12 @@ def save_images(job, meta, overwrite=False):
         img.save(out, "WEBP", quality=90, method=6)
         saved += 1
         print(f"  + {m['style']}/{m['slug']}  ->  {m['output']}")
-    return saved, failed, skipped
+    missing = sorted(k for k in expected if k not in seen)
+    if missing:
+        shown = ", ".join(f"{s}/{sl}" for s, sl in missing[:12])
+        print(f"  ! {len(missing)} request(s) had NO response: {shown}"
+              + (" ..." if len(missing) > 12 else ""))
+    return saved, failed, skipped, missing
 
 
 def main():
@@ -238,16 +281,16 @@ def main():
         )
 
     print("Job succeeded - writing images...")
-    saved, failed, skipped = save_images(job, meta, args.overwrite)
-    print(f"\nDone: {saved} saved, {skipped} already existed, {failed} failed.")
+    saved, failed, skipped, missing = save_images(job, meta, args.overwrite)
+    print(f"\nDone: {saved} saved, {skipped} already existed, {failed} failed, {len(missing)} missing.")
     if skipped and not args.overwrite:
         print("(Pass --overwrite to replace existing images.)")
-    if failed == 0:
+    if failed == 0 and not missing:
         st_data = load_state(run_id) or {}
         st_data["completed_at"] = datetime.now(timezone.utc).isoformat()
         save_state(run_id, st_data)
     else:
-        print("Some requests failed. Use --new to resubmit a fresh job for this set.")
+        print("Some requests failed/missing. Re-run with --new --overwrite to retry the set.")
 
 
 if __name__ == "__main__":

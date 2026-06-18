@@ -71,13 +71,16 @@ function handleRoom(name) {
 }
 
 /* ---------- image ---------- */
+// Bump IMG_VER whenever scene images are regenerated: the file paths stay the
+// same, so without a version query browsers/CDN would serve the old render.
+const IMG_VER = '2';
 function swapImage(name, scene) {
   const img = qs('#scene-img');
   const src = scene && scene.images && scene.images[STATE.style];
   if (!src) return showPlaceholder(name, 'no scene mapped');
   img.onerror = () => showPlaceholder(name, 'image pending');
   img.onload = () => { img.hidden = false; qs('#scene-placeholder').hidden = true; };
-  img.src = src + '?s=' + encodeURIComponent(STATE.style);
+  img.src = src + '?v=' + IMG_VER + '&s=' + encodeURIComponent(STATE.style);
 }
 
 function showPlaceholder(name, note) {
