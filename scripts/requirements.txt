@@ -2,3 +2,4 @@ google-genai>=1.0.0
 PyYAML>=6.0
 pillow>=10.0
 python-dotenv>=1.0
+certifi>=2023.0

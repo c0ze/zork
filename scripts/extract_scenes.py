@@ -51,7 +51,11 @@ def slugify(s):
 def clean(s):
     s = s.replace("|", " ").replace("\\", " ")
     s = re.sub(r"\s*:\s*\.", ".", s)  # strip dynamic object-list placeholders ("you can see: .")
-    return " ".join(s.split())
+    s = " ".join(s.split())
+    # Drop a runtime list-intro left dangling once its object list was stripped,
+    # e.g. "...On the ground below you can see." (otherwise narrated as nonsense).
+    s = re.sub(r"\s*[^.]*\byou can see\s*\.\s*$", "", s).strip()
+    return s
 
 
 def parse_rooms(text):

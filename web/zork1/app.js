@@ -98,9 +98,12 @@ function showPlaceholder(name, note) {
 }
 
 /* ---------- narration (pre-baked, per voice) ---------- */
+// Bump AUDIO_VER when narration is re-baked, so a new clip isn't masked by a
+// cached copy at the same path (same rationale as IMG_VER for scene images).
+const AUDIO_VER = '2';
 function audioSrc(slug) {
   const tpl = STATE.manifest.audio_path || 'assets/audio/{voice}/{slug}.mp3';
-  return tpl.replace('{voice}', STATE.voice).replace('{slug}', slug);
+  return tpl.replace('{voice}', STATE.voice).replace('{slug}', slug) + '?v=' + AUDIO_VER;
 }
 
 function maybeNarrate(name, scene) {

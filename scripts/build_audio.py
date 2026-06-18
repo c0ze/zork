@@ -16,11 +16,21 @@ import json
 import os
 import sys
 import time
+import ssl
 import urllib.request
 from pathlib import Path
 
 import yaml
 from dotenv import load_dotenv
+
+# Verify TLS against certifi's CA bundle so this runs regardless of the local
+# Python's certificate setup (a fresh macOS/venv Python often lacks one and
+# fails with CERTIFICATE_VERIFY_FAILED against the public TTS host).
+try:
+    import certifi
+    SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
+except Exception:  # noqa: BLE001
+    SSL_CONTEXT = ssl.create_default_context()
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_SCENES = ROOT / "zork1" / "scenes" / "zork1.yaml"
@@ -33,6 +43,7 @@ def main():
     ap.add_argument("--voice", help="only this voice key (default: every voice in voices.yaml)")
     ap.add_argument("--base", default=os.environ.get("TTS_BASE", "https://tts.akaraduman.synology.me"))
     ap.add_argument("--overwrite", action="store_true")
+    ap.add_argument("--only", help="comma-separated slugs to (re)bake (default: all scenes)")
     args = ap.parse_args()
 
     load_dotenv(ROOT / ".env")
@@ -48,7 +59,9 @@ def main():
 
     doc = yaml.safe_load(open(args.scenes))
     game = doc.get("game", "zork1")
-    scenes = [(s["slug"], " ".join((s.get("scene_description") or "").split())) for s in doc["scenes"]]
+    only = {x.strip() for x in args.only.split(",")} if args.only else None
+    scenes = [(s["slug"], " ".join((s.get("scene_description") or "").split()))
+              for s in doc["scenes"] if not only or s["slug"] in only]
 
     saved = skipped = failed = 0
     for v in voices:
@@ -69,7 +82,7 @@ def main():
                 method="POST",
             )
             try:
-                with urllib.request.urlopen(req, timeout=60) as r:
+                with urllib.request.urlopen(req, timeout=60, context=SSL_CONTEXT) as r:
                     audio = r.read()
             except Exception as e:  # noqa: BLE001
                 failed += 1

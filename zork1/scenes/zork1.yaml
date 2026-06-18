@@ -103,9 +103,9 @@ scenes:
   region: above_ground
   anchors: []
   scene_description: You are about 10 feet above the ground nestled among some large branches.
-    The nearest branch above you is above your reach. On the ground below you can see.
+    The nearest branch above you is above your reach.
   scene_core: You are about 10 feet above the ground nestled among some large branches. The
-    nearest branch above you is above your reach. On the ground below you can see.
+    nearest branch above you is above your reach.
 - id: Clearing
   room: GRATING-CLEARING
   rooms:
