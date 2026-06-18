@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,27 @@
     };
   </script>
   <style>
-    html, body { margin: 0; height: 100%; background: #0a0a0e; }
+    :root {
+      --term-bg: #0a0a0e; --term-ink: #cfe8c9; --accent: #d98a2b;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    html[data-theme="light"] { --term-bg: #f4efe2; --term-ink: #2b2620; --accent: #a8571a; }
+    html, body { margin: 0; height: 100%; background: var(--term-bg); }
+    #gameport { position: absolute; inset: 0; overflow: hidden; background: var(--term-bg) !important; }
+    #windowport { background: var(--term-bg) !important; }
+    .BufferWindow, .GridWindow {
+      background: var(--term-bg) !important; color: var(--term-ink) !important;
+      font-family: var(--mono) !important;
+    }
+    .BufferWindow { font-size: 15px; line-height: 1.55; }
+    .GridWindow { opacity: 0.85; }
+    [class*="Style_"], .BufferLine, .GridLine { color: var(--term-ink) !important; }
+    .Style_input { color: var(--accent) !important; font-weight: 500; }
+    .Input, textarea.Input, .LineInput {
+      color: var(--accent) !important; background: transparent !important; font-family: var(--mono) !important;
+    }
+    #loadingpane { color: var(--term-ink); }
+    a { color: var(--accent); }
   </style>
 </head>
 <body>

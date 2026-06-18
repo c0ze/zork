@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zork I — illustrated</title>
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <header class="topbar">
@@ -15,6 +15,12 @@
       </label>
       <label id="voice-control" hidden>Voice
         <select id="voice-select"></select>
+      </label>
+      <label>Theme
+        <select id="theme-select">
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
       </label>
       <span class="actl">
         <button id="music-toggle" type="button" aria-pressed="true">Music</button>
@@ -37,7 +43,7 @@
     </section>
 
     <section class="game" aria-label="Game">
-      <iframe id="game-frame" src="play.html" title="Zork interpreter"></iframe>
+      <iframe id="game-frame" src="play.html?v=4" title="Zork interpreter"></iframe>
     </section>
   </main>
 
@@ -48,6 +54,6 @@
     <button id="start-btn" type="button">▶ Enter the Great Underground Empire</button>
   </div>
 
-  <script src="app.js?v=2"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>

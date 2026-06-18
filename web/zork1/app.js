@@ -5,12 +5,13 @@
    the scene image, region music, and narration.
    - Narration: pre-baked per-voice MP3s (assets/audio/<voice>/<slug>.mp3). Switching
      voice re-reads the current room. No browser token, fully static.
-   - Music: per-region playlist of 2 tracks played successively, looping. */
+   - Music: per-region playlist of 2 tracks played successively, looping.
+   - Theme: dark/light, applied to this page and synced into the iframe. */
 
 const qs = (s) => document.querySelector(s);
 
 const STATE = {
-  manifest: null, style: null, voice: null,
+  manifest: null, style: null, voice: null, theme: 'dark',
   narrationOn: true, ttsVol: 1, started: false,
   visited: new Set(), current: null,
 };
@@ -40,8 +41,12 @@ async function init() {
 
   const params = new URLSearchParams(location.search);
   STATE.style = params.get('style') || STATE.manifest.default_style || STATE.manifest.styles[0];
+  STATE.theme = localStorage.getItem('zork-theme') || 'dark';
+  applyTheme(STATE.theme);
+
   buildStyleSelect();
   buildVoiceSelect();
+  buildThemeSelect();
   Music.init();
   wireAudioControls();
   wireStart();
@@ -49,6 +54,8 @@ async function init() {
   const source = new IframeRoomSource(qs('#game-frame'), Object.keys(STATE.manifest.scenes), STATE.manifest.start_room);
   source.onRoom(handleRoom);
   source.start();
+
+  setupInterpreterNudge();
 }
 
 function handleRoom(name) {
@@ -105,6 +112,17 @@ function narrateCurrent() {
   if (STATE.current) playNarration(STATE.manifest.scenes[STATE.current]);
 }
 
+/* ---------- theme ---------- */
+function applyTheme(t) {
+  STATE.theme = t;
+  document.documentElement.dataset.theme = t;
+  localStorage.setItem('zork-theme', t);
+  applyThemeToFrame();
+}
+function applyThemeToFrame() {
+  try { qs('#game-frame').contentDocument.documentElement.dataset.theme = STATE.theme; } catch (e) {}
+}
+
 /* ---------- controls ---------- */
 function buildStyleSelect() {
   const sel = qs('#style-select');
@@ -138,9 +156,16 @@ function buildVoiceSelect() {
   sel.addEventListener('change', () => {
     STATE.voice = sel.value;
     localStorage.setItem('zork-voice', STATE.voice);
-    if (STATE.started) narrateCurrent();   // re-read the current room in the new voice
+    if (STATE.started) narrateCurrent();
   });
   control.hidden = false;
+}
+
+function buildThemeSelect() {
+  const sel = qs('#theme-select');
+  if (!sel) return;
+  sel.value = STATE.theme;
+  sel.addEventListener('change', () => applyTheme(sel.value));
 }
 
 function wireAudioControls() {
@@ -172,10 +197,27 @@ function wireStart() {
     Music.kick();
     if (STATE.current) maybeNarrate(STATE.current, STATE.manifest.scenes[STATE.current]);
     try { qs('#game-frame').contentWindow.focus(); } catch (e) {}
+    nudgeFrame();
   });
 }
 
 function showFatal(msg) { document.body.insertAdjacentHTML('afterbegin', '<div class="fatal">' + msg + '</div>'); }
+
+/* GlkOte inside the iframe can lay out with a stale/zero size until a resize
+   fires (the "only renders after opening dev tools" bug). Nudge it after load,
+   on the Start click, and on window resize; also sync the theme once it loads. */
+function nudgeFrame() {
+  try { qs('#game-frame').contentWindow.dispatchEvent(new Event('resize')); } catch (e) {}
+}
+function setupInterpreterNudge() {
+  const f = qs('#game-frame');
+  [200, 700, 1500, 2500].forEach((t) => setTimeout(nudgeFrame, t));
+  f.addEventListener('load', () => {
+    applyThemeToFrame();
+    [150, 600].forEach((t) => setTimeout(nudgeFrame, t));
+  });
+  window.addEventListener('resize', nudgeFrame);
+}
 
 /* ---------- room source: read the room name from the iframe's game buffer ---------- */
 class IframeRoomSource {
@@ -190,6 +232,7 @@ class IframeRoomSource {
       try { doc = this.iframe.contentDocument; } catch (e) { doc = null; }
       const buf = doc && doc.querySelector('.BufferWindow');
       if (!buf) return void setTimeout(attach, 400);
+      applyThemeToFrame();
       if (this.startRoom && this._cb) { this._last = this.startRoom; this._cb(this.startRoom); }
       const scan = () => {
         const lines = doc.querySelectorAll('.BufferWindow .BufferLine');
