@@ -1,0 +1,15 @@
+# Curated narration voices, pre-baked to static MP3s so the public site needs no
+# token. build_audio.py bakes each scene in every voice ->
+#   web/<game>/assets/audio/<key>/<slug>.mp3
+# and the runtime's Voice picker switches between them (re-narrating the room).
+
+default: us-aria
+voices:
+  - { key: us-aria,    short: en-US-AriaNeural,                label: "US · Aria (F)" }
+  - { key: us-guy,     short: en-US-GuyNeural,                 label: "US · Guy (M)" }
+  - { key: gb-sonia,   short: en-GB-SoniaNeural,               label: "UK · Sonia (F)" }
+  - { key: gb-ryan,    short: en-GB-RyanNeural,                label: "UK · Ryan (M)" }
+  - { key: au-natasha, short: en-AU-NatashaNeural,             label: "AU · Natasha (F)" }
+  - { key: au-william, short: en-AU-WilliamMultilingualNeural, label: "AU · William (M)" }
+  - { key: ca-clara,   short: en-CA-ClaraNeural,               label: "CA · Clara (F)" }
+  - { key: ca-liam,    short: en-CA-LiamNeural,                label: "CA · Liam (M)" }

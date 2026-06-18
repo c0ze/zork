@@ -1,20 +1,18 @@
 'use strict';
 
 /* Scene controller. The game runs in a same-origin iframe (play.html / Parchment);
-   we read the room name from the buffer (a line that exactly matches a known scene
-   key), then swap the scene image, region music, and narration.
-   - Narration: live TTS via POST /tts in the player-selected voice (static fallback).
+   we read the room from the buffer (a line matching a known scene key), then swap
+   the scene image, region music, and narration.
+   - Narration: pre-baked per-voice MP3s (assets/audio/<voice>/<slug>.mp3). Switching
+     voice re-reads the current room. No browser token, fully static.
    - Music: per-region playlist of 2 tracks played successively, looping. */
 
 const qs = (s) => document.querySelector(s);
-const CFG = window.ZORK_CONFIG || {};
-const TTS_READY = !!(CFG.ttsBase && CFG.ttsToken);
-const ttsUrl = (p) => CFG.ttsBase.replace(/\/$/, '') + p;
 
 const STATE = {
   manifest: null, style: null, voice: null,
   narrationOn: true, ttsVol: 1, started: false,
-  visited: new Set(), current: null, ttsCache: new Map(),
+  visited: new Set(), current: null,
 };
 
 const Music = {
@@ -37,16 +35,16 @@ const Music = {
 };
 
 async function init() {
-  try { STATE.manifest = await (await fetch('manifest.json')).json(); }
+  try { STATE.manifest = await (await fetch('manifest.json?v=' + Date.now())).json(); }
   catch (e) { return showFatal('Could not load manifest.json (' + e + ')'); }
 
   const params = new URLSearchParams(location.search);
   STATE.style = params.get('style') || STATE.manifest.default_style || STATE.manifest.styles[0];
   buildStyleSelect();
+  buildVoiceSelect();
   Music.init();
   wireAudioControls();
   wireStart();
-  await buildVoiceSelect();
 
   const source = new IframeRoomSource(qs('#game-frame'), Object.keys(STATE.manifest.scenes), STATE.manifest.start_room);
   source.onRoom(handleRoom);
@@ -63,13 +61,6 @@ function handleRoom(name) {
   swapImage(name, scene);
   Music.setRegion((scene && scene.region) || STATE.manifest.default_region);
   if (STATE.started) maybeNarrate(name, scene);
-}
-
-function maybeNarrate(name, scene) {
-  if (scene && STATE.narrationOn && !STATE.visited.has(name)) {
-    STATE.visited.add(name);
-    playNarration(scene);
-  }
 }
 
 /* ---------- image ---------- */
@@ -89,65 +80,29 @@ function showPlaceholder(name, note) {
   ph.textContent = name + ' — ' + note;
 }
 
-/* ---------- narration ---------- */
-async function playNarration(scene) {
-  if (!STATE.narrationOn || !scene) return;
-  let url = null;
-  try {
-    if (TTS_READY && STATE.voice && scene.narration) url = await synth(scene.slug, scene.narration, STATE.voice);
-  } catch (e) { console.warn('TTS synth failed, falling back to static audio:', e); }
-  if (!url) url = scene.audio || null;
-  if (!url) return;
+/* ---------- narration (pre-baked, per voice) ---------- */
+function audioSrc(slug) {
+  const tpl = STATE.manifest.audio_path || 'assets/audio/{voice}/{slug}.mp3';
+  return tpl.replace('{voice}', STATE.voice).replace('{slug}', slug);
+}
+
+function maybeNarrate(name, scene) {
+  if (scene && !STATE.visited.has(name)) {
+    STATE.visited.add(name);
+    playNarration(scene);
+  }
+}
+
+function playNarration(scene) {
+  if (!STATE.narrationOn || !scene || !scene.slug) return;
   const a = qs('#narration');
   a.volume = STATE.ttsVol;
-  a.src = url;
-  a.play().catch(() => {});
+  a.src = audioSrc(scene.slug);
+  a.play().catch(() => { /* file may not be baked yet, or autoplay gated; harmless */ });
 }
 
-async function synth(slug, text, voice) {
-  const key = voice + '::' + slug;
-  if (STATE.ttsCache.has(key)) return STATE.ttsCache.get(key);
-  const res = await fetch(ttsUrl('/tts'), {
-    method: 'POST',
-    headers: { 'Authorization': 'Bearer ' + CFG.ttsToken, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ text, voice }),
-  });
-  if (!res.ok) throw new Error('TTS HTTP ' + res.status);
-  const url = URL.createObjectURL(await res.blob());
-  STATE.ttsCache.set(key, url);
-  return url;
-}
-
-/* ---------- voices ---------- */
-async function buildVoiceSelect() {
-  const control = qs('#voice-control');
-  if (!TTS_READY) { control.hidden = true; return; }
-  let voices;
-  try {
-    const res = await fetch(ttsUrl('/voices'), { headers: { 'Authorization': 'Bearer ' + CFG.ttsToken } });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    voices = await res.json();
-  } catch (e) { console.warn('voices fetch failed:', e); control.hidden = true; return; }
-
-  const en = voices.filter((v) => (v.Locale || '').toLowerCase().startsWith('en'))
-    .sort((a, b) => (a.Locale + a.ShortName).localeCompare(b.Locale + b.ShortName));
-  if (!en.length) { control.hidden = true; return; }
-
-  const sel = qs('#voice-select');
-  let lastLocale = null, group = null;
-  en.forEach((v) => {
-    if (v.Locale !== lastLocale) { group = document.createElement('optgroup'); group.label = v.Locale; sel.appendChild(group); lastLocale = v.Locale; }
-    const o = document.createElement('option');
-    o.value = v.ShortName;
-    o.textContent = v.ShortName.replace(/^en-[A-Za-z]+-/, '').replace(/Neural$/, '');
-    group.appendChild(o);
-  });
-  const saved = localStorage.getItem('zork-voice');
-  STATE.voice = saved && en.some((v) => v.ShortName === saved) ? saved
-    : (en.some((v) => v.ShortName === 'en-US-AriaNeural') ? 'en-US-AriaNeural' : en[0].ShortName);
-  sel.value = STATE.voice;
-  sel.addEventListener('change', () => { STATE.voice = sel.value; localStorage.setItem('zork-voice', STATE.voice); });
-  control.hidden = false;
+function narrateCurrent() {
+  if (STATE.current) playNarration(STATE.manifest.scenes[STATE.current]);
 }
 
 /* ---------- controls ---------- */
@@ -164,6 +119,28 @@ function buildStyleSelect() {
     const u = new URL(location); u.searchParams.set('style', STATE.style); history.replaceState(null, '', u);
     if (STATE.current) swapImage(STATE.current, STATE.manifest.scenes[STATE.current]);
   });
+}
+
+function buildVoiceSelect() {
+  const control = qs('#voice-control');
+  const sel = qs('#voice-select');
+  const voices = STATE.manifest.voices || [];
+  if (!voices.length) { control.hidden = true; return; }
+  const saved = localStorage.getItem('zork-voice');
+  STATE.voice = (saved && voices.some((v) => v.key === saved)) ? saved
+    : (STATE.manifest.default_voice || voices[0].key);
+  voices.forEach((v) => {
+    const o = document.createElement('option');
+    o.value = v.key; o.textContent = v.label;
+    if (v.key === STATE.voice) o.selected = true;
+    sel.appendChild(o);
+  });
+  sel.addEventListener('change', () => {
+    STATE.voice = sel.value;
+    localStorage.setItem('zork-voice', STATE.voice);
+    if (STATE.started) narrateCurrent();   // re-read the current room in the new voice
+  });
+  control.hidden = false;
 }
 
 function wireAudioControls() {
@@ -186,8 +163,7 @@ function wireAudioControls() {
   mVol.addEventListener('input', () => Music.setVol(parseFloat(mVol.value)));
 }
 
-/* Start gate: one click in the parent document grants audio autoplay for the
-   session, then music + narration flow even as the player types in the iframe. */
+/* One click in the parent grants audio autoplay for the session. */
 function wireStart() {
   const overlay = qs('#start-overlay');
   qs('#start-btn').addEventListener('click', () => {

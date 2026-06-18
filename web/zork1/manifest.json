@@ -7,6 +7,42 @@
     "cinematic_painterly"
   ],
   "default_style": "ink_engraving",
+  "voices": [
+    {
+      "key": "us-aria",
+      "label": "US \u00b7 Aria (F)"
+    },
+    {
+      "key": "us-guy",
+      "label": "US \u00b7 Guy (M)"
+    },
+    {
+      "key": "gb-sonia",
+      "label": "UK \u00b7 Sonia (F)"
+    },
+    {
+      "key": "gb-ryan",
+      "label": "UK \u00b7 Ryan (M)"
+    },
+    {
+      "key": "au-natasha",
+      "label": "AU \u00b7 Natasha (F)"
+    },
+    {
+      "key": "au-william",
+      "label": "AU \u00b7 William (M)"
+    },
+    {
+      "key": "ca-clara",
+      "label": "CA \u00b7 Clara (F)"
+    },
+    {
+      "key": "ca-liam",
+      "label": "CA \u00b7 Liam (M)"
+    }
+  ],
+  "default_voice": "us-aria",
+  "audio_path": "assets/audio/{voice}/{slug}.mp3",
   "default_region": "above_ground",
   "start_room": "West of House",
   "music": {
@@ -37,7 +73,6 @@
       "room": "WEST-OF-HOUSE",
       "region": "above_ground",
       "narration": "You are standing in an open field west of a white house, with a boarded front door.",
-      "audio": "assets/audio/west-of-house.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/west-of-house.webp",
         "retro_pixel": "assets/images/retro_pixel/west-of-house.webp",
@@ -50,7 +85,6 @@
       "room": "STONE-BARROW",
       "region": "above_ground",
       "narration": "You are standing in front of a massive barrow of stone. In the east face is a huge stone door which is open. You cannot see into the dark of the tomb.",
-      "audio": "assets/audio/stone-barrow.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/stone-barrow.webp",
         "retro_pixel": "assets/images/retro_pixel/stone-barrow.webp",
@@ -63,7 +97,6 @@
       "room": "NORTH-OF-HOUSE",
       "region": "above_ground",
       "narration": "You are facing the north side of a white house. There is no door here, and all the windows are boarded up. To the north a narrow path winds through the trees.",
-      "audio": "assets/audio/north-of-house.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/north-of-house.webp",
         "retro_pixel": "assets/images/retro_pixel/north-of-house.webp",
@@ -76,7 +109,6 @@
       "room": "SOUTH-OF-HOUSE",
       "region": "above_ground",
       "narration": "You are facing the south side of a white house. There is no door here, and all the windows are boarded.",
-      "audio": "assets/audio/south-of-house.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/south-of-house.webp",
         "retro_pixel": "assets/images/retro_pixel/south-of-house.webp",
@@ -89,7 +121,6 @@
       "room": "EAST-OF-HOUSE",
       "region": "above_ground",
       "narration": "You are behind the white house. A path leads into the forest to the east. In one corner of the house there is a small window which is slightly ajar.",
-      "audio": "assets/audio/behind-house.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/behind-house.webp",
         "retro_pixel": "assets/images/retro_pixel/behind-house.webp",
@@ -102,7 +133,6 @@
       "room": "FOREST-1",
       "region": "above_ground",
       "narration": "This is a forest, with trees in all directions. To the east, there appears to be sunlight.",
-      "audio": "assets/audio/forest.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/forest.webp",
         "retro_pixel": "assets/images/retro_pixel/forest.webp",
@@ -115,7 +145,6 @@
       "room": "PATH",
       "region": "above_ground",
       "narration": "This is a path winding through a dimly lit forest. The path heads north-south here. One particularly large tree with some low branches stands at the edge of the path.",
-      "audio": "assets/audio/forest-path.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/forest-path.webp",
         "retro_pixel": "assets/images/retro_pixel/forest-path.webp",
@@ -128,7 +157,6 @@
       "room": "UP-A-TREE",
       "region": "above_ground",
       "narration": "You are about 10 feet above the ground nestled among some large branches. The nearest branch above you is above your reach. On the ground below you can see.",
-      "audio": "assets/audio/up-a-tree.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/up-a-tree.webp",
         "retro_pixel": "assets/images/retro_pixel/up-a-tree.webp",
@@ -141,7 +169,6 @@
       "room": "GRATING-CLEARING",
       "region": "above_ground",
       "narration": "You are in a clearing, with a forest surrounding you on all sides. A path leads south. There is an open grating, descending into darkness. There is a grating securely fastened into the ground.",
-      "audio": "assets/audio/clearing.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/clearing.webp",
         "retro_pixel": "assets/images/retro_pixel/clearing.webp",
@@ -154,7 +181,6 @@
       "room": "KITCHEN",
       "region": "above_ground",
       "narration": "You are in the kitchen of the white house. A table seems to have been used recently for the preparation of food. A passage leads to the west and a dark staircase can be seen leading upward. A dark chimney leads down and to the east is a small window which is slightly ajar.",
-      "audio": "assets/audio/kitchen.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/kitchen.webp",
         "retro_pixel": "assets/images/retro_pixel/kitchen.webp",
@@ -167,7 +193,6 @@
       "room": "ATTIC",
       "region": "above_ground",
       "narration": "This is the attic. The only exit is a stairway leading down.",
-      "audio": "assets/audio/attic.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/attic.webp",
         "retro_pixel": "assets/images/retro_pixel/attic.webp",
@@ -180,7 +205,6 @@
       "room": "LIVING-ROOM",
       "region": "above_ground",
       "narration": "You are in the living room. There is a doorway to the east, a wooden door with strange gothic lettering to the west, which appears to be nailed shut, a trophy case, and a large oriental rug in the center of the room.",
-      "audio": "assets/audio/living-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/living-room.webp",
         "retro_pixel": "assets/images/retro_pixel/living-room.webp",
@@ -193,7 +217,6 @@
       "room": "CELLAR",
       "region": "underground",
       "narration": "You are in a dark and damp cellar with a narrow passageway leading north, and a crawlway to the south. On the west is the bottom of a steep metal ramp which is unclimbable.",
-      "audio": "assets/audio/cellar.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/cellar.webp",
         "retro_pixel": "assets/images/retro_pixel/cellar.webp",
@@ -206,7 +229,6 @@
       "room": "TROLL-ROOM",
       "region": "peril",
       "narration": "This is a small room with passages to the east and south and a forbidding hole leading west. Bloodstains and deep scratches (perhaps made by an axe) mar the walls.",
-      "audio": "assets/audio/troll-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/troll-room.webp",
         "retro_pixel": "assets/images/retro_pixel/troll-room.webp",
@@ -219,7 +241,6 @@
       "room": "EAST-OF-CHASM",
       "region": "underground",
       "narration": "You are on the east edge of a chasm, the bottom of which cannot be seen. A narrow passage goes north, and the path you are on continues to the east.",
-      "audio": "assets/audio/east-of-chasm.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/east-of-chasm.webp",
         "retro_pixel": "assets/images/retro_pixel/east-of-chasm.webp",
@@ -232,7 +253,6 @@
       "room": "GALLERY",
       "region": "wonder",
       "narration": "This is an art gallery. Most of the paintings have been stolen by vandals with exceptional taste. The vandals left through either the north or west exits.",
-      "audio": "assets/audio/gallery.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/gallery.webp",
         "retro_pixel": "assets/images/retro_pixel/gallery.webp",
@@ -245,7 +265,6 @@
       "room": "STUDIO",
       "region": "underground",
       "narration": "This appears to have been an artist's studio. The walls and floors are splattered with paints of 69 different colors. Strangely enough, nothing of value is hanging here. At the south end of the room is an open door (also covered with paint). A dark and narrow chimney leads up from a fireplace; although you might be able to get up it, it seems unlikely you could get back down.",
-      "audio": "assets/audio/studio.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/studio.webp",
         "retro_pixel": "assets/images/retro_pixel/studio.webp",
@@ -258,7 +277,6 @@
       "room": "MAZE-1",
       "region": "underground",
       "narration": "This is part of a maze of twisty little passages, all alike.",
-      "audio": "assets/audio/maze.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/maze.webp",
         "retro_pixel": "assets/images/retro_pixel/maze.webp",
@@ -271,7 +289,6 @@
       "room": "DEAD-END-1",
       "region": "underground",
       "narration": "You have come to a dead end in the maze.",
-      "audio": "assets/audio/dead-end.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/dead-end.webp",
         "retro_pixel": "assets/images/retro_pixel/dead-end.webp",
@@ -284,7 +301,6 @@
       "room": "GRATING-ROOM",
       "region": "underground",
       "narration": "You are in a small room near the maze. There are twisty passages in the immediate vicinity. Above you is an open grating with sunlight pouring in. Above you is a grating. Above you is a grating locked with a skull-and-crossbones lock.",
-      "audio": "assets/audio/grating-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/grating-room.webp",
         "retro_pixel": "assets/images/retro_pixel/grating-room.webp",
@@ -297,7 +313,6 @@
       "room": "CYCLOPS-ROOM",
       "region": "peril",
       "narration": "This room has an exit on the northwest, and a staircase leading up. The cyclops is sleeping blissfully at the foot of the stairs. The east wall, previously solid, now has a cyclops-sized opening in it. A cyclops, who looks prepared to eat horses (much less mere adventurers), blocks the staircase. From his state of health, and the bloodstains on the walls, you gather that he is not very friendly, though he likes people. The cyclops is standing in the corner, eyeing you closely. I don't think he likes you very much. He looks extremely hungry, even for a cyclops. The cyclops, having eaten the hot peppers, appears to be gasping. His enflamed tongue protrudes from his man-sized mouth.",
-      "audio": "assets/audio/cyclops-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/cyclops-room.webp",
         "retro_pixel": "assets/images/retro_pixel/cyclops-room.webp",
@@ -310,7 +325,6 @@
       "room": "STRANGE-PASSAGE",
       "region": "underground",
       "narration": "This is a long passage. To the west is one entrance. On the east there is an old wooden door, with a large opening in it (about cyclops sized).",
-      "audio": "assets/audio/strange-passage.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/strange-passage.webp",
         "retro_pixel": "assets/images/retro_pixel/strange-passage.webp",
@@ -323,7 +337,6 @@
       "room": "TREASURE-ROOM",
       "region": "peril",
       "narration": "This is a large room, whose east wall is solid granite. A number of discarded bags, which crumble at your touch, are scattered about on the floor. There is an exit down a staircase.",
-      "audio": "assets/audio/treasure-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/treasure-room.webp",
         "retro_pixel": "assets/images/retro_pixel/treasure-room.webp",
@@ -336,7 +349,6 @@
       "room": "RESERVOIR-SOUTH",
       "region": "underground",
       "narration": "You are in a long room, to the north of which was formerly a lake. However, with the water level lowered, there is merely a wide stream running through the center of the room. You are in a long room. To the north is a large lake, too deep to cross. You notice, however, that the water level appears to be dropping at a rapid rate. Before long, it might be possible to cross to the other side from here. You are in a long room, to the north of which is a wide area which was formerly a reservoir, but now is merely a stream. You notice, however, that the level of the stream is rising quickly and that before long it will be impossible to cross here. You are in a long room on the south shore of a large lake, far too deep and wide for crossing. There is a path along the stream to the east or west, a steep pathway climbing southwest along the edge of a chasm, and a path leading into a canyon to the southeast.",
-      "audio": "assets/audio/reservoir-south.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/reservoir-south.webp",
         "retro_pixel": "assets/images/retro_pixel/reservoir-south.webp",
@@ -349,7 +361,6 @@
       "room": "RESERVOIR",
       "region": "underground",
       "narration": "You are on what used to be a large lake, but which is now a large mud pile. There are to the north and south. You are on the lake. Beaches can be seen north and south. Upstream a small stream enters the lake through a narrow cleft in the rocks. The dam can be seen downstream.",
-      "audio": "assets/audio/reservoir.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/reservoir.webp",
         "retro_pixel": "assets/images/retro_pixel/reservoir.webp",
@@ -362,7 +373,6 @@
       "room": "RESERVOIR-NORTH",
       "region": "underground",
       "narration": "You are in a large cavernous room, the south of which was formerly a lake. However, with the water level lowered, there is merely a wide stream running through there. You are in a large cavernous area. To the south is a wide lake, whose water level appears to be falling rapidly. You are in a cavernous area, to the south of which is a very wide stream. The level of the stream is rising rapidly, and it appears that before long it will be impossible to cross to the other side. You are in a large cavernous room, north of a large lake. There is a slimy stairway leaving the room to the north. SUBTITLE WATER, WATER EVERYWHERE...",
-      "audio": "assets/audio/reservoir-north.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/reservoir-north.webp",
         "retro_pixel": "assets/images/retro_pixel/reservoir-north.webp",
@@ -375,7 +385,6 @@
       "room": "STREAM-VIEW",
       "region": "underground",
       "narration": "You are standing on a path beside a gently flowing stream. The path follows the stream, which flows from west to east.",
-      "audio": "assets/audio/stream-view.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/stream-view.webp",
         "retro_pixel": "assets/images/retro_pixel/stream-view.webp",
@@ -388,7 +397,6 @@
       "room": "IN-STREAM",
       "region": "underground",
       "narration": "You are on the gently flowing stream. The upstream route is too narrow to navigate, and the downstream route is invisible due to twisting walls. There is a narrow beach to land on.",
-      "audio": "assets/audio/stream.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/stream.webp",
         "retro_pixel": "assets/images/retro_pixel/stream.webp",
@@ -401,7 +409,6 @@
       "room": "MIRROR-ROOM-1",
       "region": "underground",
       "narration": "You are in a large square room with tall ceilings. On the south wall is an enormous mirror which fills the entire wall. There are exits on the other three sides of the room. Unfortunately, the mirror has been destroyed by your recklessness.",
-      "audio": "assets/audio/mirror-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/mirror-room.webp",
         "retro_pixel": "assets/images/retro_pixel/mirror-room.webp",
@@ -414,7 +421,6 @@
       "room": "SMALL-CAVE",
       "region": "underground",
       "narration": "This is a tiny cave with entrances west and north, and a staircase leading down.",
-      "audio": "assets/audio/cave.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/cave.webp",
         "retro_pixel": "assets/images/retro_pixel/cave.webp",
@@ -427,7 +433,6 @@
       "room": "COLD-PASSAGE",
       "region": "underground",
       "narration": "This is a cold and damp corridor where a long east-west passageway turns into a southward path.",
-      "audio": "assets/audio/cold-passage.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/cold-passage.webp",
         "retro_pixel": "assets/images/retro_pixel/cold-passage.webp",
@@ -440,7 +445,6 @@
       "room": "NARROW-PASSAGE",
       "region": "underground",
       "narration": "This is a long and narrow corridor where a long north-south passageway briefly narrows even further.",
-      "audio": "assets/audio/narrow-passage.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/narrow-passage.webp",
         "retro_pixel": "assets/images/retro_pixel/narrow-passage.webp",
@@ -453,7 +457,6 @@
       "room": "WINDING-PASSAGE",
       "region": "underground",
       "narration": "This is a winding passage. It seems that there are only exits on the east and north.",
-      "audio": "assets/audio/winding-passage.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/winding-passage.webp",
         "retro_pixel": "assets/images/retro_pixel/winding-passage.webp",
@@ -466,7 +469,6 @@
       "room": "TWISTING-PASSAGE",
       "region": "underground",
       "narration": "This is a winding passage. It seems that there are only exits on the east and north.",
-      "audio": "assets/audio/twisting-passage.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/twisting-passage.webp",
         "retro_pixel": "assets/images/retro_pixel/twisting-passage.webp",
@@ -479,7 +481,6 @@
       "room": "ATLANTIS-ROOM",
       "region": "wonder",
       "narration": "This is an ancient room, long under water. There is an exit to the south and a staircase leading up.",
-      "audio": "assets/audio/atlantis-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/atlantis-room.webp",
         "retro_pixel": "assets/images/retro_pixel/atlantis-room.webp",
@@ -492,7 +493,6 @@
       "room": "EW-PASSAGE",
       "region": "underground",
       "narration": "This is a narrow east-west passageway. There is a narrow stairway leading down at the north end of the room.",
-      "audio": "assets/audio/east-west-passage.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/east-west-passage.webp",
         "retro_pixel": "assets/images/retro_pixel/east-west-passage.webp",
@@ -505,7 +505,6 @@
       "room": "ROUND-ROOM",
       "region": "underground",
       "narration": "This is a circular stone room with passages in all directions. Several of them have unfortunately been blocked by cave-ins.",
-      "audio": "assets/audio/round-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/round-room.webp",
         "retro_pixel": "assets/images/retro_pixel/round-room.webp",
@@ -518,7 +517,6 @@
       "room": "DEEP-CANYON",
       "region": "underground",
       "narration": "You are on the south edge of a deep canyon. Passages lead off to the east, northwest and southwest. A stairway leads down. You can hear a loud roaring sound, like that of rushing water, from below. You can hear the sound of flowing water from below. SUBTITLE A SEEDY LOOKING GENTLEMAN... I-THIEF moved to DEMONS SUBTITLE THINGS THIEF MIGHT DO INTERACTION WITH ADVENTURER -- RETURNS T IF THIEF FINISHED.",
-      "audio": "assets/audio/deep-canyon.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/deep-canyon.webp",
         "retro_pixel": "assets/images/retro_pixel/deep-canyon.webp",
@@ -531,7 +529,6 @@
       "room": "DAMP-CAVE",
       "region": "underground",
       "narration": "This cave has exits to the west and east, and narrows to a crack toward the south. The earth is particularly damp here.",
-      "audio": "assets/audio/damp-cave.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/damp-cave.webp",
         "retro_pixel": "assets/images/retro_pixel/damp-cave.webp",
@@ -544,7 +541,6 @@
       "room": "LOUD-ROOM",
       "region": "underground",
       "narration": "This is a large room with a ceiling which cannot be detected from the ground. There is a narrow passage from east to west and a stone stairway leading upward. The room is eerie in its quietness. The room is deafeningly loud with an undetermined rushing sound. The sound seems to reverberate from all of the walls, making it difficult even to think. It is unbearably loud here, with an ear-splitting roar seeming to come from all around you. There is a pounding in your head which won't stop. With a tremendous effort, you scramble out of the room.",
-      "audio": "assets/audio/loud-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/loud-room.webp",
         "retro_pixel": "assets/images/retro_pixel/loud-room.webp",
@@ -557,7 +553,6 @@
       "room": "NS-PASSAGE",
       "region": "underground",
       "narration": "This is a high north-south passage, which forks to the northeast.",
-      "audio": "assets/audio/north-south-passage.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/north-south-passage.webp",
         "retro_pixel": "assets/images/retro_pixel/north-south-passage.webp",
@@ -570,7 +565,6 @@
       "room": "CHASM-ROOM",
       "region": "underground",
       "narration": "A chasm runs southwest to northeast and the path follows it. You are on the south side of the chasm, where a crack opens into a passage.",
-      "audio": "assets/audio/chasm.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/chasm.webp",
         "retro_pixel": "assets/images/retro_pixel/chasm.webp",
@@ -583,7 +577,6 @@
       "room": "ENTRANCE-TO-HADES",
       "region": "dread",
       "narration": "You are outside a large gateway, on which is inscribed Abandon every hope all ye who enter here! The gate is open; through it you can see a desolation, with a pile of mangled bodies in one corner. Thousands of voices, lamenting some hideous fate, can be heard. The way through the gate is barred by evil spirits, who jeer at your attempts to pass.",
-      "audio": "assets/audio/entrance-to-hades.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/entrance-to-hades.webp",
         "retro_pixel": "assets/images/retro_pixel/entrance-to-hades.webp",
@@ -596,7 +589,6 @@
       "room": "LAND-OF-LIVING-DEAD",
       "region": "dread",
       "narration": "You have entered the Land of the Living Dead. Thousands of lost souls can be heard weeping and moaning. In the corner are stacked the remains of dozens of previous adventurers less fortunate than yourself. A passage exits to the north.",
-      "audio": "assets/audio/land-of-the-dead.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/land-of-the-dead.webp",
         "retro_pixel": "assets/images/retro_pixel/land-of-the-dead.webp",
@@ -609,7 +601,6 @@
       "room": "ENGRAVINGS-CAVE",
       "region": "wonder",
       "narration": "You have entered a low cave with passages leading northwest and east.",
-      "audio": "assets/audio/engravings-cave.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/engravings-cave.webp",
         "retro_pixel": "assets/images/retro_pixel/engravings-cave.webp",
@@ -622,7 +613,6 @@
       "room": "EGYPT-ROOM",
       "region": "wonder",
       "narration": "This is a room which looks like an Egyptian tomb. There is an ascending staircase to the west.",
-      "audio": "assets/audio/egyptian-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/egyptian-room.webp",
         "retro_pixel": "assets/images/retro_pixel/egyptian-room.webp",
@@ -635,7 +625,6 @@
       "room": "DOME-ROOM",
       "region": "wonder",
       "narration": "You are at the periphery of a large dome, which forms the ceiling of another room below. Protecting you from a precipitous drop is a wooden railing which circles the dome. Hanging down from the railing is a rope which ends about ten feet from the floor below.",
-      "audio": "assets/audio/dome-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/dome-room.webp",
         "retro_pixel": "assets/images/retro_pixel/dome-room.webp",
@@ -648,7 +637,6 @@
       "room": "TORCH-ROOM",
       "region": "wonder",
       "narration": "This is a large room with a prominent doorway leading to a down staircase. Above you is a large dome. Up around the edge of the dome (20 feet up) is a wooden railing. In the center of the room sits a white marble pedestal. A piece of rope descends from the railing above, ending some five feet above your head.",
-      "audio": "assets/audio/torch-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/torch-room.webp",
         "retro_pixel": "assets/images/retro_pixel/torch-room.webp",
@@ -661,7 +649,6 @@
       "room": "NORTH-TEMPLE",
       "region": "wonder",
       "narration": "This is the north end of a large temple. On the east wall is an ancient inscription, probably a prayer in a long-forgotten language. Below the prayer is a staircase leading down. The west wall is solid granite. The exit to the north end of the room is through huge marble pillars.",
-      "audio": "assets/audio/temple.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/temple.webp",
         "retro_pixel": "assets/images/retro_pixel/temple.webp",
@@ -674,7 +661,6 @@
       "room": "SOUTH-TEMPLE",
       "region": "wonder",
       "narration": "This is the south end of a large temple. In front of you is what appears to be an altar. In one corner is a small hole in the floor which leads into darkness. You probably could not get back up it.",
-      "audio": "assets/audio/altar.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/altar.webp",
         "retro_pixel": "assets/images/retro_pixel/altar.webp",
@@ -687,7 +673,6 @@
       "room": "DAM-ROOM",
       "region": "underground",
       "narration": "You are standing on the top of the Flood Control Dam #3, which was quite a tourist attraction in times far distant. There are paths to the north, south, and west, and a scramble down. The water level behind the dam is low: The sluice gates have been opened. Water rushes through the dam and downstream. The sluice gates are open, and water rushes through the dam. The water level behind the dam is still high. The sluice gates are closed. The water level in the reservoir is quite low, but the level is rising quickly. The sluice gates on the dam are closed. Behind the dam, there can be seen a wide reservoir. Water is pouring over the top of the now abandoned dam. There is a control panel here, on which a large metal bolt is mounted. Directly above the bolt is a small green plastic bubble which is glowing serenely .",
-      "audio": "assets/audio/dam.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/dam.webp",
         "retro_pixel": "assets/images/retro_pixel/dam.webp",
@@ -700,7 +685,6 @@
       "room": "DAM-LOBBY",
       "region": "underground",
       "narration": "This room appears to have been the waiting room for groups touring the dam. There are open doorways here to the north and east marked",
-      "audio": "assets/audio/dam-lobby.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/dam-lobby.webp",
         "retro_pixel": "assets/images/retro_pixel/dam-lobby.webp",
@@ -713,7 +697,6 @@
       "room": "MAINTENANCE-ROOM",
       "region": "underground",
       "narration": "This is what appears to have been the maintenance room for Flood Control Dam #3. Apparently, this room has been ransacked recently, for most of the valuable equipment is gone. On the wall in front of you is a group of buttons colored blue, yellow, brown, and red. There are doorways to the west and south.",
-      "audio": "assets/audio/maintenance-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/maintenance-room.webp",
         "retro_pixel": "assets/images/retro_pixel/maintenance-room.webp",
@@ -726,7 +709,6 @@
       "room": "DAM-BASE",
       "region": "underground",
       "narration": "You are at the base of Flood Control Dam #3, which looms above you and to the north. The river Frigid is flowing by here. Along the river are the White Cliffs which seem to form giant walls stretching from north to south along the shores of the river as it winds its way downstream.",
-      "audio": "assets/audio/dam-base.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/dam-base.webp",
         "retro_pixel": "assets/images/retro_pixel/dam-base.webp",
@@ -739,7 +721,6 @@
       "room": "RIVER-1",
       "region": "above_ground",
       "narration": "You are on the Frigid River in the vicinity of the Dam. The river flows quietly here. There is a landing on the west shore.",
-      "audio": "assets/audio/frigid-river.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/frigid-river.webp",
         "retro_pixel": "assets/images/retro_pixel/frigid-river.webp",
@@ -752,7 +733,6 @@
       "room": "WHITE-CLIFFS-NORTH",
       "region": "above_ground",
       "narration": "You are on a narrow strip of beach which runs along the base of the White Cliffs. There is a narrow path heading south along the Cliffs and a tight passage leading west into the cliffs themselves.",
-      "audio": "assets/audio/white-cliffs-beach.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/white-cliffs-beach.webp",
         "retro_pixel": "assets/images/retro_pixel/white-cliffs-beach.webp",
@@ -765,7 +745,6 @@
       "room": "SHORE",
       "region": "above_ground",
       "narration": "You are on the east shore of the river. The water here seems somewhat treacherous. A path travels from north to south here, the south end quickly turning around a sharp corner.",
-      "audio": "assets/audio/shore.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/shore.webp",
         "retro_pixel": "assets/images/retro_pixel/shore.webp",
@@ -778,7 +757,6 @@
       "room": "SANDY-BEACH",
       "region": "above_ground",
       "narration": "You are on a large sandy beach on the east shore of the river, which is flowing quickly by. A path runs beside the river to the south here, and a passage is partially buried in sand to the northeast.",
-      "audio": "assets/audio/sandy-beach.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/sandy-beach.webp",
         "retro_pixel": "assets/images/retro_pixel/sandy-beach.webp",
@@ -791,7 +769,6 @@
       "room": "SANDY-CAVE",
       "region": "underground",
       "narration": "This is a sand-filled cave whose exit is to the southwest.",
-      "audio": "assets/audio/sandy-cave.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/sandy-cave.webp",
         "retro_pixel": "assets/images/retro_pixel/sandy-cave.webp",
@@ -804,7 +781,6 @@
       "room": "ARAGAIN-FALLS",
       "region": "above_ground",
       "narration": "You are at the top of Aragain Falls, an enormous waterfall with a drop of about 450 feet. The only path here is on the north end. A solid rainbow spans the falls. A beautiful rainbow can be seen over the falls and to the west.",
-      "audio": "assets/audio/aragain-falls.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/aragain-falls.webp",
         "retro_pixel": "assets/images/retro_pixel/aragain-falls.webp",
@@ -817,7 +793,6 @@
       "room": "ON-RAINBOW",
       "region": "above_ground",
       "narration": "You are on top of a rainbow (I bet you never thought you would walk on a rainbow), with a magnificent view of the Falls. The rainbow travels east-west here.",
-      "audio": "assets/audio/on-the-rainbow.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/on-the-rainbow.webp",
         "retro_pixel": "assets/images/retro_pixel/on-the-rainbow.webp",
@@ -830,7 +805,6 @@
       "room": "END-OF-RAINBOW",
       "region": "above_ground",
       "narration": "You are on a small, rocky beach on the continuation of the Frigid River past the Falls. The beach is narrow due to the presence of the White Cliffs. The river canyon opens here and sunlight shines in from above. A rainbow crosses over the falls to the east and a narrow path continues to the southwest.",
-      "audio": "assets/audio/end-of-rainbow.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/end-of-rainbow.webp",
         "retro_pixel": "assets/images/retro_pixel/end-of-rainbow.webp",
@@ -843,7 +817,6 @@
       "room": "CANYON-BOTTOM",
       "region": "above_ground",
       "narration": "You are beneath the walls of the river canyon which may be climbable here. The lesser part of the runoff of Aragain Falls flows by below. To the north is a narrow path.",
-      "audio": "assets/audio/canyon-bottom.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/canyon-bottom.webp",
         "retro_pixel": "assets/images/retro_pixel/canyon-bottom.webp",
@@ -856,7 +829,6 @@
       "room": "CLIFF-MIDDLE",
       "region": "above_ground",
       "narration": "You are on a ledge about halfway up the wall of the river canyon. You can see from here that the main flow from Aragain Falls twists along a passage which it is impossible for you to enter. Below you is the canyon bottom. Above you is more cliff, which appears climbable.",
-      "audio": "assets/audio/rocky-ledge.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/rocky-ledge.webp",
         "retro_pixel": "assets/images/retro_pixel/rocky-ledge.webp",
@@ -869,7 +841,6 @@
       "room": "CANYON-VIEW",
       "region": "above_ground",
       "narration": "You are at the top of the Great Canyon on its west wall. From here there is a marvelous view of the canyon and parts of the Frigid River upstream. Across the canyon, the walls of the White Cliffs join the mighty ramparts of the Flathead Mountains to the east. Following the Canyon upstream to the north, Aragain Falls may be seen, complete with rainbow. The mighty Frigid River flows out from a great dark cavern. To the west and south can be seen an immense forest, stretching for miles around. A path leads northwest. It is possible to climb down into the canyon from here.",
-      "audio": "assets/audio/canyon-view.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/canyon-view.webp",
         "retro_pixel": "assets/images/retro_pixel/canyon-view.webp",
@@ -882,7 +853,6 @@
       "room": "MINE-ENTRANCE",
       "region": "underground",
       "narration": "You are standing at the entrance of what might have been a coal mine. The shaft enters the west wall, and there is another exit on the south end of the room.",
-      "audio": "assets/audio/mine-entrance.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/mine-entrance.webp",
         "retro_pixel": "assets/images/retro_pixel/mine-entrance.webp",
@@ -895,7 +865,6 @@
       "room": "SQUEEKY-ROOM",
       "region": "underground",
       "narration": "You are in a small room. Strange squeaky sounds may be heard coming from the passage at the north end. You may also escape to the east.",
-      "audio": "assets/audio/squeaky-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/squeaky-room.webp",
         "retro_pixel": "assets/images/retro_pixel/squeaky-room.webp",
@@ -908,7 +877,6 @@
       "room": "BAT-ROOM",
       "region": "underground",
       "narration": "You are in a small room which has doors only to the east and south.",
-      "audio": "assets/audio/bat-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/bat-room.webp",
         "retro_pixel": "assets/images/retro_pixel/bat-room.webp",
@@ -921,7 +889,6 @@
       "room": "SHAFT-ROOM",
       "region": "underground",
       "narration": "This is a large room, in the middle of which is a small shaft descending through the floor into darkness below. To the west and the north are exits from this room. Constructed over the top of the shaft is a metal framework to which a heavy iron chain is attached.",
-      "audio": "assets/audio/shaft-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/shaft-room.webp",
         "retro_pixel": "assets/images/retro_pixel/shaft-room.webp",
@@ -934,7 +901,6 @@
       "room": "SMELLY-ROOM",
       "region": "underground",
       "narration": "This is a small nondescript room. However, from the direction of a small descending staircase a foul odor can be detected. To the south is a narrow tunnel.",
-      "audio": "assets/audio/smelly-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/smelly-room.webp",
         "retro_pixel": "assets/images/retro_pixel/smelly-room.webp",
@@ -947,7 +913,6 @@
       "room": "GAS-ROOM",
       "region": "underground",
       "narration": "This is a small room which smells strongly of coal gas. There is a short climb up some stairs and a narrow tunnel leading east.",
-      "audio": "assets/audio/gas-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/gas-room.webp",
         "retro_pixel": "assets/images/retro_pixel/gas-room.webp",
@@ -960,7 +925,6 @@
       "room": "LADDER-TOP",
       "region": "underground",
       "narration": "This is a very small room. In the corner is a rickety wooden ladder, leading downward. It might be safe to descend. There is also a staircase leading upward.",
-      "audio": "assets/audio/ladder-top.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/ladder-top.webp",
         "retro_pixel": "assets/images/retro_pixel/ladder-top.webp",
@@ -973,7 +937,6 @@
       "room": "LADDER-BOTTOM",
       "region": "underground",
       "narration": "This is a rather wide room. On one side is the bottom of a narrow wooden ladder. To the west and the south are passages leaving the room.",
-      "audio": "assets/audio/ladder-bottom.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/ladder-bottom.webp",
         "retro_pixel": "assets/images/retro_pixel/ladder-bottom.webp",
@@ -986,7 +949,6 @@
       "room": "TIMBER-ROOM",
       "region": "underground",
       "narration": "This is a long and narrow passage, which is cluttered with broken timbers. A wide passage comes from the east and turns at the west end of the room into a very narrow passageway. From the west comes a strong draft.",
-      "audio": "assets/audio/timber-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/timber-room.webp",
         "retro_pixel": "assets/images/retro_pixel/timber-room.webp",
@@ -999,7 +961,6 @@
       "room": "LOWER-SHAFT",
       "region": "underground",
       "narration": "This is a small drafty room in which is the bottom of a long shaft. To the south is a passageway and to the east a very narrow passage. In the shaft can be seen a heavy iron chain.",
-      "audio": "assets/audio/drafty-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/drafty-room.webp",
         "retro_pixel": "assets/images/retro_pixel/drafty-room.webp",
@@ -1012,7 +973,6 @@
       "room": "MACHINE-ROOM",
       "region": "underground",
       "narration": "This is a large, cold room whose sole exit is to the north. In one corner there is a machine which is reminiscent of a clothes dryer. On its face is a switch which is labelled . The switch does not appear to be manipulable by any human hand (unless the fingers are about 1/16 by 1/4 inch). On the front of the machine is a large lid, which is open. closed.",
-      "audio": "assets/audio/machine-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/machine-room.webp",
         "retro_pixel": "assets/images/retro_pixel/machine-room.webp",
@@ -1025,7 +985,6 @@
       "room": "MINE-1",
       "region": "underground",
       "narration": "This is a nondescript part of a coal mine.",
-      "audio": "assets/audio/coal-mine.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/coal-mine.webp",
         "retro_pixel": "assets/images/retro_pixel/coal-mine.webp",
@@ -1038,7 +997,6 @@
       "room": "SLIDE-ROOM",
       "region": "underground",
       "narration": "This is a small chamber, which appears to have been part of a coal mine. On the south wall of the chamber the letters",
-      "audio": "assets/audio/slide-room.mp3",
       "images": {
         "ink_engraving": "assets/images/ink_engraving/slide-room.webp",
         "retro_pixel": "assets/images/retro_pixel/slide-room.webp",

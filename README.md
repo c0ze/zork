@@ -42,10 +42,9 @@ web/                           <-- the publishable static site
    batch (`gemini-2.5-flash-image`), polls (resumable), and writes
    `web/assets/zork1/images/<style>/<slug>.webp`. Regenerate just-changed scenes
    with e.g. `--only west-of-house,behind-house --new --overwrite`.
-3. **Narration:** the runtime synthesizes each scene's text live via your TTS
-   server (`POST /tts {text, voice}`) in the voice the player selects (dropdown
-   from `/voices`, English only). Optional pre-baked fallbacks can live at
-   `web/assets/zork1/audio/<slug>.<ext>`.
+3. **Narration:** `python scripts/build_audio.py` pre-bakes every scene in each
+   curated voice (`voices.yaml`) via your TTS server (server-side; token in `.env`)
+   to `web/<game>/assets/audio/<voice>/<slug>.mp3`. No token reaches the browser.
 4. **Manifest:** `python scripts/build_manifest.py` regenerates `web/manifest.json`
    (includes the narration text the runtime sends to the TTS server).
 
@@ -61,22 +60,20 @@ Use the Style selector (or `?style=retro_pixel`) to compare looks.
 
 ## Runtime — how scene sync works
 
-`zork1.z3` → Parchment (Bocfel/WASM) renders into `#gameport`/`#windowport` →
-`app.js` reads the current room from GlkOte's `.GridWindow` status line → looks it
-up in `manifest.json` → swaps the scene image and narrates it (first visit only).
-Narration is synthesized live from your TTS server in the player-selected voice
-(`/voices`, English only), with pre-baked files as fallback. No browser speech
-synthesis.
+`zork1.z3` runs in a same-origin iframe (`play.html`) via Parchment (Bocfel/WASM).
+`app.js` reads the current room by matching the game buffer against known scene
+names → looks it up in `manifest.json` → swaps the scene image, region music, and
+narration (first visit). Narration is pre-baked per voice (static MP3s under
+`assets/audio/<voice>/`); the Voice picker switches voice and re-reads the room —
+no browser token.
 
 **Music:** each scene's `region` maps to a 2-track playlist in `manifest.json`
 (`web/assets/zork1/music/<section>-{1,2}.mp3`); the two tracks play successively
 and loop while you remain in that region. Music and narration each have an on/off
 toggle and a volume slider. WAV masters are gitignored; web-optimized MP3s ship.
 
-**TTS config:** copy `web/config.example.js` to `web/config.js` (gitignored) and
-set `ttsBase` + `ttsToken`. ⚠️ The token ships to the browser — fine for local or
-private use, but for a PUBLIC deploy proxy the TTS server or pre-bake the audio so
-the token stays secret.
+**Voices:** the 8 curated narration voices are defined in `voices.yaml`. Re-bake any
+with `python scripts/build_audio.py --voice <key> --overwrite`.
 
 ### Wiring the interpreter (next step)
 
