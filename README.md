@@ -6,10 +6,12 @@ site (GitHub Pages) — no backend, no API keys at runtime.
 
 ## Status
 
+- **Live at [zork.coze.org](https://zork.coze.org):** **Zork I** and **Zork II** — both fully
+  playable, illustrated (4 art styles), narrated (8 voices), and scored with regional music.
+- **Planned:** Zork III.
 - **Sources** (`sources/`, reference only): Zork I/II/III (MIT, 2025) + Colossal Cave (Unlicense).
-- **First target:** Zork I "opening" vertical slice — 6 scenes, 4 candidate art styles.
-- **Done:** scene/text extraction, style bibles, Gemini batch image generator, static web shell.
-- **Next:** choose the art style, wire the Parchment interpreter, extend to the full map.
+- Per game: full-map scene/text extraction → Gemini batch art → pre-baked TTS narration →
+  regional music → a static Parchment web shell with per-turn autosave / restart / death-reset.
 
 ## Layout
 

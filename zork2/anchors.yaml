@@ -1,0 +1,57 @@
+# Recurring entities to keep visually consistent across Zork II scenes
+# ("The Wizard of Frobozz").
+#
+# Workflow: generate_images.py injects these descriptions into any scene prompt
+# whose `anchors:` list names them (see scene_anchors in extract_scenes.py and the
+# hand-authored opening.yaml). Generate reference images first if you later want to
+# feed them back as true visual-lock reference inputs.
+
+anchors:
+  wizard-of-frobozz:
+    description: >
+      A tall, gaunt old wizard with a long white beard and a tall conical hat,
+      wrapped in flowing dark robes embroidered with faded arcane sigils. He
+      grips a slender ebony wand and wears a theatrical, slightly unhinged
+      expression — the fallen court magician of the Great Underground Empire,
+      his once-great powers now erratic and absurd.
+  demon:
+    description: >
+      A colossal demon conjured from smoke and shadow: towering and muscular
+      with dark crimson skin, great curling horns, smouldering eyes and vast
+      ribbed leathery wings; an aura of immense, barely-bound power.
+  dragon:
+    description: >
+      A huge red dragon with glinting overlapping scales, folded membranous
+      wings, smoking nostrils and cruel, intelligent eyes, coiled amid the
+      scorched stone of its lair; immense, ancient and dangerous.
+  unicorn:
+    description: >
+      A graceful white unicorn with a single spiralling horn, a flowing silver
+      mane and tail, stepping delicately among the clipped green hedges of a
+      formal garden; serene and faintly luminous, a small delicate gold key
+      hanging at its throat.
+  princess:
+    description: >
+      A beautiful young princess in a flowing medieval gown with long loose
+      hair and a quiet, regal bearing, at home among the roses and hedges of an
+      enchanted formal garden.
+  cerberus:
+    description: >
+      A massive three-headed dog, its three snarling heads on thick necks,
+      matted dark fur, bared fangs and burning eyes, set as a guardian before
+      the marble entrance of a crypt; fearsome and watchful.
+  menhir:
+    description: >
+      An enormous standing stone — a single colossal weathered grey monolith,
+      far too vast to shift by ordinary strength, looming over the floor of a
+      quarried cavern.
+  robot:
+    description: >
+      A boxy humanoid automaton of riveted iron and tarnished brass plates,
+      with a blocky head, round glowing lens-eyes and heavy clanking limbs; an
+      obedient, antique mechanical servant.
+  sea-serpent:
+    description: >
+      A long sinuous sea serpent with glistening blue-green scales and a finned
+      crest, coiling in the dark water of a stone aquarium; sleek, alien and
+      dangerous.

@@ -1,0 +1,313 @@
+game: zork2
+slice: opening
+aspect: "16:9"
+default_region: underground
+
+# Hand-authored fixes merged verbatim into zork2.yaml by extract_scenes.py (keyed
+# by `id`). These rooms take their text from ZIL *action routines*, whose M-LOOK
+# branch concatenates conditional/endgame strings into nonsense; here each is
+# trimmed back to the faithful first-visit description.
+#
+# scene_description = first-visit room text -> fed to TTS (narration).
+# scene_core        = style-agnostic image content; the script prepends a style bible.
+# anchors           = recurring entities (anchors.yaml) injected for visual consistency.
+# region            = music section (above_ground | underground | peril | wonder | dread).
+
+scenes:
+  - id: "Crypt Anteroom"
+    room: CRYPT-ANTEROOM
+    slug: crypt-anteroom
+    region: dread
+    anchors: []
+    scene_description: >
+      The anteroom is large and empty. Marble bas-reliefs depict the stirring
+      times and afterlife of the Flatheads (the latter a bit optimistically).
+      The exit is to the west. A huge marble door stands to the south, and above
+      it is carved a cryptic inscription.
+    scene_core: >
+      A large, empty marble anteroom; the walls covered in elaborate carved
+      bas-reliefs of robed Flathead kings and their imagined afterlife; a single
+      passage west; a huge marble door in the south wall with a worn inscription
+      carved above it; cold, solemn, dimly lit.
+
+  - id: "Crypt"
+    room: CRYPT-ROOM
+    slug: crypt
+    region: dread
+    anchors: []
+    scene_description: >
+      The room contains the earthly remains of the mighty Flatheads — twelve
+      conspicuously flat heads mounted securely on poles. Though one might expect
+      funerary urns or other relics of the ancient Zorkers, the crypt is empty of
+      all such things. Writing is carved on the wall, and the only apparent exit
+      is north, through the door to the anteroom.
+    scene_core: >
+      A solemn stone burial crypt; a row of twelve poles each bearing a
+      grotesquely flat mummified head; the chamber otherwise bare of urns or
+      grave-goods; faint inscriptions carved into the far wall; a door leading
+      north; sepulchral, eerie, dim.
+
+  - id: "Landing"
+    room: ZORK3
+    slug: landing
+    region: dread
+    anchors: []
+    scene_description: >
+      Beyond the door, a roughly hewn staircase leads down into darkness. The
+      landing on which you stand is covered with carefully drawn magical runes,
+      like those sketched on the workbench of the Wizard of Frobozz. They have
+      been overlaid with sweeping green lines of enormous power that undulate
+      slowly back and forth across the stone.
+    scene_core: >
+      The top of a rough-hewn stone staircase descending into pitch darkness; the
+      broad stone landing inscribed with intricate magical runes, overlaid by
+      sweeping luminous green lines of power that ripple across the floor; charged,
+      ominous, on the threshold of something vast.
+
+  - id: "Guarded Room"
+    room: GUARDIAN-ROOM
+    slug: guarded-room
+    region: peril
+    anchors: []
+    scene_description: >
+      This room is cobwebby and musty, but tracks in the dust show that it has
+      seen visitors recently. At the south end stands a stained and battered — but
+      very strong-looking — door, and a corridor exits to the north. Embedded in
+      the door is a nasty-looking lizard head, with sharp teeth and beady eyes
+      that follow you.
+    scene_core: >
+      A cobwebbed, musty stone chamber with fresh tracks disturbing the dust; a
+      massive battered iron-bound door at the south end; embedded in that door a
+      snarling reptilian lizard head with sharp teeth and beady, watchful eyes; a
+      dark corridor leading north; tense and menacing.
+
+  - id: "Wizard's Quarters"
+    room: WIZARDS-QUARTERS
+    slug: wizard-s-quarters
+    region: wonder
+    anchors: [wizard-of-frobozz]
+    scene_description: >
+      This is where the Wizard of Frobozz lives. The room is sparsely furnished
+      and almost monkish in its austerity; the only furniture is a hammock. It is
+      said to wear a different aspect each time it is seen.
+    scene_core: >
+      The austere private chamber of the Wizard of Frobozz; bare stone walls,
+      spartan and monkish; a single hammock slung across the room; an air of
+      faded, eccentric magic; dim and quiet.
+
+  - id: "Carousel Room"
+    room: CAROUSEL-ROOM
+    slug: carousel-room
+    region: peril
+    anchors: []
+    scene_description: >
+      You are in a large circular room whose high ceiling is lost in gloom. Eight
+      identical passages leave the room. A loud whirring sound comes from all
+      around, and you feel strangely disoriented here.
+    scene_core: >
+      A vast circular chamber, its high ceiling vanishing into gloom; eight
+      identical dark passages radiating outward at even intervals around the
+      walls; a sense of unseen heavy machinery whirring beneath the floor;
+      vertiginous and disorienting, dim.
+
+  - id: "Riddle Room"
+    room: RIDDLE-ROOM
+    slug: riddle-room
+    region: wonder
+    anchors: []
+    scene_description: >
+      This is a room bare on all sides. An exit leads down from the northwest
+      corner. To the east stands a great closed stone door, and into the stone
+      above it words have been carved.
+    scene_core: >
+      A bare, austere stone chamber; a dark exit descending in the northwest
+      corner; in the east wall a great closed door of solid stone with weathered
+      carved markings above it; puzzling, silent, dim.
+
+  - id: "Wide Ledge"
+    room: LEDGE-2
+    slug: wide-ledge
+    region: peril
+    anchors: []
+    scene_description: >
+      You are on a wide ledge high in the volcano. The rim is about two hundred
+      feet above, and there is a precipitous drop to the bottom. The way south is
+      blocked by rubble, but a small door is set into the rock there.
+    scene_core: >
+      A wide rocky ledge high on the inner wall of an enormous dormant volcano;
+      the distant rim far overhead and a dizzying drop into shadow below; a fall
+      of rubble blocking the way south; a small stone door set into the cliff;
+      vast scale, warm volcanic gloom.
+
+  - id: "Dusty Room"
+    room: SAFE-ROOM
+    slug: dusty-room
+    region: dread
+    anchors: []
+    scene_description: >
+      You are in a dusty old room, featureless except for an exit on the north
+      side. Embedded in the far wall is a rusty box; it appears somewhat damaged,
+      an oblong hole chipped out of the front of it.
+    scene_core: >
+      A featureless, dust-choked old chamber; a single exit to the north;
+      embedded in the far wall a heavy rusted metal box with a ragged oblong hole
+      chipped out of its front; still, abandoned, dim.
+
+  - id: "Low Room"
+    room: MAGNET-ROOM
+    slug: low-room
+    region: underground
+    anchors: []
+    scene_description: >
+      You are in a circular room with a low ceiling. There are exits to the east
+      and southeast. The air here carries a strange charge: powerful, rapidly
+      shifting magnetic fields fill the room, and any compass brought inside
+      spins wildly.
+    scene_core: >
+      A low-ceilinged circular stone chamber; rough exits to the east and
+      southeast; a faint metallic shimmer to the air and whorls of iron grit
+      clinging to the walls, hinting at unseen magnetic force; close, oppressive,
+      dim.
+
+  - id: "West Teller's Room"
+    room: TELLER-WEST
+    slug: west-teller-s-room
+    region: wonder
+    anchors: []
+    scene_description: >
+      You are in a small room once used by a bank officer who retrieved safety
+      deposit boxes for customers. On the east side of the room, above an open
+      door, hangs a small sign reserving the way beyond for bank personnel.
+    scene_core: >
+      A small, austere bank officer's room in the marble Bank of Zork; a worn
+      wooden counter where safety deposit boxes were once handed across; an open
+      door in the east wall beneath a small blank plaque; faded institutional
+      grandeur, dim.
+
+  - id: "East Teller's Room"
+    room: TELLER-EAST
+    slug: east-teller-s-room
+    region: wonder
+    anchors: []
+    scene_description: >
+      You are in a small room once used by a bank officer who retrieved safety
+      deposit boxes for customers. On the west side of the room, above an open
+      door, hangs a small sign reserving the way beyond for bank personnel.
+    scene_core: >
+      A small, austere bank officer's room in the marble Bank of Zork; a worn
+      wooden counter where safety deposit boxes were once handed across; an open
+      door in the west wall beneath a small blank plaque; faded institutional
+      grandeur, dim.
+
+  - id: "West Viewing Room"
+    room: VIEWING-WEST
+    slug: west-viewing-room
+    region: wonder
+    anchors: []
+    scene_description: >
+      This room was used by holders of safety deposit boxes to view their
+      contents in private. On the north side of the room hangs a small sign.
+    scene_core: >
+      A small, private marble viewing room in the Bank of Zork; a plain stone
+      viewing table at its center; a small blank plaque mounted on the north
+      wall; hushed, austere, dim.
+
+  - id: "East Viewing Room"
+    room: VIEWING-EAST
+    slug: east-viewing-room
+    region: wonder
+    anchors: []
+    scene_description: >
+      This room was used by holders of safety deposit boxes to view their
+      contents in private. On the north side of the room hangs a small sign.
+    scene_core: >
+      A small, private marble viewing room in the Bank of Zork; a plain stone
+      viewing table at its center; a small blank plaque mounted on the north
+      wall; hushed, austere, dim.
+
+  - id: "Dreary Room"
+    room: DREARY-ROOM
+    slug: dreary-room
+    region: dread
+    anchors: []
+    scene_description: >
+      This is a small and rather dreary room, eerily illuminated by a red glow
+      that emanates from a crack in one wall. The light falls upon a dusty wooden
+      table in the center of the room.
+    scene_core: >
+      A small, dreary stone room lit only by an eerie red glow seeping from a
+      jagged crack in one wall; the red light falling across a dusty wooden table
+      at the room's center; oppressive, shadowed, still.
+
+  - id: "Tiny Room"
+    room: TINY-ROOM
+    slug: tiny-room
+    region: underground
+    anchors: []
+    scene_description: >
+      This is a tiny room carved out of the wall of the ravine. The only exit is
+      down, by way of a precarious climb.
+    scene_core: >
+      A tiny niche of a room hewn from the rock wall of a deep ravine; its open
+      lip giving onto a precarious climbing descent into shadow; cramped,
+      vertiginous, dim.
+
+  - id: "Room of Red Mist"
+    room: DEAD-PALANTIR-1
+    slug: room-of-red-mist
+    region: dread
+    anchors: []
+    scene_description: >
+      You are inside a huge crystalline sphere filled with thin red mist. Ghostly,
+      blurred shapes of distant rooms shift and swim beyond the curving glass
+      walls, always just too indistinct to make out.
+    scene_core: >
+      The interior of an enormous crystalline sphere filled with swirling thin red
+      mist; through the curved glass walls drift ghostly, blurred glimpses of
+      far-off rooms, too vague to read; dreamlike and claustrophobic, lit by a
+      deep red glow.
+
+  - id: "Room of Blue Mist"
+    room: DEAD-PALANTIR-2
+    slug: room-of-blue-mist
+    region: dread
+    anchors: []
+    scene_description: >
+      You are inside a huge crystalline sphere filled with thin blue mist. Ghostly,
+      blurred shapes of distant rooms shift and swim beyond the curving glass
+      walls, always just too indistinct to make out.
+    scene_core: >
+      The interior of an enormous crystalline sphere filled with swirling thin
+      blue mist; through the curved glass walls drift ghostly, blurred glimpses of
+      far-off rooms, too vague to read; dreamlike and claustrophobic, lit by a
+      cold blue glow.
+
+  - id: "Room of White Mist"
+    room: DEAD-PALANTIR-3
+    slug: room-of-white-mist
+    region: dread
+    anchors: []
+    scene_description: >
+      You are inside a huge crystalline sphere filled with thin white mist.
+      Ghostly, blurred shapes of distant rooms shift and swim beyond the curving
+      glass walls, always just too indistinct to make out.
+    scene_core: >
+      The interior of an enormous crystalline sphere filled with swirling thin
+      white mist; through the curved glass walls drift ghostly, blurred glimpses
+      of far-off rooms, too vague to read; dreamlike and claustrophobic, a pale,
+      milky white glow verging on whiteout.
+
+  - id: "Room of Black Mist"
+    room: DEAD-PALANTIR-4
+    slug: room-of-black-mist
+    region: dread
+    anchors: []
+    scene_description: >
+      You are inside a huge crystalline sphere filled with thin black mist.
+      Ghostly, blurred shapes of distant rooms shift and swim beyond the curving
+      glass walls, always just too indistinct to make out.
+    scene_core: >
+      The interior of an enormous crystalline sphere filled with swirling thin
+      black mist; through the curved glass walls, faint blurred shapes of far-off
+      rooms are barely visible in the gloom; dreamlike and claustrophobic, a
+      near-darkness of black haze.

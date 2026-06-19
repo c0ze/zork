@@ -1,0 +1,1104 @@
+game: zork2
+default_region: underground
+start_room: Inside the Barrow
+scenes:
+- id: Inside the Barrow
+  room: INSIDE-BARROW
+  rooms:
+  - INSIDE-BARROW
+  slug: inside-the-barrow
+  region: above_ground
+  anchors: []
+  scene_description: You are inside an ancient barrow hidden deep within a dark forest. The
+    barrow opens into a narrow tunnel at its southern end. You can see a faint glow at the far
+    end.
+  scene_core: You are inside an ancient barrow hidden deep within a dark forest. The barrow
+    opens into a narrow tunnel at its southern end. You can see a faint glow at the far end.
+- id: Narrow Tunnel
+  room: NARROW-TUNNEL
+  rooms:
+  - NARROW-TUNNEL
+  slug: narrow-tunnel
+  region: underground
+  anchors: []
+  scene_description: You are standing at the southern end of a narrow tunnel where it opens
+    into a wide cavern. The cavern is dimly illuminated by phosphorescent mosses clinging to
+    its high ceiling. A deep ravine winds through the cavern, with a small stream at the bottom.
+    The walls of the ravine are steep and crumbly. A foot bridge crosses the ravine to the south.
+  scene_core: You are standing at the southern end of a narrow tunnel where it opens into a
+    wide cavern. The cavern is dimly illuminated by phosphorescent mosses clinging to its high
+    ceiling. A deep ravine winds through the cavern, with a small stream at the bottom. The
+    walls of the ravine are steep and crumbly. A foot bridge crosses the ravine to the south.
+- id: Foot Bridge
+  room: FOOT-BRIDGE
+  rooms:
+  - FOOT-BRIDGE
+  slug: foot-bridge
+  region: underground
+  anchors: []
+  scene_description: You are standing on a crude but sturdy wooden foot bridge crossing a deep
+    ravine. The path runs north and south from here.
+  scene_core: You are standing on a crude but sturdy wooden foot bridge crossing a deep ravine.
+    The path runs north and south from here.
+- id: Great Cavern
+  room: GREAT-CAVERN
+  rooms:
+  - GREAT-CAVERN
+  slug: great-cavern
+  region: underground
+  anchors: []
+  scene_description: This is the center of the great cavern, carved out of the limestone. Stalactites
+    and stalagmites of many sizes are everywhere. The room glows with dim light provided by
+    phosphorescent moss, and weird shadows move all around you. A narrow path winds southwest
+    among the stalagmites, and another leads northeast.
+  scene_core: This is the center of the great cavern, carved out of the limestone. Stalactites
+    and stalagmites of many sizes are everywhere. The room glows with dim light provided by
+    phosphorescent moss, and weird shadows move all around you. A narrow path winds southwest
+    among the stalagmites, and another leads northeast.
+- id: Shallow Ford
+  room: SHALLOW-FORD
+  rooms:
+  - SHALLOW-FORD
+  slug: shallow-ford
+  region: underground
+  anchors: []
+  scene_description: You are at the southern edge of a great cavern. To the south across a shallow
+    ford is a dark tunnel which looks like it was once enlarged and smoothed. To the north a
+    narrow path winds among stalagmites. Dim light illuminates the cavern.
+  scene_core: You are at the southern edge of a great cavern. To the south across a shallow
+    ford is a dark tunnel which looks like it was once enlarged and smoothed. To the north a
+    narrow path winds among stalagmites. Dim light illuminates the cavern.
+- id: Dark Tunnel
+  room: DARK-TUNNEL
+  rooms:
+  - DARK-TUNNEL
+  slug: dark-tunnel
+  region: dread
+  anchors: []
+  scene_description: This is a dark tunnel with dim light to the northeast. The tunnel is smooth
+    but dusty and filled with twigs and leaves, debris which becomes deeper as the tunnel branches
+    into a wide corridor leading southwest and a narrower one leading southeast.
+  scene_core: This is a dark tunnel with dim light to the northeast. The tunnel is smooth but
+    dusty and filled with twigs and leaves, debris which becomes deeper as the tunnel branches
+    into a wide corridor leading southwest and a narrower one leading southeast.
+- id: North End of Garden
+  room: GARDEN-NORTH
+  rooms:
+  - GARDEN-NORTH
+  slug: north-end-of-garden
+  region: above_ground
+  anchors:
+  - unicorn
+  scene_description: This is the northern end of a formal garden. Hedges hide the cavern walls,
+    and if you don't look up, the illusion is of a cloudy day outside. The light comes from
+    a large growth of glowing mosses on the roof of the cave. A break in the hedge is almost
+    overgrown to the north. A carefully manicured path leads south. In the center of a rosebed
+    is a small open structure, painted white. It appears to be a gazebo.
+  scene_core: This is the northern end of a formal garden. Hedges hide the cavern walls, and
+    if you don't look up, the illusion is of a cloudy day outside. The light comes from a large
+    growth of glowing mosses on the roof of the cave. A break in the hedge is almost overgrown
+    to the north. A carefully manicured path leads south. In the center of a rosebed is a small
+    open structure, painted white. It appears to be a gazebo.
+- id: Gazebo
+  room: GAZEBO-ROOM
+  rooms:
+  - GAZEBO-ROOM
+  slug: gazebo
+  region: above_ground
+  anchors: []
+  scene_description: This is a gazebo in the midst of a formal garden. It is cool and restful
+    here. A tea table adorns the center of the gazebo.
+  scene_core: This is a gazebo in the midst of a formal garden. It is cool and restful here.
+    A tea table adorns the center of the gazebo.
+- id: Formal Garden
+  room: FORMAL-GARDEN
+  rooms:
+  - FORMAL-GARDEN
+  slug: formal-garden
+  region: above_ground
+  anchors:
+  - unicorn
+  - princess
+  scene_description: This is the middle part of a formal garden. Hedges hide the cavern walls
+    and a dim illumination comes from mosses far above. The path is of small crushed white stones.
+    It winds among bushes and flower beds from south to north. To the north a small structure
+    can be seen. To the south are peculiarly shaped bushes. There is a small gap in the hedges
+    to the west.
+  scene_core: This is the middle part of a formal garden. Hedges hide the cavern walls and a
+    dim illumination comes from mosses far above. The path is of small crushed white stones.
+    It winds among bushes and flower beds from south to north. To the north a small structure
+    can be seen. To the south are peculiarly shaped bushes. There is a small gap in the hedges
+    to the west.
+- id: Topiary
+  room: TOPIARY-ROOM
+  rooms:
+  - TOPIARY-ROOM
+  slug: topiary
+  region: above_ground
+  anchors:
+  - unicorn
+  scene_description: 'This is the southern end of a formal garden. Hedges hide the cavern walls
+    and mosses provide dim illumination. Fantastically shaped hedges and bushes are arrayed
+    with geometric precision. They have not recently been clipped, but you can discern creatures
+    in the shapes of the bushes: There is a dragon, a unicorn, a great serpent, a huge misshapen
+    dog, and several human figures. On the west side of the garden the path leads through a
+    rose arbor into a tunnel.'
+  scene_core: 'This is the southern end of a formal garden. Hedges hide the cavern walls and
+    mosses provide dim illumination. Fantastically shaped hedges and bushes are arrayed with
+    geometric precision. They have not recently been clipped, but you can discern creatures
+    in the shapes of the bushes: There is a dragon, a unicorn, a great serpent, a huge misshapen
+    dog, and several human figures. On the west side of the garden the path leads through a
+    rose arbor into a tunnel.'
+- id: Path Near Stream
+  room: STREAM-PATH
+  rooms:
+  - STREAM-PATH
+  slug: path-near-stream
+  region: underground
+  anchors: []
+  scene_description: The path follows the south edge of a deep ravine and heads northeast. A
+    tunnel heads southwest, narrowing to a rather tight crawl. A faint whirring sound can be
+    heard in that direction. On the east is a ruined archway choked with vegetation.
+  scene_core: The path follows the south edge of a deep ravine and heads northeast. A tunnel
+    heads southwest, narrowing to a rather tight crawl. A faint whirring sound can be heard
+    in that direction. On the east is a ruined archway choked with vegetation.
+- id: Marble Hall
+  room: MARBLE-HALL
+  rooms:
+  - MARBLE-HALL
+  slug: marble-hall
+  region: wonder
+  anchors: []
+  scene_description: This is an arched hall of fine marble. The hall stops abruptly to the north
+    at a ford across a stream, where the marble is cracked and broken. Perhaps a flood or collapse
+    of the cave was responsible. To the south the hall opens into a large room. There is rather
+    annoying whirring sound coming from that room.
+  scene_core: This is an arched hall of fine marble. The hall stops abruptly to the north at
+    a ford across a stream, where the marble is cracked and broken. Perhaps a flood or collapse
+    of the cave was responsible. To the south the hall opens into a large room. There is rather
+    annoying whirring sound coming from that room.
+- id: Deep Ford
+  room: DEEP-FORD
+  rooms:
+  - DEEP-FORD
+  slug: deep-ford
+  region: underground
+  anchors: []
+  scene_description: You are fording the stream at a deep but not impossible spot. The water
+    is very cold. The walls of the ravine rise to east and west. There is a small ledge along
+    the north wall of the ravine. To the south is the entrance to a well-constructed but somewhat
+    ruined hall.
+  scene_core: You are fording the stream at a deep but not impossible spot. The water is very
+    cold. The walls of the ravine rise to east and west. There is a small ledge along the north
+    wall of the ravine. To the south is the entrance to a well-constructed but somewhat ruined
+    hall.
+- id: Ledge in Ravine
+  room: RAVINE-LEDGE
+  rooms:
+  - RAVINE-LEDGE
+  slug: ledge-in-ravine
+  region: underground
+  anchors: []
+  scene_description: You are on a narrow ledge near the bottom of a deep ravine. The ledge continues
+    to the west. A precarious climb up to another tiny ledge is possible. A short scramble down
+    the rock face leads to a stream.
+  scene_core: You are on a narrow ledge near the bottom of a deep ravine. The ledge continues
+    to the west. A precarious climb up to another tiny ledge is possible. A short scramble down
+    the rock face leads to a stream.
+- id: End of Ledge
+  room: LEDGE-TUNNEL
+  rooms:
+  - LEDGE-TUNNEL
+  slug: end-of-ledge
+  region: underground
+  anchors: []
+  scene_description: A ledge from the east ends here, and a tunnel leads north into the wall.
+    There is a rather odd smokey odor in the warm air of the tunnel.
+  scene_core: A ledge from the east ends here, and a tunnel leads north into the wall. There
+    is a rather odd smokey odor in the warm air of the tunnel.
+- id: Dragon Room
+  room: DRAGON-ROOM
+  rooms:
+  - DRAGON-ROOM
+  slug: dragon-room
+  region: peril
+  anchors:
+  - dragon
+  scene_description: The room is a large cavern full of broken stone. The walls are scorched
+    and there are deep scratches on the floor. A sooty dry smell is very strong here. A paved
+    path winds from a large passage to the west, through the room, and across a huge stone bridge
+    to the south. To the east a small crack is visible. A dark and smokey tunnel leads north.
+  scene_core: The room is a large cavern full of broken stone. The walls are scorched and there
+    are deep scratches on the floor. A sooty dry smell is very strong here. A paved path winds
+    from a large passage to the west, through the room, and across a huge stone bridge to the
+    south. To the east a small crack is visible. A dark and smokey tunnel leads north.
+- id: Dragon's Lair
+  room: DRAGON-LAIR
+  rooms:
+  - DRAGON-LAIR
+  slug: dragon-s-lair
+  region: peril
+  anchors:
+  - dragon
+  scene_description: You are in the dragon's lair, where the rock walls are scarred by flame.
+    A blackened doorway leads to the south.
+  scene_core: You are in the dragon's lair, where the rock walls are scarred by flame. A blackened
+    doorway leads to the south.
+- id: Fresco Room
+  room: FRESCO-ROOM
+  rooms:
+  - FRESCO-ROOM
+  slug: fresco-room
+  region: wonder
+  anchors: []
+  scene_description: A path leads east-west through a room decorated with beautiful frescoes
+    of someone battling dragons and rescuing fair maidens. It is hard to tell who is doing this
+    as those parts of the frescoes have been blackened and cracked by intense heat.
+  scene_core: A path leads east-west through a room decorated with beautiful frescoes of someone
+    battling dragons and rescuing fair maidens. It is hard to tell who is doing this as those
+    parts of the frescoes have been blackened and cracked by intense heat.
+- id: Stone Bridge
+  room: STONE-BRIDGE
+  rooms:
+  - STONE-BRIDGE
+  slug: stone-bridge
+  region: above_ground
+  anchors: []
+  scene_description: This is the middle of a ruined but still impressive stone bridge spanning
+    a deep chasm. Water flows far beneath. A paved path leads north into a large open space.
+    To the south, the path leads into a misty tunnel.
+  scene_core: This is the middle of a ruined but still impressive stone bridge spanning a deep
+    chasm. Water flows far beneath. A paved path leads north into a large open space. To the
+    south, the path leads into a misty tunnel.
+- id: Cool Room
+  room: COOL-ROOM
+  rooms:
+  - COOL-ROOM
+  slug: cool-room
+  region: dread
+  anchors: []
+  scene_description: The room is cool and damp. The air is misty. A twisty path from the southeast
+    splits here toward a wide northerly stone bridge, and a narrow westerly tunnel. It is from
+    the latter that the mist and chill seem to originate.
+  scene_core: The room is cool and damp. The air is misty. A twisty path from the southeast
+    splits here toward a wide northerly stone bridge, and a narrow westerly tunnel. It is from
+    the latter that the mist and chill seem to originate.
+- id: Ice Room
+  room: GLACIER-ROOM
+  rooms:
+  - GLACIER-ROOM
+  slug: ice-room
+  region: dread
+  anchors: []
+  scene_description: This is a large hall of ancient lava, since worn smooth by the movement
+    of a glacier. A large passage exits to the east and an upward lava tube is at the top of
+    a jumble of fallen rocks. A damp and scorched passage leads west. It is still partly full
+    of steam.
+  scene_core: This is a large hall of ancient lava, since worn smooth by the movement of a glacier.
+    A large passage exits to the east and an upward lava tube is at the top of a jumble of fallen
+    rocks. A damp and scorched passage leads west. It is still partly full of steam.
+- id: Lava Tube
+  room: LAVA-TUBE
+  rooms:
+  - LAVA-TUBE
+  slug: lava-tube
+  region: peril
+  anchors: []
+  scene_description: You are in a tight chimney of solidified lava. It extends up at least another
+    hundred feet and down to a large room far below. A large crack opens to the south, probably
+    the result of a shift in the rock strata.
+  scene_core: You are in a tight chimney of solidified lava. It extends up at least another
+    hundred feet and down to a large room far below. A large crack opens to the south, probably
+    the result of a shift in the rock strata.
+- id: Cobwebby Corridor
+  room: COBWEBBY-CORRIDOR
+  rooms:
+  - COBWEBBY-CORRIDOR
+  slug: cobwebby-corridor
+  region: dread
+  anchors: []
+  scene_description: A winding corridor is filled with cobwebs. Some are broken and the dust
+    on the floor is disturbed. The trend of the twists and turns is northeast to southwest.
+    On the north side of one twist, high up, is a narrow crack.
+  scene_core: A winding corridor is filled with cobwebs. Some are broken and the dust on the
+    floor is disturbed. The trend of the twists and turns is northeast to southwest. On the
+    north side of one twist, high up, is a narrow crack.
+- id: Room 8
+  room: ROOM-8
+  rooms:
+  - ROOM-8
+  slug: room-8
+  region: underground
+  anchors: []
+  scene_description: This is a small chamber carved out of the rock at the end of a short crawl.
+    On the wall is crudely chiseled the number
+  scene_core: This is a small chamber carved out of the rock at the end of a short crawl. On
+    the wall is crudely chiseled the number
+- id: Menhir Room
+  room: MENHIR-ROOM
+  rooms:
+  - MENHIR-ROOM
+  slug: menhir-room
+  region: peril
+  anchors:
+  - menhir
+  scene_description: This is a large room which was evidently used once as a quarry. Many large
+    limestone chunks lie helter-skelter around the room. Some are rough-hewn and unworked, others
+    smooth and well-finished. One side of the room appears to have been used to quarry building
+    blocks, the other to produce menhirs (standing stones). Obvious passages lead north and
+    south.
+  scene_core: This is a large room which was evidently used once as a quarry. Many large limestone
+    chunks lie helter-skelter around the room. Some are rough-hewn and unworked, others smooth
+    and well-finished. One side of the room appears to have been used to quarry building blocks,
+    the other to produce menhirs (standing stones). Obvious passages lead north and south.
+- id: Kennel
+  room: KENNEL
+  rooms:
+  - KENNEL
+  slug: kennel
+  region: dread
+  anchors: []
+  scene_description: This room looks like it was once a kennel for a very large dog (some of
+    the bones would fit a dinosaur). It apparently hasn't been used for a long time, as the
+    dust is fairly thick all over. The only exit is northeast.
+  scene_core: This room looks like it was once a kennel for a very large dog (some of the bones
+    would fit a dinosaur). It apparently hasn't been used for a long time, as the dust is fairly
+    thick all over. The only exit is northeast.
+- id: Stairway
+  room: STAIRWAY-TOP
+  rooms:
+  - STAIRWAY-TOP
+  slug: stairway
+  region: underground
+  anchors: []
+  scene_description: A marble stairway leads down into the gloom and a passage leads north.
+  scene_core: A marble stairway leads down into the gloom and a passage leads north.
+- id: Oddly-angled Room
+  room: DIAMOND-1
+  rooms:
+  - DIAMOND-1
+  - DIAMOND-2
+  - DIAMOND-3
+  - DIAMOND-4
+  - DIAMOND-5
+  - DIAMOND-6
+  - DIAMOND-7
+  - DIAMOND-8
+  - DIAMOND-9
+  slug: oddly-angled-room
+  region: underground
+  anchors: []
+  scene_description: A small room with oddly angled walls and passages in all directions.
+  scene_core: A small room with oddly angled walls and passages in all directions.
+- id: Cerberus Room
+  room: CERBERUS-ROOM
+  rooms:
+  - CERBERUS-ROOM
+  slug: cerberus-room
+  region: peril
+  anchors:
+  - cerberus
+  scene_description: This is the entrance to a huge crypt or tomb. A marble stairway leads up
+    from a gateway arch.
+  scene_core: This is the entrance to a huge crypt or tomb. A marble stairway leads up from
+    a gateway arch.
+- id: Crypt Anteroom
+  room: CRYPT-ANTEROOM
+  slug: crypt-anteroom
+  region: dread
+  anchors: []
+  scene_description: 'The anteroom is large and empty. Marble bas-reliefs depict the stirring
+    times and afterlife of the Flatheads (the latter a bit optimistically). The exit is to the
+    west. A huge marble door stands to the south, and above it is carved a cryptic inscription.
+
+    '
+  scene_core: 'A large, empty marble anteroom; the walls covered in elaborate carved bas-reliefs
+    of robed Flathead kings and their imagined afterlife; a single passage west; a huge marble
+    door in the south wall with a worn inscription carved above it; cold, solemn, dimly lit.
+
+    '
+  rooms:
+  - CRYPT-ANTEROOM
+- id: Crypt
+  room: CRYPT-ROOM
+  slug: crypt
+  region: dread
+  anchors: []
+  scene_description: 'The room contains the earthly remains of the mighty Flatheads — twelve
+    conspicuously flat heads mounted securely on poles. Though one might expect funerary urns
+    or other relics of the ancient Zorkers, the crypt is empty of all such things. Writing is
+    carved on the wall, and the only apparent exit is north, through the door to the anteroom.
+
+    '
+  scene_core: 'A solemn stone burial crypt; a row of twelve poles each bearing a grotesquely
+    flat mummified head; the chamber otherwise bare of urns or grave-goods; faint inscriptions
+    carved into the far wall; a door leading north; sepulchral, eerie, dim.
+
+    '
+  rooms:
+  - CRYPT-ROOM
+- id: Landing
+  room: ZORK3
+  slug: landing
+  region: dread
+  anchors: []
+  scene_description: 'Beyond the door, a roughly hewn staircase leads down into darkness. The
+    landing on which you stand is covered with carefully drawn magical runes, like those sketched
+    on the workbench of the Wizard of Frobozz. They have been overlaid with sweeping green lines
+    of enormous power that undulate slowly back and forth across the stone.
+
+    '
+  scene_core: 'The top of a rough-hewn stone staircase descending into pitch darkness; the broad
+    stone landing inscribed with intricate magical runes, overlaid by sweeping luminous green
+    lines of power that ripple across the floor; charged, ominous, on the threshold of something
+    vast.
+
+    '
+  rooms:
+  - ZORK3
+- id: Guarded Room
+  room: GUARDIAN-ROOM
+  slug: guarded-room
+  region: peril
+  anchors: []
+  scene_description: 'This room is cobwebby and musty, but tracks in the dust show that it has
+    seen visitors recently. At the south end stands a stained and battered — but very strong-looking
+    — door, and a corridor exits to the north. Embedded in the door is a nasty-looking lizard
+    head, with sharp teeth and beady eyes that follow you.
+
+    '
+  scene_core: 'A cobwebbed, musty stone chamber with fresh tracks disturbing the dust; a massive
+    battered iron-bound door at the south end; embedded in that door a snarling reptilian lizard
+    head with sharp teeth and beady, watchful eyes; a dark corridor leading north; tense and
+    menacing.
+
+    '
+  rooms:
+  - GUARDIAN-ROOM
+- id: Wizard's Workshop
+  room: WIZARDS-WORKSHOP
+  rooms:
+  - WIZARDS-WORKSHOP
+  slug: wizard-s-workshop
+  region: wonder
+  anchors:
+  - wizard-of-frobozz
+  scene_description: This is the workshop of the Wizard of Frobozz.
+  scene_core: This is the workshop of the Wizard of Frobozz.
+- id: Wizard's Workroom
+  room: WORKBENCH-ROOM
+  rooms:
+  - WORKBENCH-ROOM
+  slug: wizard-s-workroom
+  region: wonder
+  anchors:
+  - wizard-of-frobozz
+  scene_description: This room is the Wizard's workroom. A hall continues east and west, and
+    a larger room lies to the south. There are many shelves and racks on the walls, but the
+    Wizard's workbench dominates the room. It is made of dark, heavy wood bound with iron. The
+    workbench is stained from many years of use, and is deeply gouged as though some huge clawed
+    animal was imprisoned on it. There are burn marks and even notes written in a crabbed hand.
+    Many arcane items are scattered about the bench; alembics, mortar and pestle, small knives
+    of various sizes, odd scraps of vellum, wax candles, and much more. In the center of a relatively
+    clear area of the bench are affixed three stands - ruby, sapphire, and diamond - which form
+    a triangle.
+  scene_core: This room is the Wizard's workroom. A hall continues east and west, and a larger
+    room lies to the south. There are many shelves and racks on the walls, but the Wizard's
+    workbench dominates the room. It is made of dark, heavy wood bound with iron. The workbench
+    is stained from many years of use, and is deeply gouged as though some huge clawed animal
+    was imprisoned on it. There are burn marks and even notes written in a crabbed hand. Many
+    arcane items are scattered about the bench; alembics, mortar and pestle, small knives of
+    various sizes, odd scraps of vellum, wax candles, and much more. In the center of a relatively
+    clear area of the bench are affixed three stands - ruby, sapphire, and diamond - which form
+    a triangle.
+- id: Trophy Room
+  room: TROPHY-ROOM
+  rooms:
+  - TROPHY-ROOM
+  slug: trophy-room
+  region: underground
+  anchors: []
+  scene_description: This is the Wizard's trophy room, filled with memorabilia of various sorts.
+    On one wall is the Wizard's D. T. (Doctor of Thaumaturgy) degree from GUE Tech. Several
+    old magic wands are mounted on a wand rack. A collection of dull and nicked swords testify
+    to the fate of many foolhardy adventurers. Small bottles contain discarded homunculi (a
+    few preserved in alcohol). There is a stuffed owl on a perch.
+  scene_core: This is the Wizard's trophy room, filled with memorabilia of various sorts. On
+    one wall is the Wizard's D. T. (Doctor of Thaumaturgy) degree from GUE Tech. Several old
+    magic wands are mounted on a wand rack. A collection of dull and nicked swords testify to
+    the fate of many foolhardy adventurers. Small bottles contain discarded homunculi (a few
+    preserved in alcohol). There is a stuffed owl on a perch.
+- id: Pentagram Room
+  room: PENTAGRAM-ROOM
+  rooms:
+  - PENTAGRAM-ROOM
+  slug: pentagram-room
+  region: wonder
+  anchors: []
+  scene_description: In this room, inscribed on the floor, is a great pentagram drawn with black
+    chalk. In its center is a black circle.
+  scene_core: In this room, inscribed on the floor, is a great pentagram drawn with black chalk.
+    In its center is a black circle.
+- id: Aquarium Room
+  room: AQUARIUM-ROOM
+  rooms:
+  - AQUARIUM-ROOM
+  slug: aquarium-room
+  region: wonder
+  anchors:
+  - sea-serpent
+  scene_description: Here a dark hallway turns a corner. To the south is a dark room, to the
+    east is fitful light.
+  scene_core: Here a dark hallway turns a corner. To the south is a dark room, to the east is
+    fitful light.
+- id: Murky Room
+  room: IN-AQUARIUM
+  rooms:
+  - IN-AQUARIUM
+  slug: murky-room
+  region: dread
+  anchors: []
+  scene_description: The floor here seems to be made of sand, but it is hard to see anything
+    else.
+  scene_core: The floor here seems to be made of sand, but it is hard to see anything else.
+- id: Wizard's Quarters
+  room: WIZARDS-QUARTERS
+  slug: wizard-s-quarters
+  region: wonder
+  anchors:
+  - wizard-of-frobozz
+  scene_description: 'This is where the Wizard of Frobozz lives. The room is sparsely furnished
+    and almost monkish in its austerity; the only furniture is a hammock. It is said to wear
+    a different aspect each time it is seen.
+
+    '
+  scene_core: 'The austere private chamber of the Wizard of Frobozz; bare stone walls, spartan
+    and monkish; a single hammock slung across the room; an air of faded, eccentric magic; dim
+    and quiet.
+
+    '
+  rooms:
+  - WIZARDS-QUARTERS
+- id: Carousel Room
+  room: CAROUSEL-ROOM
+  slug: carousel-room
+  region: peril
+  anchors: []
+  scene_description: 'You are in a large circular room whose high ceiling is lost in gloom.
+    Eight identical passages leave the room. A loud whirring sound comes from all around, and
+    you feel strangely disoriented here.
+
+    '
+  scene_core: 'A vast circular chamber, its high ceiling vanishing into gloom; eight identical
+    dark passages radiating outward at even intervals around the walls; a sense of unseen heavy
+    machinery whirring beneath the floor; vertiginous and disorienting, dim.
+
+    '
+  rooms:
+  - CAROUSEL-ROOM
+- id: Riddle Room
+  room: RIDDLE-ROOM
+  slug: riddle-room
+  region: wonder
+  anchors: []
+  scene_description: 'This is a room bare on all sides. An exit leads down from the northwest
+    corner. To the east stands a great closed stone door, and into the stone above it words
+    have been carved.
+
+    '
+  scene_core: 'A bare, austere stone chamber; a dark exit descending in the northwest corner;
+    in the east wall a great closed door of solid stone with weathered carved markings above
+    it; puzzling, silent, dim.
+
+    '
+  rooms:
+  - RIDDLE-ROOM
+- id: Pearl Room
+  room: PEARL-ROOM
+  rooms:
+  - PEARL-ROOM
+  slug: pearl-room
+  region: wonder
+  anchors: []
+  scene_description: This is a former broom closet. The exits are to the east and west.
+  scene_core: This is a former broom closet. The exits are to the east and west.
+- id: Volcano Bottom
+  room: VOLCANO-BOTTOM
+  rooms:
+  - VOLCANO-BOTTOM
+  slug: volcano-bottom
+  region: peril
+  anchors: []
+  scene_description: You are at the bottom of a large dormant volcano. High above you light
+    enters from the cone of the volcano. The only exit is to the north.
+  scene_core: You are at the bottom of a large dormant volcano. High above you light enters
+    from the cone of the volcano. The only exit is to the north.
+- id: Volcano Core
+  room: VAIR-1
+  rooms:
+  - VAIR-1
+  slug: volcano-core
+  region: peril
+  anchors: []
+  scene_description: You are about one hundred feet above the bottom of the volcano. The top
+    of the volcano is clearly visible here.
+  scene_core: You are about one hundred feet above the bottom of the volcano. The top of the
+    volcano is clearly visible here.
+- id: Volcano Near Small Ledge
+  room: VAIR-2
+  rooms:
+  - VAIR-2
+  slug: volcano-near-small-ledge
+  region: peril
+  anchors: []
+  scene_description: You are about two hundred feet above the volcano floor. Looming above is
+    the rim of the volcano. There is a small ledge on the west side.
+  scene_core: You are about two hundred feet above the volcano floor. Looming above is the rim
+    of the volcano. There is a small ledge on the west side.
+- id: Volcano by Viewing Ledge
+  room: VAIR-3
+  rooms:
+  - VAIR-3
+  slug: volcano-by-viewing-ledge
+  region: peril
+  anchors: []
+  scene_description: You are high above the floor of the volcano. The rim of the volcano looks
+    very narrow and you are very near it. To the east is what appears to be a viewing ledge,
+    too thin to land on.
+  scene_core: You are high above the floor of the volcano. The rim of the volcano looks very
+    narrow and you are very near it. To the east is what appears to be a viewing ledge, too
+    thin to land on.
+- id: Volcano Near Wide Ledge
+  room: VAIR-4
+  rooms:
+  - VAIR-4
+  slug: volcano-near-wide-ledge
+  region: peril
+  anchors: []
+  scene_description: You are near the rim of the volcano. Above you it is open to the sky. To
+    the west, there is a place to land on a wide ledge.
+  scene_core: You are near the rim of the volcano. Above you it is open to the sky. To the west,
+    there is a place to land on a wide ledge.
+- id: Narrow Ledge
+  room: LEDGE-1
+  rooms:
+  - LEDGE-1
+  slug: narrow-ledge
+  region: peril
+  anchors: []
+  scene_description: You are on a narrow ledge within an old dormant volcano. This ledge is
+    about halfway between the floor below and the rim above. There is an exit to the south.
+  scene_core: You are on a narrow ledge within an old dormant volcano. This ledge is about halfway
+    between the floor below and the rim above. There is an exit to the south.
+- id: Library
+  room: LIBRARY
+  rooms:
+  - LIBRARY
+  slug: library
+  region: wonder
+  anchors: []
+  scene_description: This must have been a large library, probably for the royal family. All
+    of the shelves have been gnawed to pieces by unfriendly gnomes. To the north is an exit.
+  scene_core: This must have been a large library, probably for the royal family. All of the
+    shelves have been gnawed to pieces by unfriendly gnomes. To the north is an exit.
+- id: Volcano View
+  room: VOLCANO-VIEW
+  rooms:
+  - VOLCANO-VIEW
+  slug: volcano-view
+  region: peril
+  anchors: []
+  scene_description: You are on a ledge in the middle of a large volcano. Below you the volcano
+    bottom can be seen and above is the rim of the volcano. A couple of ledges can be seen on
+    the other side of the volcano; it appears that this ledge is intermediate in elevation between
+    those on the other side. The exit from this room is to the east.
+  scene_core: You are on a ledge in the middle of a large volcano. Below you the volcano bottom
+    can be seen and above is the rim of the volcano. A couple of ledges can be seen on the other
+    side of the volcano; it appears that this ledge is intermediate in elevation between those
+    on the other side. The exit from this room is to the east.
+- id: Wide Ledge
+  room: LEDGE-2
+  slug: wide-ledge
+  region: peril
+  anchors: []
+  scene_description: 'You are on a wide ledge high in the volcano. The rim is about two hundred
+    feet above, and there is a precipitous drop to the bottom. The way south is blocked by rubble,
+    but a small door is set into the rock there.
+
+    '
+  scene_core: 'A wide rocky ledge high on the inner wall of an enormous dormant volcano; the
+    distant rim far overhead and a dizzying drop into shadow below; a fall of rubble blocking
+    the way south; a small stone door set into the cliff; vast scale, warm volcanic gloom.
+
+    '
+  rooms:
+  - LEDGE-2
+- id: Dusty Room
+  room: SAFE-ROOM
+  slug: dusty-room
+  region: dread
+  anchors: []
+  scene_description: 'You are in a dusty old room, featureless except for an exit on the north
+    side. Embedded in the far wall is a rusty box; it appears somewhat damaged, an oblong hole
+    chipped out of the front of it.
+
+    '
+  scene_core: 'A featureless, dust-choked old chamber; a single exit to the north; embedded
+    in the far wall a heavy rusted metal box with a ragged oblong hole chipped out of its front;
+    still, abandoned, dim.
+
+    '
+  rooms:
+  - SAFE-ROOM
+- id: Lava Room
+  room: LAVA-ROOM
+  rooms:
+  - LAVA-ROOM
+  slug: lava-room
+  region: peril
+  anchors: []
+  scene_description: This is a small room, whose walls are formed by an old lava flow. There
+    are exits here to the east and the south.
+  scene_core: This is a small room, whose walls are formed by an old lava flow. There are exits
+    here to the east and the south.
+- id: Low Room
+  room: MAGNET-ROOM
+  slug: low-room
+  region: underground
+  anchors: []
+  scene_description: 'You are in a circular room with a low ceiling. There are exits to the
+    east and southeast. The air here carries a strange charge: powerful, rapidly shifting magnetic
+    fields fill the room, and any compass brought inside spins wildly.
+
+    '
+  scene_core: 'A low-ceilinged circular stone chamber; rough exits to the east and southeast;
+    a faint metallic shimmer to the air and whorls of iron grit clinging to the walls, hinting
+    at unseen magnetic force; close, oppressive, dim.
+
+    '
+  rooms:
+  - MAGNET-ROOM
+- id: Machine Room
+  room: MACHINE-ROOM
+  rooms:
+  - MACHINE-ROOM
+  slug: machine-room
+  region: underground
+  anchors: []
+  scene_description: This is a large room full of assorted heavy machinery, whirring noisily.
+    The room smells of burned resistors. Along one wall are three buttons which are, respectively,
+    round, triangular, and square. Naturally, above these buttons are instructions written in
+    EBCDIC. A large sign in English above all the buttons says
+  scene_core: This is a large room full of assorted heavy machinery, whirring noisily. The room
+    smells of burned resistors. Along one wall are three buttons which are, respectively, round,
+    triangular, and square. Naturally, above these buttons are instructions written in EBCDIC.
+    A large sign in English above all the buttons says
+- id: Dingy Closet
+  room: CAGE-ROOM
+  rooms:
+  - CAGE-ROOM
+  slug: dingy-closet
+  region: dread
+  anchors: []
+  scene_description: 'This is a dingy closet adjacent to a larger room to the north. Chiselled
+    into a wall are these words: Protected by FROBOZZ Magic Alarm Company (Hello, footpad!)
+    There doesn''t seem to be any footpad here, however.'
+  scene_core: 'This is a dingy closet adjacent to a larger room to the north. Chiselled into
+    a wall are these words: Protected by FROBOZZ Magic Alarm Company (Hello, footpad!) There
+    doesn''t seem to be any footpad here, however.'
+- id: Cage
+  room: IN-CAGE
+  rooms:
+  - IN-CAGE
+  slug: cage
+  region: underground
+  anchors: []
+  scene_description: You are trapped inside a solid steel cage.
+  scene_core: You are trapped inside a solid steel cage.
+- id: Top of Well
+  room: WELL-TOP
+  rooms:
+  - WELL-TOP
+  slug: top-of-well
+  region: underground
+  anchors: []
+  scene_description: You are at the top of the well. Well done. There are etchings on the side
+    of the well. There is a small crack across the floor at the entrance to a room on the east,
+    but it can be crossed easily.
+  scene_core: You are at the top of the well. Well done. There are etchings on the side of the
+    well. There is a small crack across the floor at the entrance to a room on the east, but
+    it can be crossed easily.
+- id: Circular Room
+  room: WELL-BOTTOM
+  rooms:
+  - WELL-BOTTOM
+  slug: circular-room
+  region: wonder
+  anchors: []
+  scene_description: This is a damp circular room, whose walls are made of brick and mortar.
+    The roof of this room is not visible, but there appear to be some etchings on the walls.
+    There is a passageway to the west.
+  scene_core: This is a damp circular room, whose walls are made of brick and mortar. The roof
+    of this room is not visible, but there appear to be some etchings on the walls. There is
+    a passageway to the west.
+- id: Tea Room
+  room: TEA-ROOM
+  rooms:
+  - TEA-ROOM
+  slug: tea-room
+  region: wonder
+  anchors: []
+  scene_description: This is a small room containing a large oblong table, no doubt set for
+    afternoon tea. It is clear from the objects on the table that the users were indeed mad.
+    In the eastern corner of the room is a small hole (no more than four inches high). There
+    are passageways leading away to the west and the northwest.
+  scene_core: This is a small room containing a large oblong table, no doubt set for afternoon
+    tea. It is clear from the objects on the table that the users were indeed mad. In the eastern
+    corner of the room is a small hole (no more than four inches high). There are passageways
+    leading away to the west and the northwest.
+- id: Posts Room
+  room: POSTS-ROOM
+  rooms:
+  - POSTS-ROOM
+  slug: posts-room
+  region: underground
+  anchors:
+  - robot
+  scene_description: This is an enormous room, in the center of which are four wooden posts
+    delineating a rectangular area, above which is what appears to be a wooden roof. In fact,
+    all objects in this room appear to be abnormally large. To the east is a passageway. There
+    are large gaping chasms to the west and northwest.
+  scene_core: This is an enormous room, in the center of which are four wooden posts delineating
+    a rectangular area, above which is what appears to be a wooden roof. In fact, all objects
+    in this room appear to be abnormally large. To the east is a passageway. There are large
+    gaping chasms to the west and northwest.
+- id: Pool Room
+  room: POOL-ROOM
+  rooms:
+  - POOL-ROOM
+  slug: pool-room
+  region: underground
+  anchors: []
+  scene_description: This is a large room, one half of which is depressed. Salty water flows
+    from a large leak in the ceiling. The only exit is to the west.
+  scene_core: This is a large room, one half of which is depressed. Salty water flows from a
+    large leak in the ceiling. The only exit is to the west.
+- id: Bank Entrance
+  room: BANK-ENTRANCE
+  rooms:
+  - BANK-ENTRANCE
+  slug: bank-entrance
+  region: wonder
+  anchors: []
+  scene_description: This is the entrance hall of the Bank of Zork, the largest banking institution
+    of the Great Underground Empire. A partial account of its history is in
+  scene_core: This is the entrance hall of the Bank of Zork, the largest banking institution
+    of the Great Underground Empire. A partial account of its history is in
+- id: West Teller's Room
+  room: TELLER-WEST
+  slug: west-teller-s-room
+  region: wonder
+  anchors: []
+  scene_description: 'You are in a small room once used by a bank officer who retrieved safety
+    deposit boxes for customers. On the east side of the room, above an open door, hangs a small
+    sign reserving the way beyond for bank personnel.
+
+    '
+  scene_core: 'A small, austere bank officer''s room in the marble Bank of Zork; a worn wooden
+    counter where safety deposit boxes were once handed across; an open door in the east wall
+    beneath a small blank plaque; faded institutional grandeur, dim.
+
+    '
+  rooms:
+  - TELLER-WEST
+- id: East Teller's Room
+  room: TELLER-EAST
+  slug: east-teller-s-room
+  region: wonder
+  anchors: []
+  scene_description: 'You are in a small room once used by a bank officer who retrieved safety
+    deposit boxes for customers. On the west side of the room, above an open door, hangs a small
+    sign reserving the way beyond for bank personnel.
+
+    '
+  scene_core: 'A small, austere bank officer''s room in the marble Bank of Zork; a worn wooden
+    counter where safety deposit boxes were once handed across; an open door in the west wall
+    beneath a small blank plaque; faded institutional grandeur, dim.
+
+    '
+  rooms:
+  - TELLER-EAST
+- id: West Viewing Room
+  room: VIEWING-WEST
+  slug: west-viewing-room
+  region: wonder
+  anchors: []
+  scene_description: 'This room was used by holders of safety deposit boxes to view their contents
+    in private. On the north side of the room hangs a small sign.
+
+    '
+  scene_core: 'A small, private marble viewing room in the Bank of Zork; a plain stone viewing
+    table at its center; a small blank plaque mounted on the north wall; hushed, austere, dim.
+
+    '
+  rooms:
+  - VIEWING-WEST
+- id: East Viewing Room
+  room: VIEWING-EAST
+  slug: east-viewing-room
+  region: wonder
+  anchors: []
+  scene_description: 'This room was used by holders of safety deposit boxes to view their contents
+    in private. On the north side of the room hangs a small sign.
+
+    '
+  scene_core: 'A small, private marble viewing room in the Bank of Zork; a plain stone viewing
+    table at its center; a small blank plaque mounted on the north wall; hushed, austere, dim.
+
+    '
+  rooms:
+  - VIEWING-EAST
+- id: Small Room
+  room: SMALL-ROOM
+  rooms:
+  - SMALL-ROOM
+  slug: small-room
+  region: underground
+  anchors: []
+  scene_description: This is a small, bare room with no distinguishing features. There are no
+    exits from this room.
+  scene_core: This is a small, bare room with no distinguishing features. There are no exits
+    from this room.
+- id: Vault
+  room: VAULT
+  rooms:
+  - VAULT
+  slug: vault
+  region: wonder
+  anchors: []
+  scene_description: This is the Vault of the Bank of Zork, in which there are no doors.
+  scene_core: This is the Vault of the Bank of Zork, in which there are no doors.
+- id: Safety Depository
+  room: DEPOSITORY
+  rooms:
+  - DEPOSITORY
+  slug: safety-depository
+  region: wonder
+  anchors: []
+  scene_description: This is a large rectangular room. The east and west walls were used for
+    storing safety deposit boxes, but all have been carefully removed by evil persons. To the
+    east, west, and south of the room are large doorways. The northern
+  scene_core: This is a large rectangular room. The east and west walls were used for storing
+    safety deposit boxes, but all have been carefully removed by evil persons. To the east,
+    west, and south of the room are large doorways. The northern
+- id: Chairman's Office
+  room: OFFICE
+  rooms:
+  - OFFICE
+  slug: chairman-s-office
+  region: wonder
+  anchors: []
+  scene_description: This room was the office of the Chairman of the Bank of Zork. Like the
+    other rooms here, it has been extensively vandalized. The lone exit is to the north.
+  scene_core: This room was the office of the Chairman of the Bank of Zork. Like the other rooms
+    here, it has been extensively vandalized. The lone exit is to the north.
+- id: Dreary Room
+  room: DREARY-ROOM
+  slug: dreary-room
+  region: dread
+  anchors: []
+  scene_description: 'This is a small and rather dreary room, eerily illuminated by a red glow
+    that emanates from a crack in one wall. The light falls upon a dusty wooden table in the
+    center of the room.
+
+    '
+  scene_core: 'A small, dreary stone room lit only by an eerie red glow seeping from a jagged
+    crack in one wall; the red light falling across a dusty wooden table at the room''s center;
+    oppressive, shadowed, still.
+
+    '
+  rooms:
+  - DREARY-ROOM
+- id: Tiny Room
+  room: TINY-ROOM
+  slug: tiny-room
+  region: underground
+  anchors: []
+  scene_description: 'This is a tiny room carved out of the wall of the ravine. The only exit
+    is down, by way of a precarious climb.
+
+    '
+  scene_core: 'A tiny niche of a room hewn from the rock wall of a deep ravine; its open lip
+    giving onto a precarious climbing descent into shadow; cramped, vertiginous, dim.
+
+    '
+  rooms:
+  - TINY-ROOM
+- id: Room of Red Mist
+  room: DEAD-PALANTIR-1
+  slug: room-of-red-mist
+  region: dread
+  anchors: []
+  scene_description: 'You are inside a huge crystalline sphere filled with thin red mist. Ghostly,
+    blurred shapes of distant rooms shift and swim beyond the curving glass walls, always just
+    too indistinct to make out.
+
+    '
+  scene_core: 'The interior of an enormous crystalline sphere filled with swirling thin red
+    mist; through the curved glass walls drift ghostly, blurred glimpses of far-off rooms, too
+    vague to read; dreamlike and claustrophobic, lit by a deep red glow.
+
+    '
+  rooms:
+  - DEAD-PALANTIR-1
+- id: Room of Blue Mist
+  room: DEAD-PALANTIR-2
+  slug: room-of-blue-mist
+  region: dread
+  anchors: []
+  scene_description: 'You are inside a huge crystalline sphere filled with thin blue mist. Ghostly,
+    blurred shapes of distant rooms shift and swim beyond the curving glass walls, always just
+    too indistinct to make out.
+
+    '
+  scene_core: 'The interior of an enormous crystalline sphere filled with swirling thin blue
+    mist; through the curved glass walls drift ghostly, blurred glimpses of far-off rooms, too
+    vague to read; dreamlike and claustrophobic, lit by a cold blue glow.
+
+    '
+  rooms:
+  - DEAD-PALANTIR-2
+- id: Room of White Mist
+  room: DEAD-PALANTIR-3
+  slug: room-of-white-mist
+  region: dread
+  anchors: []
+  scene_description: 'You are inside a huge crystalline sphere filled with thin white mist.
+    Ghostly, blurred shapes of distant rooms shift and swim beyond the curving glass walls,
+    always just too indistinct to make out.
+
+    '
+  scene_core: 'The interior of an enormous crystalline sphere filled with swirling thin white
+    mist; through the curved glass walls drift ghostly, blurred glimpses of far-off rooms, too
+    vague to read; dreamlike and claustrophobic, a pale, milky white glow verging on whiteout.
+
+    '
+  rooms:
+  - DEAD-PALANTIR-3
+- id: Room of Black Mist
+  room: DEAD-PALANTIR-4
+  slug: room-of-black-mist
+  region: dread
+  anchors: []
+  scene_description: 'You are inside a huge crystalline sphere filled with thin black mist.
+    Ghostly, blurred shapes of distant rooms shift and swim beyond the curving glass walls,
+    always just too indistinct to make out.
+
+    '
+  scene_core: 'The interior of an enormous crystalline sphere filled with swirling thin black
+    mist; through the curved glass walls, faint blurred shapes of far-off rooms are barely visible
+    in the gloom; dreamlike and claustrophobic, a near-darkness of black haze.
+
+    '
+  rooms:
+  - DEAD-PALANTIR-4

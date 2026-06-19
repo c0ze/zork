@@ -1,0 +1,1008 @@
+{
+  "game": "zork2",
+  "styles": [
+    "ink_engraving",
+    "retro_pixel",
+    "painted_pulp",
+    "cinematic_painterly"
+  ],
+  "default_style": "ink_engraving",
+  "voices": [
+    {
+      "key": "us-aria",
+      "label": "US \u00b7 Aria (F)"
+    },
+    {
+      "key": "us-guy",
+      "label": "US \u00b7 Guy (M)"
+    },
+    {
+      "key": "gb-sonia",
+      "label": "UK \u00b7 Sonia (F)"
+    },
+    {
+      "key": "gb-ryan",
+      "label": "UK \u00b7 Ryan (M)"
+    },
+    {
+      "key": "au-natasha",
+      "label": "AU \u00b7 Natasha (F)"
+    },
+    {
+      "key": "au-william",
+      "label": "AU \u00b7 William (M)"
+    },
+    {
+      "key": "ca-clara",
+      "label": "CA \u00b7 Clara (F)"
+    },
+    {
+      "key": "ca-liam",
+      "label": "CA \u00b7 Liam (M)"
+    }
+  ],
+  "default_voice": "us-aria",
+  "audio_path": "assets/audio/{voice}/{slug}.mp3",
+  "default_region": "underground",
+  "start_room": "Inside the Barrow",
+  "music": {
+    "above_ground": [
+      "assets/music/above_ground-1.mp3",
+      "assets/music/above_ground-2.mp3"
+    ],
+    "underground": [
+      "assets/music/underground-1.mp3",
+      "assets/music/underground-2.mp3"
+    ],
+    "peril": [
+      "assets/music/peril-1.mp3",
+      "assets/music/peril-2.mp3"
+    ],
+    "wonder": [
+      "assets/music/wonder-1.mp3",
+      "assets/music/wonder-2.mp3"
+    ],
+    "dread": [
+      "assets/music/dread-1.mp3",
+      "assets/music/dread-2.mp3"
+    ]
+  },
+  "scenes": {
+    "Inside the Barrow": {
+      "slug": "inside-the-barrow",
+      "room": "INSIDE-BARROW",
+      "region": "above_ground",
+      "narration": "You are inside an ancient barrow hidden deep within a dark forest. The barrow opens into a narrow tunnel at its southern end. You can see a faint glow at the far end.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/inside-the-barrow.webp",
+        "retro_pixel": "assets/images/retro_pixel/inside-the-barrow.webp",
+        "painted_pulp": "assets/images/painted_pulp/inside-the-barrow.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/inside-the-barrow.webp"
+      }
+    },
+    "Narrow Tunnel": {
+      "slug": "narrow-tunnel",
+      "room": "NARROW-TUNNEL",
+      "region": "underground",
+      "narration": "You are standing at the southern end of a narrow tunnel where it opens into a wide cavern. The cavern is dimly illuminated by phosphorescent mosses clinging to its high ceiling. A deep ravine winds through the cavern, with a small stream at the bottom. The walls of the ravine are steep and crumbly. A foot bridge crosses the ravine to the south.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/narrow-tunnel.webp",
+        "retro_pixel": "assets/images/retro_pixel/narrow-tunnel.webp",
+        "painted_pulp": "assets/images/painted_pulp/narrow-tunnel.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/narrow-tunnel.webp"
+      }
+    },
+    "Foot Bridge": {
+      "slug": "foot-bridge",
+      "room": "FOOT-BRIDGE",
+      "region": "underground",
+      "narration": "You are standing on a crude but sturdy wooden foot bridge crossing a deep ravine. The path runs north and south from here.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/foot-bridge.webp",
+        "retro_pixel": "assets/images/retro_pixel/foot-bridge.webp",
+        "painted_pulp": "assets/images/painted_pulp/foot-bridge.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/foot-bridge.webp"
+      }
+    },
+    "Great Cavern": {
+      "slug": "great-cavern",
+      "room": "GREAT-CAVERN",
+      "region": "underground",
+      "narration": "This is the center of the great cavern, carved out of the limestone. Stalactites and stalagmites of many sizes are everywhere. The room glows with dim light provided by phosphorescent moss, and weird shadows move all around you. A narrow path winds southwest among the stalagmites, and another leads northeast.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/great-cavern.webp",
+        "retro_pixel": "assets/images/retro_pixel/great-cavern.webp",
+        "painted_pulp": "assets/images/painted_pulp/great-cavern.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/great-cavern.webp"
+      }
+    },
+    "Shallow Ford": {
+      "slug": "shallow-ford",
+      "room": "SHALLOW-FORD",
+      "region": "underground",
+      "narration": "You are at the southern edge of a great cavern. To the south across a shallow ford is a dark tunnel which looks like it was once enlarged and smoothed. To the north a narrow path winds among stalagmites. Dim light illuminates the cavern.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/shallow-ford.webp",
+        "retro_pixel": "assets/images/retro_pixel/shallow-ford.webp",
+        "painted_pulp": "assets/images/painted_pulp/shallow-ford.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/shallow-ford.webp"
+      }
+    },
+    "Dark Tunnel": {
+      "slug": "dark-tunnel",
+      "room": "DARK-TUNNEL",
+      "region": "dread",
+      "narration": "This is a dark tunnel with dim light to the northeast. The tunnel is smooth but dusty and filled with twigs and leaves, debris which becomes deeper as the tunnel branches into a wide corridor leading southwest and a narrower one leading southeast.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/dark-tunnel.webp",
+        "retro_pixel": "assets/images/retro_pixel/dark-tunnel.webp",
+        "painted_pulp": "assets/images/painted_pulp/dark-tunnel.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/dark-tunnel.webp"
+      }
+    },
+    "North End of Garden": {
+      "slug": "north-end-of-garden",
+      "room": "GARDEN-NORTH",
+      "region": "above_ground",
+      "narration": "This is the northern end of a formal garden. Hedges hide the cavern walls, and if you don't look up, the illusion is of a cloudy day outside. The light comes from a large growth of glowing mosses on the roof of the cave. A break in the hedge is almost overgrown to the north. A carefully manicured path leads south. In the center of a rosebed is a small open structure, painted white. It appears to be a gazebo.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/north-end-of-garden.webp",
+        "retro_pixel": "assets/images/retro_pixel/north-end-of-garden.webp",
+        "painted_pulp": "assets/images/painted_pulp/north-end-of-garden.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/north-end-of-garden.webp"
+      }
+    },
+    "Gazebo": {
+      "slug": "gazebo",
+      "room": "GAZEBO-ROOM",
+      "region": "above_ground",
+      "narration": "This is a gazebo in the midst of a formal garden. It is cool and restful here. A tea table adorns the center of the gazebo.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/gazebo.webp",
+        "retro_pixel": "assets/images/retro_pixel/gazebo.webp",
+        "painted_pulp": "assets/images/painted_pulp/gazebo.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/gazebo.webp"
+      }
+    },
+    "Formal Garden": {
+      "slug": "formal-garden",
+      "room": "FORMAL-GARDEN",
+      "region": "above_ground",
+      "narration": "This is the middle part of a formal garden. Hedges hide the cavern walls and a dim illumination comes from mosses far above. The path is of small crushed white stones. It winds among bushes and flower beds from south to north. To the north a small structure can be seen. To the south are peculiarly shaped bushes. There is a small gap in the hedges to the west.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/formal-garden.webp",
+        "retro_pixel": "assets/images/retro_pixel/formal-garden.webp",
+        "painted_pulp": "assets/images/painted_pulp/formal-garden.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/formal-garden.webp"
+      }
+    },
+    "Topiary": {
+      "slug": "topiary",
+      "room": "TOPIARY-ROOM",
+      "region": "above_ground",
+      "narration": "This is the southern end of a formal garden. Hedges hide the cavern walls and mosses provide dim illumination. Fantastically shaped hedges and bushes are arrayed with geometric precision. They have not recently been clipped, but you can discern creatures in the shapes of the bushes: There is a dragon, a unicorn, a great serpent, a huge misshapen dog, and several human figures. On the west side of the garden the path leads through a rose arbor into a tunnel.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/topiary.webp",
+        "retro_pixel": "assets/images/retro_pixel/topiary.webp",
+        "painted_pulp": "assets/images/painted_pulp/topiary.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/topiary.webp"
+      }
+    },
+    "Path Near Stream": {
+      "slug": "path-near-stream",
+      "room": "STREAM-PATH",
+      "region": "underground",
+      "narration": "The path follows the south edge of a deep ravine and heads northeast. A tunnel heads southwest, narrowing to a rather tight crawl. A faint whirring sound can be heard in that direction. On the east is a ruined archway choked with vegetation.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/path-near-stream.webp",
+        "retro_pixel": "assets/images/retro_pixel/path-near-stream.webp",
+        "painted_pulp": "assets/images/painted_pulp/path-near-stream.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/path-near-stream.webp"
+      }
+    },
+    "Marble Hall": {
+      "slug": "marble-hall",
+      "room": "MARBLE-HALL",
+      "region": "wonder",
+      "narration": "This is an arched hall of fine marble. The hall stops abruptly to the north at a ford across a stream, where the marble is cracked and broken. Perhaps a flood or collapse of the cave was responsible. To the south the hall opens into a large room. There is rather annoying whirring sound coming from that room.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/marble-hall.webp",
+        "retro_pixel": "assets/images/retro_pixel/marble-hall.webp",
+        "painted_pulp": "assets/images/painted_pulp/marble-hall.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/marble-hall.webp"
+      }
+    },
+    "Deep Ford": {
+      "slug": "deep-ford",
+      "room": "DEEP-FORD",
+      "region": "underground",
+      "narration": "You are fording the stream at a deep but not impossible spot. The water is very cold. The walls of the ravine rise to east and west. There is a small ledge along the north wall of the ravine. To the south is the entrance to a well-constructed but somewhat ruined hall.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/deep-ford.webp",
+        "retro_pixel": "assets/images/retro_pixel/deep-ford.webp",
+        "painted_pulp": "assets/images/painted_pulp/deep-ford.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/deep-ford.webp"
+      }
+    },
+    "Ledge in Ravine": {
+      "slug": "ledge-in-ravine",
+      "room": "RAVINE-LEDGE",
+      "region": "underground",
+      "narration": "You are on a narrow ledge near the bottom of a deep ravine. The ledge continues to the west. A precarious climb up to another tiny ledge is possible. A short scramble down the rock face leads to a stream.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/ledge-in-ravine.webp",
+        "retro_pixel": "assets/images/retro_pixel/ledge-in-ravine.webp",
+        "painted_pulp": "assets/images/painted_pulp/ledge-in-ravine.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/ledge-in-ravine.webp"
+      }
+    },
+    "End of Ledge": {
+      "slug": "end-of-ledge",
+      "room": "LEDGE-TUNNEL",
+      "region": "underground",
+      "narration": "A ledge from the east ends here, and a tunnel leads north into the wall. There is a rather odd smokey odor in the warm air of the tunnel.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/end-of-ledge.webp",
+        "retro_pixel": "assets/images/retro_pixel/end-of-ledge.webp",
+        "painted_pulp": "assets/images/painted_pulp/end-of-ledge.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/end-of-ledge.webp"
+      }
+    },
+    "Dragon Room": {
+      "slug": "dragon-room",
+      "room": "DRAGON-ROOM",
+      "region": "peril",
+      "narration": "The room is a large cavern full of broken stone. The walls are scorched and there are deep scratches on the floor. A sooty dry smell is very strong here. A paved path winds from a large passage to the west, through the room, and across a huge stone bridge to the south. To the east a small crack is visible. A dark and smokey tunnel leads north.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/dragon-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/dragon-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/dragon-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/dragon-room.webp"
+      }
+    },
+    "Dragon's Lair": {
+      "slug": "dragon-s-lair",
+      "room": "DRAGON-LAIR",
+      "region": "peril",
+      "narration": "You are in the dragon's lair, where the rock walls are scarred by flame. A blackened doorway leads to the south.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/dragon-s-lair.webp",
+        "retro_pixel": "assets/images/retro_pixel/dragon-s-lair.webp",
+        "painted_pulp": "assets/images/painted_pulp/dragon-s-lair.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/dragon-s-lair.webp"
+      }
+    },
+    "Fresco Room": {
+      "slug": "fresco-room",
+      "room": "FRESCO-ROOM",
+      "region": "wonder",
+      "narration": "A path leads east-west through a room decorated with beautiful frescoes of someone battling dragons and rescuing fair maidens. It is hard to tell who is doing this as those parts of the frescoes have been blackened and cracked by intense heat.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/fresco-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/fresco-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/fresco-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/fresco-room.webp"
+      }
+    },
+    "Stone Bridge": {
+      "slug": "stone-bridge",
+      "room": "STONE-BRIDGE",
+      "region": "above_ground",
+      "narration": "This is the middle of a ruined but still impressive stone bridge spanning a deep chasm. Water flows far beneath. A paved path leads north into a large open space. To the south, the path leads into a misty tunnel.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/stone-bridge.webp",
+        "retro_pixel": "assets/images/retro_pixel/stone-bridge.webp",
+        "painted_pulp": "assets/images/painted_pulp/stone-bridge.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/stone-bridge.webp"
+      }
+    },
+    "Cool Room": {
+      "slug": "cool-room",
+      "room": "COOL-ROOM",
+      "region": "dread",
+      "narration": "The room is cool and damp. The air is misty. A twisty path from the southeast splits here toward a wide northerly stone bridge, and a narrow westerly tunnel. It is from the latter that the mist and chill seem to originate.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/cool-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/cool-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/cool-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/cool-room.webp"
+      }
+    },
+    "Ice Room": {
+      "slug": "ice-room",
+      "room": "GLACIER-ROOM",
+      "region": "dread",
+      "narration": "This is a large hall of ancient lava, since worn smooth by the movement of a glacier. A large passage exits to the east and an upward lava tube is at the top of a jumble of fallen rocks. A damp and scorched passage leads west. It is still partly full of steam.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/ice-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/ice-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/ice-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/ice-room.webp"
+      }
+    },
+    "Lava Tube": {
+      "slug": "lava-tube",
+      "room": "LAVA-TUBE",
+      "region": "peril",
+      "narration": "You are in a tight chimney of solidified lava. It extends up at least another hundred feet and down to a large room far below. A large crack opens to the south, probably the result of a shift in the rock strata.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/lava-tube.webp",
+        "retro_pixel": "assets/images/retro_pixel/lava-tube.webp",
+        "painted_pulp": "assets/images/painted_pulp/lava-tube.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/lava-tube.webp"
+      }
+    },
+    "Cobwebby Corridor": {
+      "slug": "cobwebby-corridor",
+      "room": "COBWEBBY-CORRIDOR",
+      "region": "dread",
+      "narration": "A winding corridor is filled with cobwebs. Some are broken and the dust on the floor is disturbed. The trend of the twists and turns is northeast to southwest. On the north side of one twist, high up, is a narrow crack.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/cobwebby-corridor.webp",
+        "retro_pixel": "assets/images/retro_pixel/cobwebby-corridor.webp",
+        "painted_pulp": "assets/images/painted_pulp/cobwebby-corridor.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/cobwebby-corridor.webp"
+      }
+    },
+    "Room 8": {
+      "slug": "room-8",
+      "room": "ROOM-8",
+      "region": "underground",
+      "narration": "This is a small chamber carved out of the rock at the end of a short crawl. On the wall is crudely chiseled the number",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/room-8.webp",
+        "retro_pixel": "assets/images/retro_pixel/room-8.webp",
+        "painted_pulp": "assets/images/painted_pulp/room-8.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/room-8.webp"
+      }
+    },
+    "Menhir Room": {
+      "slug": "menhir-room",
+      "room": "MENHIR-ROOM",
+      "region": "peril",
+      "narration": "This is a large room which was evidently used once as a quarry. Many large limestone chunks lie helter-skelter around the room. Some are rough-hewn and unworked, others smooth and well-finished. One side of the room appears to have been used to quarry building blocks, the other to produce menhirs (standing stones). Obvious passages lead north and south.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/menhir-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/menhir-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/menhir-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/menhir-room.webp"
+      }
+    },
+    "Kennel": {
+      "slug": "kennel",
+      "room": "KENNEL",
+      "region": "dread",
+      "narration": "This room looks like it was once a kennel for a very large dog (some of the bones would fit a dinosaur). It apparently hasn't been used for a long time, as the dust is fairly thick all over. The only exit is northeast.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/kennel.webp",
+        "retro_pixel": "assets/images/retro_pixel/kennel.webp",
+        "painted_pulp": "assets/images/painted_pulp/kennel.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/kennel.webp"
+      }
+    },
+    "Stairway": {
+      "slug": "stairway",
+      "room": "STAIRWAY-TOP",
+      "region": "underground",
+      "narration": "A marble stairway leads down into the gloom and a passage leads north.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/stairway.webp",
+        "retro_pixel": "assets/images/retro_pixel/stairway.webp",
+        "painted_pulp": "assets/images/painted_pulp/stairway.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/stairway.webp"
+      }
+    },
+    "Oddly-angled Room": {
+      "slug": "oddly-angled-room",
+      "room": "DIAMOND-1",
+      "region": "underground",
+      "narration": "A small room with oddly angled walls and passages in all directions.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/oddly-angled-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/oddly-angled-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/oddly-angled-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/oddly-angled-room.webp"
+      }
+    },
+    "Cerberus Room": {
+      "slug": "cerberus-room",
+      "room": "CERBERUS-ROOM",
+      "region": "peril",
+      "narration": "This is the entrance to a huge crypt or tomb. A marble stairway leads up from a gateway arch.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/cerberus-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/cerberus-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/cerberus-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/cerberus-room.webp"
+      }
+    },
+    "Crypt Anteroom": {
+      "slug": "crypt-anteroom",
+      "room": "CRYPT-ANTEROOM",
+      "region": "dread",
+      "narration": "The anteroom is large and empty. Marble bas-reliefs depict the stirring times and afterlife of the Flatheads (the latter a bit optimistically). The exit is to the west. A huge marble door stands to the south, and above it is carved a cryptic inscription.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/crypt-anteroom.webp",
+        "retro_pixel": "assets/images/retro_pixel/crypt-anteroom.webp",
+        "painted_pulp": "assets/images/painted_pulp/crypt-anteroom.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/crypt-anteroom.webp"
+      }
+    },
+    "Crypt": {
+      "slug": "crypt",
+      "room": "CRYPT-ROOM",
+      "region": "dread",
+      "narration": "The room contains the earthly remains of the mighty Flatheads \u2014 twelve conspicuously flat heads mounted securely on poles. Though one might expect funerary urns or other relics of the ancient Zorkers, the crypt is empty of all such things. Writing is carved on the wall, and the only apparent exit is north, through the door to the anteroom.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/crypt.webp",
+        "retro_pixel": "assets/images/retro_pixel/crypt.webp",
+        "painted_pulp": "assets/images/painted_pulp/crypt.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/crypt.webp"
+      }
+    },
+    "Landing": {
+      "slug": "landing",
+      "room": "ZORK3",
+      "region": "dread",
+      "narration": "Beyond the door, a roughly hewn staircase leads down into darkness. The landing on which you stand is covered with carefully drawn magical runes, like those sketched on the workbench of the Wizard of Frobozz. They have been overlaid with sweeping green lines of enormous power that undulate slowly back and forth across the stone.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/landing.webp",
+        "retro_pixel": "assets/images/retro_pixel/landing.webp",
+        "painted_pulp": "assets/images/painted_pulp/landing.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/landing.webp"
+      }
+    },
+    "Guarded Room": {
+      "slug": "guarded-room",
+      "room": "GUARDIAN-ROOM",
+      "region": "peril",
+      "narration": "This room is cobwebby and musty, but tracks in the dust show that it has seen visitors recently. At the south end stands a stained and battered \u2014 but very strong-looking \u2014 door, and a corridor exits to the north. Embedded in the door is a nasty-looking lizard head, with sharp teeth and beady eyes that follow you.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/guarded-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/guarded-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/guarded-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/guarded-room.webp"
+      }
+    },
+    "Wizard's Workshop": {
+      "slug": "wizard-s-workshop",
+      "room": "WIZARDS-WORKSHOP",
+      "region": "wonder",
+      "narration": "This is the workshop of the Wizard of Frobozz.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/wizard-s-workshop.webp",
+        "retro_pixel": "assets/images/retro_pixel/wizard-s-workshop.webp",
+        "painted_pulp": "assets/images/painted_pulp/wizard-s-workshop.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/wizard-s-workshop.webp"
+      }
+    },
+    "Wizard's Workroom": {
+      "slug": "wizard-s-workroom",
+      "room": "WORKBENCH-ROOM",
+      "region": "wonder",
+      "narration": "This room is the Wizard's workroom. A hall continues east and west, and a larger room lies to the south. There are many shelves and racks on the walls, but the Wizard's workbench dominates the room. It is made of dark, heavy wood bound with iron. The workbench is stained from many years of use, and is deeply gouged as though some huge clawed animal was imprisoned on it. There are burn marks and even notes written in a crabbed hand. Many arcane items are scattered about the bench; alembics, mortar and pestle, small knives of various sizes, odd scraps of vellum, wax candles, and much more. In the center of a relatively clear area of the bench are affixed three stands - ruby, sapphire, and diamond - which form a triangle.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/wizard-s-workroom.webp",
+        "retro_pixel": "assets/images/retro_pixel/wizard-s-workroom.webp",
+        "painted_pulp": "assets/images/painted_pulp/wizard-s-workroom.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/wizard-s-workroom.webp"
+      }
+    },
+    "Trophy Room": {
+      "slug": "trophy-room",
+      "room": "TROPHY-ROOM",
+      "region": "underground",
+      "narration": "This is the Wizard's trophy room, filled with memorabilia of various sorts. On one wall is the Wizard's D. T. (Doctor of Thaumaturgy) degree from GUE Tech. Several old magic wands are mounted on a wand rack. A collection of dull and nicked swords testify to the fate of many foolhardy adventurers. Small bottles contain discarded homunculi (a few preserved in alcohol). There is a stuffed owl on a perch.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/trophy-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/trophy-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/trophy-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/trophy-room.webp"
+      }
+    },
+    "Pentagram Room": {
+      "slug": "pentagram-room",
+      "room": "PENTAGRAM-ROOM",
+      "region": "wonder",
+      "narration": "In this room, inscribed on the floor, is a great pentagram drawn with black chalk. In its center is a black circle.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/pentagram-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/pentagram-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/pentagram-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/pentagram-room.webp"
+      }
+    },
+    "Aquarium Room": {
+      "slug": "aquarium-room",
+      "room": "AQUARIUM-ROOM",
+      "region": "wonder",
+      "narration": "Here a dark hallway turns a corner. To the south is a dark room, to the east is fitful light.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/aquarium-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/aquarium-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/aquarium-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/aquarium-room.webp"
+      }
+    },
+    "Murky Room": {
+      "slug": "murky-room",
+      "room": "IN-AQUARIUM",
+      "region": "dread",
+      "narration": "The floor here seems to be made of sand, but it is hard to see anything else.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/murky-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/murky-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/murky-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/murky-room.webp"
+      }
+    },
+    "Wizard's Quarters": {
+      "slug": "wizard-s-quarters",
+      "room": "WIZARDS-QUARTERS",
+      "region": "wonder",
+      "narration": "This is where the Wizard of Frobozz lives. The room is sparsely furnished and almost monkish in its austerity; the only furniture is a hammock. It is said to wear a different aspect each time it is seen.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/wizard-s-quarters.webp",
+        "retro_pixel": "assets/images/retro_pixel/wizard-s-quarters.webp",
+        "painted_pulp": "assets/images/painted_pulp/wizard-s-quarters.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/wizard-s-quarters.webp"
+      }
+    },
+    "Carousel Room": {
+      "slug": "carousel-room",
+      "room": "CAROUSEL-ROOM",
+      "region": "peril",
+      "narration": "You are in a large circular room whose high ceiling is lost in gloom. Eight identical passages leave the room. A loud whirring sound comes from all around, and you feel strangely disoriented here.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/carousel-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/carousel-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/carousel-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/carousel-room.webp"
+      }
+    },
+    "Riddle Room": {
+      "slug": "riddle-room",
+      "room": "RIDDLE-ROOM",
+      "region": "wonder",
+      "narration": "This is a room bare on all sides. An exit leads down from the northwest corner. To the east stands a great closed stone door, and into the stone above it words have been carved.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/riddle-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/riddle-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/riddle-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/riddle-room.webp"
+      }
+    },
+    "Pearl Room": {
+      "slug": "pearl-room",
+      "room": "PEARL-ROOM",
+      "region": "wonder",
+      "narration": "This is a former broom closet. The exits are to the east and west.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/pearl-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/pearl-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/pearl-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/pearl-room.webp"
+      }
+    },
+    "Volcano Bottom": {
+      "slug": "volcano-bottom",
+      "room": "VOLCANO-BOTTOM",
+      "region": "peril",
+      "narration": "You are at the bottom of a large dormant volcano. High above you light enters from the cone of the volcano. The only exit is to the north.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/volcano-bottom.webp",
+        "retro_pixel": "assets/images/retro_pixel/volcano-bottom.webp",
+        "painted_pulp": "assets/images/painted_pulp/volcano-bottom.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/volcano-bottom.webp"
+      }
+    },
+    "Volcano Core": {
+      "slug": "volcano-core",
+      "room": "VAIR-1",
+      "region": "peril",
+      "narration": "You are about one hundred feet above the bottom of the volcano. The top of the volcano is clearly visible here.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/volcano-core.webp",
+        "retro_pixel": "assets/images/retro_pixel/volcano-core.webp",
+        "painted_pulp": "assets/images/painted_pulp/volcano-core.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/volcano-core.webp"
+      }
+    },
+    "Volcano Near Small Ledge": {
+      "slug": "volcano-near-small-ledge",
+      "room": "VAIR-2",
+      "region": "peril",
+      "narration": "You are about two hundred feet above the volcano floor. Looming above is the rim of the volcano. There is a small ledge on the west side.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/volcano-near-small-ledge.webp",
+        "retro_pixel": "assets/images/retro_pixel/volcano-near-small-ledge.webp",
+        "painted_pulp": "assets/images/painted_pulp/volcano-near-small-ledge.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/volcano-near-small-ledge.webp"
+      }
+    },
+    "Volcano by Viewing Ledge": {
+      "slug": "volcano-by-viewing-ledge",
+      "room": "VAIR-3",
+      "region": "peril",
+      "narration": "You are high above the floor of the volcano. The rim of the volcano looks very narrow and you are very near it. To the east is what appears to be a viewing ledge, too thin to land on.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/volcano-by-viewing-ledge.webp",
+        "retro_pixel": "assets/images/retro_pixel/volcano-by-viewing-ledge.webp",
+        "painted_pulp": "assets/images/painted_pulp/volcano-by-viewing-ledge.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/volcano-by-viewing-ledge.webp"
+      }
+    },
+    "Volcano Near Wide Ledge": {
+      "slug": "volcano-near-wide-ledge",
+      "room": "VAIR-4",
+      "region": "peril",
+      "narration": "You are near the rim of the volcano. Above you it is open to the sky. To the west, there is a place to land on a wide ledge.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/volcano-near-wide-ledge.webp",
+        "retro_pixel": "assets/images/retro_pixel/volcano-near-wide-ledge.webp",
+        "painted_pulp": "assets/images/painted_pulp/volcano-near-wide-ledge.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/volcano-near-wide-ledge.webp"
+      }
+    },
+    "Narrow Ledge": {
+      "slug": "narrow-ledge",
+      "room": "LEDGE-1",
+      "region": "peril",
+      "narration": "You are on a narrow ledge within an old dormant volcano. This ledge is about halfway between the floor below and the rim above. There is an exit to the south.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/narrow-ledge.webp",
+        "retro_pixel": "assets/images/retro_pixel/narrow-ledge.webp",
+        "painted_pulp": "assets/images/painted_pulp/narrow-ledge.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/narrow-ledge.webp"
+      }
+    },
+    "Library": {
+      "slug": "library",
+      "room": "LIBRARY",
+      "region": "wonder",
+      "narration": "This must have been a large library, probably for the royal family. All of the shelves have been gnawed to pieces by unfriendly gnomes. To the north is an exit.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/library.webp",
+        "retro_pixel": "assets/images/retro_pixel/library.webp",
+        "painted_pulp": "assets/images/painted_pulp/library.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/library.webp"
+      }
+    },
+    "Volcano View": {
+      "slug": "volcano-view",
+      "room": "VOLCANO-VIEW",
+      "region": "peril",
+      "narration": "You are on a ledge in the middle of a large volcano. Below you the volcano bottom can be seen and above is the rim of the volcano. A couple of ledges can be seen on the other side of the volcano; it appears that this ledge is intermediate in elevation between those on the other side. The exit from this room is to the east.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/volcano-view.webp",
+        "retro_pixel": "assets/images/retro_pixel/volcano-view.webp",
+        "painted_pulp": "assets/images/painted_pulp/volcano-view.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/volcano-view.webp"
+      }
+    },
+    "Wide Ledge": {
+      "slug": "wide-ledge",
+      "room": "LEDGE-2",
+      "region": "peril",
+      "narration": "You are on a wide ledge high in the volcano. The rim is about two hundred feet above, and there is a precipitous drop to the bottom. The way south is blocked by rubble, but a small door is set into the rock there.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/wide-ledge.webp",
+        "retro_pixel": "assets/images/retro_pixel/wide-ledge.webp",
+        "painted_pulp": "assets/images/painted_pulp/wide-ledge.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/wide-ledge.webp"
+      }
+    },
+    "Dusty Room": {
+      "slug": "dusty-room",
+      "room": "SAFE-ROOM",
+      "region": "dread",
+      "narration": "You are in a dusty old room, featureless except for an exit on the north side. Embedded in the far wall is a rusty box; it appears somewhat damaged, an oblong hole chipped out of the front of it.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/dusty-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/dusty-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/dusty-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/dusty-room.webp"
+      }
+    },
+    "Lava Room": {
+      "slug": "lava-room",
+      "room": "LAVA-ROOM",
+      "region": "peril",
+      "narration": "This is a small room, whose walls are formed by an old lava flow. There are exits here to the east and the south.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/lava-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/lava-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/lava-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/lava-room.webp"
+      }
+    },
+    "Low Room": {
+      "slug": "low-room",
+      "room": "MAGNET-ROOM",
+      "region": "underground",
+      "narration": "You are in a circular room with a low ceiling. There are exits to the east and southeast. The air here carries a strange charge: powerful, rapidly shifting magnetic fields fill the room, and any compass brought inside spins wildly.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/low-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/low-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/low-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/low-room.webp"
+      }
+    },
+    "Machine Room": {
+      "slug": "machine-room",
+      "room": "MACHINE-ROOM",
+      "region": "underground",
+      "narration": "This is a large room full of assorted heavy machinery, whirring noisily. The room smells of burned resistors. Along one wall are three buttons which are, respectively, round, triangular, and square. Naturally, above these buttons are instructions written in EBCDIC. A large sign in English above all the buttons says",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/machine-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/machine-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/machine-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/machine-room.webp"
+      }
+    },
+    "Dingy Closet": {
+      "slug": "dingy-closet",
+      "room": "CAGE-ROOM",
+      "region": "dread",
+      "narration": "This is a dingy closet adjacent to a larger room to the north. Chiselled into a wall are these words: Protected by FROBOZZ Magic Alarm Company (Hello, footpad!) There doesn't seem to be any footpad here, however.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/dingy-closet.webp",
+        "retro_pixel": "assets/images/retro_pixel/dingy-closet.webp",
+        "painted_pulp": "assets/images/painted_pulp/dingy-closet.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/dingy-closet.webp"
+      }
+    },
+    "Cage": {
+      "slug": "cage",
+      "room": "IN-CAGE",
+      "region": "underground",
+      "narration": "You are trapped inside a solid steel cage.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/cage.webp",
+        "retro_pixel": "assets/images/retro_pixel/cage.webp",
+        "painted_pulp": "assets/images/painted_pulp/cage.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/cage.webp"
+      }
+    },
+    "Top of Well": {
+      "slug": "top-of-well",
+      "room": "WELL-TOP",
+      "region": "underground",
+      "narration": "You are at the top of the well. Well done. There are etchings on the side of the well. There is a small crack across the floor at the entrance to a room on the east, but it can be crossed easily.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/top-of-well.webp",
+        "retro_pixel": "assets/images/retro_pixel/top-of-well.webp",
+        "painted_pulp": "assets/images/painted_pulp/top-of-well.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/top-of-well.webp"
+      }
+    },
+    "Circular Room": {
+      "slug": "circular-room",
+      "room": "WELL-BOTTOM",
+      "region": "wonder",
+      "narration": "This is a damp circular room, whose walls are made of brick and mortar. The roof of this room is not visible, but there appear to be some etchings on the walls. There is a passageway to the west.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/circular-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/circular-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/circular-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/circular-room.webp"
+      }
+    },
+    "Tea Room": {
+      "slug": "tea-room",
+      "room": "TEA-ROOM",
+      "region": "wonder",
+      "narration": "This is a small room containing a large oblong table, no doubt set for afternoon tea. It is clear from the objects on the table that the users were indeed mad. In the eastern corner of the room is a small hole (no more than four inches high). There are passageways leading away to the west and the northwest.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/tea-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/tea-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/tea-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/tea-room.webp"
+      }
+    },
+    "Posts Room": {
+      "slug": "posts-room",
+      "room": "POSTS-ROOM",
+      "region": "underground",
+      "narration": "This is an enormous room, in the center of which are four wooden posts delineating a rectangular area, above which is what appears to be a wooden roof. In fact, all objects in this room appear to be abnormally large. To the east is a passageway. There are large gaping chasms to the west and northwest.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/posts-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/posts-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/posts-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/posts-room.webp"
+      }
+    },
+    "Pool Room": {
+      "slug": "pool-room",
+      "room": "POOL-ROOM",
+      "region": "underground",
+      "narration": "This is a large room, one half of which is depressed. Salty water flows from a large leak in the ceiling. The only exit is to the west.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/pool-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/pool-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/pool-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/pool-room.webp"
+      }
+    },
+    "Bank Entrance": {
+      "slug": "bank-entrance",
+      "room": "BANK-ENTRANCE",
+      "region": "wonder",
+      "narration": "This is the entrance hall of the Bank of Zork, the largest banking institution of the Great Underground Empire. A partial account of its history is in",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/bank-entrance.webp",
+        "retro_pixel": "assets/images/retro_pixel/bank-entrance.webp",
+        "painted_pulp": "assets/images/painted_pulp/bank-entrance.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/bank-entrance.webp"
+      }
+    },
+    "West Teller's Room": {
+      "slug": "west-teller-s-room",
+      "room": "TELLER-WEST",
+      "region": "wonder",
+      "narration": "You are in a small room once used by a bank officer who retrieved safety deposit boxes for customers. On the east side of the room, above an open door, hangs a small sign reserving the way beyond for bank personnel.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/west-teller-s-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/west-teller-s-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/west-teller-s-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/west-teller-s-room.webp"
+      }
+    },
+    "East Teller's Room": {
+      "slug": "east-teller-s-room",
+      "room": "TELLER-EAST",
+      "region": "wonder",
+      "narration": "You are in a small room once used by a bank officer who retrieved safety deposit boxes for customers. On the west side of the room, above an open door, hangs a small sign reserving the way beyond for bank personnel.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/east-teller-s-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/east-teller-s-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/east-teller-s-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/east-teller-s-room.webp"
+      }
+    },
+    "West Viewing Room": {
+      "slug": "west-viewing-room",
+      "room": "VIEWING-WEST",
+      "region": "wonder",
+      "narration": "This room was used by holders of safety deposit boxes to view their contents in private. On the north side of the room hangs a small sign.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/west-viewing-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/west-viewing-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/west-viewing-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/west-viewing-room.webp"
+      }
+    },
+    "East Viewing Room": {
+      "slug": "east-viewing-room",
+      "room": "VIEWING-EAST",
+      "region": "wonder",
+      "narration": "This room was used by holders of safety deposit boxes to view their contents in private. On the north side of the room hangs a small sign.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/east-viewing-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/east-viewing-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/east-viewing-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/east-viewing-room.webp"
+      }
+    },
+    "Small Room": {
+      "slug": "small-room",
+      "room": "SMALL-ROOM",
+      "region": "underground",
+      "narration": "This is a small, bare room with no distinguishing features. There are no exits from this room.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/small-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/small-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/small-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/small-room.webp"
+      }
+    },
+    "Vault": {
+      "slug": "vault",
+      "room": "VAULT",
+      "region": "wonder",
+      "narration": "This is the Vault of the Bank of Zork, in which there are no doors.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/vault.webp",
+        "retro_pixel": "assets/images/retro_pixel/vault.webp",
+        "painted_pulp": "assets/images/painted_pulp/vault.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/vault.webp"
+      }
+    },
+    "Safety Depository": {
+      "slug": "safety-depository",
+      "room": "DEPOSITORY",
+      "region": "wonder",
+      "narration": "This is a large rectangular room. The east and west walls were used for storing safety deposit boxes, but all have been carefully removed by evil persons. To the east, west, and south of the room are large doorways. The northern",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/safety-depository.webp",
+        "retro_pixel": "assets/images/retro_pixel/safety-depository.webp",
+        "painted_pulp": "assets/images/painted_pulp/safety-depository.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/safety-depository.webp"
+      }
+    },
+    "Chairman's Office": {
+      "slug": "chairman-s-office",
+      "room": "OFFICE",
+      "region": "wonder",
+      "narration": "This room was the office of the Chairman of the Bank of Zork. Like the other rooms here, it has been extensively vandalized. The lone exit is to the north.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/chairman-s-office.webp",
+        "retro_pixel": "assets/images/retro_pixel/chairman-s-office.webp",
+        "painted_pulp": "assets/images/painted_pulp/chairman-s-office.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/chairman-s-office.webp"
+      }
+    },
+    "Dreary Room": {
+      "slug": "dreary-room",
+      "room": "DREARY-ROOM",
+      "region": "dread",
+      "narration": "This is a small and rather dreary room, eerily illuminated by a red glow that emanates from a crack in one wall. The light falls upon a dusty wooden table in the center of the room.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/dreary-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/dreary-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/dreary-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/dreary-room.webp"
+      }
+    },
+    "Tiny Room": {
+      "slug": "tiny-room",
+      "room": "TINY-ROOM",
+      "region": "underground",
+      "narration": "This is a tiny room carved out of the wall of the ravine. The only exit is down, by way of a precarious climb.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/tiny-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/tiny-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/tiny-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/tiny-room.webp"
+      }
+    },
+    "Room of Red Mist": {
+      "slug": "room-of-red-mist",
+      "room": "DEAD-PALANTIR-1",
+      "region": "dread",
+      "narration": "You are inside a huge crystalline sphere filled with thin red mist. Ghostly, blurred shapes of distant rooms shift and swim beyond the curving glass walls, always just too indistinct to make out.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/room-of-red-mist.webp",
+        "retro_pixel": "assets/images/retro_pixel/room-of-red-mist.webp",
+        "painted_pulp": "assets/images/painted_pulp/room-of-red-mist.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/room-of-red-mist.webp"
+      }
+    },
+    "Room of Blue Mist": {
+      "slug": "room-of-blue-mist",
+      "room": "DEAD-PALANTIR-2",
+      "region": "dread",
+      "narration": "You are inside a huge crystalline sphere filled with thin blue mist. Ghostly, blurred shapes of distant rooms shift and swim beyond the curving glass walls, always just too indistinct to make out.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/room-of-blue-mist.webp",
+        "retro_pixel": "assets/images/retro_pixel/room-of-blue-mist.webp",
+        "painted_pulp": "assets/images/painted_pulp/room-of-blue-mist.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/room-of-blue-mist.webp"
+      }
+    },
+    "Room of White Mist": {
+      "slug": "room-of-white-mist",
+      "room": "DEAD-PALANTIR-3",
+      "region": "dread",
+      "narration": "You are inside a huge crystalline sphere filled with thin white mist. Ghostly, blurred shapes of distant rooms shift and swim beyond the curving glass walls, always just too indistinct to make out.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/room-of-white-mist.webp",
+        "retro_pixel": "assets/images/retro_pixel/room-of-white-mist.webp",
+        "painted_pulp": "assets/images/painted_pulp/room-of-white-mist.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/room-of-white-mist.webp"
+      }
+    },
+    "Room of Black Mist": {
+      "slug": "room-of-black-mist",
+      "room": "DEAD-PALANTIR-4",
+      "region": "dread",
+      "narration": "You are inside a huge crystalline sphere filled with thin black mist. Ghostly, blurred shapes of distant rooms shift and swim beyond the curving glass walls, always just too indistinct to make out.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/room-of-black-mist.webp",
+        "retro_pixel": "assets/images/retro_pixel/room-of-black-mist.webp",
+        "painted_pulp": "assets/images/painted_pulp/room-of-black-mist.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/room-of-black-mist.webp"
+      }
+    }
+  }
+}

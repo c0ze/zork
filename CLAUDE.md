@@ -1,6 +1,6 @@
 # Zork — graphic text adventure (agent guide)
 
-Web-playable Zork ports (zork1 is live; zork2/zork3 planned). The Z-machine story
+Web-playable Zork ports (zork1 + zork2 are live; zork3 planned). The Z-machine story
 runs in-browser via **Parchment**, dressed with AI scene art (4 styles), pre-baked
 **TTS narration** (8 voices), and regional music. Fully static; deployed to GitHub
 Pages (**zork.coze.org**) on every push to `main`. Project backstory: `README.md`.
@@ -71,8 +71,8 @@ So inconsistencies are in the **source text**, not the mapping:
 ## Conventions
 - End commit messages with: `Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>`.
 - Never commit `.env`, `sources/`, or a venv. `scripts/.batch_jobs/` is gitignored.
-- Continuity (zork1): Parchment `do_vm_autosave: true` resumes per-turn; `visited` is persisted
+- Continuity (zork1/zork2): Parchment `do_vm_autosave: true` resumes per-turn; `visited` is persisted
   (`zork-visited`); Restart wipes `dialog_*` + progress and reloads; death is detected from the
   buffer banner and resets `visited` so the start scene re-renders/re-narrates.
 - Releases: v1.0 launch · v1.0.1 interpreter/theme · v1.0.2 image-scramble fix ·
-  v1.1.0 autosave/restart/death-reset · v1.1.1 narration fix.
+  v1.1.0 autosave/restart/death-reset · v1.1.1 narration fix · v1.2.0 Zork II port (The Wizard of Frobozz).
