@@ -1,0 +1,915 @@
+game: zork3
+default_region: underground
+start_room: Endless Stair
+scenes:
+- id: Royal Puzzle Entrance
+  room: CP-ANTE
+  rooms:
+  - CP-ANTE
+  - MID-CP-ANTE
+  slug: royal-puzzle-entrance
+  region: wonder
+  anchors: []
+  scene_description: This is a small square room, in the middle of which is a round hole which
+    is blocked by smooth sandstone. through which you can discern the floor some ten feet below.
+    The area under the hole is dark, but it appears to be completely enclosed in rock. In any
+    event, it doesn't seem likely that you could climb back up. Exits are west and, up a few
+    steps, north.
+  scene_core: This is a small square room, in the middle of which is a round hole which is blocked
+    by smooth sandstone. through which you can discern the floor some ten feet below. The area
+    under the hole is dark, but it appears to be completely enclosed in rock. In any event,
+    it doesn't seem likely that you could climb back up. Exits are west and, up a few steps,
+    north.
+- id: Side Room
+  room: CP-OUT
+  slug: side-room
+  region: wonder
+  anchors: []
+  scene_description: 'You are in a narrow room, lit from above. A flight of steps leads up to
+    the north, and a metal door leads to the east.
+
+    '
+  scene_core: 'A narrow stone room lit from above by a pale shaft of light; a flight of worn
+    steps rising to the north; a heavy metal door set in the east wall; quiet and enclosed.
+
+    '
+  rooms:
+  - CP-OUT
+  - MID-CP-OUT
+- id: Room in a Puzzle
+  room: CP
+  rooms:
+  - CP
+  slug: room-in-a-puzzle
+  region: wonder
+  anchors: []
+  scene_description: You are in a small square room bounded to the north and west with marble
+    walls and to the east and south with sandstone walls.
+  scene_core: You are in a small square room bounded to the north and west with marble walls
+    and to the east and south with sandstone walls.
+- id: Hallway
+  room: MRD
+  slug: hallway
+  region: wonder
+  anchors: []
+  scene_description: 'You are in a long, bare hallway of dark polished stone, eerily identical
+    in either direction. This is part of the strange maze surrounding the great mirror.
+
+    '
+  scene_core: 'A long, featureless hallway of dark polished stone, unnervingly symmetrical and
+    identical in both directions; part of a disorienting mirror-maze; cold, uncanny, dim.
+
+    '
+  rooms:
+  - MRD
+  - MRG
+  - MRC
+  - MRB
+  - MRA
+- id: Narrow Room
+  room: MRDE
+  slug: narrow-room
+  region: wonder
+  anchors: []
+  scene_description: 'You are in a narrow room, one of several near-identical chambers arranged
+    around the great mirror, with confusingly similar passages leading off.
+
+    '
+  scene_core: 'A cramped, narrow stone chamber, one of many identical cells arranged around
+    a central mirror; confusingly similar passages branching away; claustrophobic and uncanny.
+
+    '
+  rooms:
+  - MRDE
+  - MRDW
+  - MRGE
+  - MRGW
+  - MRCE
+  - MRCW
+  - MRBE
+  - MRBW
+  - MRAE
+  - MRAW
+- id: Inside Mirror
+  room: IN-MIRROR
+  slug: inside-mirror
+  region: wonder
+  anchors: []
+  scene_description: 'You are inside a rectangular wooden box of complicated structure: four
+    sides and the roof are filled in and the floor is open. Two short side-panels are of carved
+    and polished wood — mahogany on the left, pine on the right; the wall you face is painted
+    red and black, the wall behind white and yellow, and the ceiling blue. A narrow channel
+    runs north to south through the stone floor, widening at the centre into a circular depression
+    incised with a compass rose. A carved wooden bar crosses the box at waist height, pierced
+    by two wooden poles — a short hand-grip pole at the left, and a long central pole ending
+    in a T-bar carved with an arrow.
+
+    '
+  scene_core: 'The interior of a strange wooden box like a sorcerer''s cabinet: panelled walls
+    painted in bold blocks of red, black, white, yellow and blue, with two short panels of mahogany
+    and pine; an open stone floor cut by a north-south channel that widens to a central circular
+    compass-rose depression; a waist-high carved bar threaded by two wooden poles, the central
+    one ending in a T-bar carved with an arrow; arcane, puzzling, dim.
+
+    '
+  rooms:
+  - IN-MIRROR
+- id: Button Room
+  room: MR-ANTE
+  rooms:
+  - MR-ANTE
+  slug: button-room
+  region: wonder
+  anchors: []
+  scene_description: You are at the southern end of a long hall. To the south, stairs ascend
+    into darkness. To the north the corridor is illuminated by torches set high in the walls,
+    out of reach. On one wall is a red button.
+  scene_core: You are at the southern end of a long hall. To the south, stairs ascend into darkness.
+    To the north the corridor is illuminated by torches set high in the walls, out of reach.
+    On one wall is a red button.
+- id: Beam Room
+  room: MREYE
+  slug: beam-room
+  region: wonder
+  anchors: []
+  scene_description: 'You are in the middle of a long north-south corridor of polished stone.
+    A narrow red beam of light crosses the room at the north end, only inches above the floor.
+
+    '
+  scene_core: 'A long north-south corridor of polished dark stone; a taut, narrow beam of red
+    light crossing the floor at the far north end, mere inches above the ground; tense, precise,
+    dim.
+
+    '
+  rooms:
+  - MREYE
+- id: Engravings Room
+  room: MSTAIRS
+  rooms:
+  - MSTAIRS
+  slug: engravings-room
+  region: wonder
+  anchors: []
+  scene_description: You are in a room with passages heading southwest and southeast. The north
+    wall is ornately carved, filled with strange runes and writing in an unfamiliar language.
+    The outline of a door is barely visible among the runes.
+  scene_core: You are in a room with passages heading southwest and southeast. The north wall
+    is ornately carved, filled with strange runes and writing in an unfamiliar language. The
+    outline of a door is barely visible among the runes.
+- id: Dead End
+  room: DEAD-END
+  rooms:
+  - DEAD-END
+  - DEAD-END-5
+  slug: dead-end
+  region: dread
+  anchors: []
+  scene_description: You have come to the end of two adjoining passages to the west and the
+    northwest.
+  scene_core: You have come to the end of two adjoining passages to the west and the northwest.
+- id: Damp Passage
+  room: DAMP-PASSAGE
+  rooms:
+  - DAMP-PASSAGE
+  slug: damp-passage
+  region: dread
+  anchors: []
+  scene_description: This is a particularly damp spot even by dungeon standards. You can see
+    the junction to the west, and two similar passages to the east and northeast. A wide stone
+    channel steeply descends into the room from the south. It is covered with slippery moss
+    and lichen. The channel crosses the room, but the opening where it once continued north
+    is now blocked by rubble.
+  scene_core: This is a particularly damp spot even by dungeon standards. You can see the junction
+    to the west, and two similar passages to the east and northeast. A wide stone channel steeply
+    descends into the room from the south. It is covered with slippery moss and lichen. The
+    channel crosses the room, but the opening where it once continued north is now blocked by
+    rubble.
+- id: East Corridor
+  room: EAST-CORRIDOR
+  rooms:
+  - EAST-CORRIDOR
+  slug: east-corridor
+  region: peril
+  anchors: []
+  scene_description: This is a hall with polished marble walls. It widens slightly as it turns
+    west at its northern and southern ends.
+  scene_core: This is a hall with polished marble walls. It widens slightly as it turns west
+    at its northern and southern ends.
+- id: West Corridor
+  room: WEST-CORRIDOR
+  rooms:
+  - WEST-CORRIDOR
+  slug: west-corridor
+  region: peril
+  anchors: []
+  scene_description: This is a hall with polished marble walls. It widens slightly as it turns
+    east at its northern and southern ends.
+  scene_core: This is a hall with polished marble walls. It widens slightly as it turns east
+    at its northern and southern ends.
+- id: South Corridor
+  room: SOUTH-CORRIDOR
+  slug: south-corridor
+  region: peril
+  anchors: []
+  scene_description: 'You are in an east-west corridor of the finest marble, which turns north
+    at both its eastern and western ends. Another hall leads south at the centre, and set into
+    the north wall is a heavy bronze door.
+
+    '
+  scene_core: 'An echoing east-west corridor of polished marble that turns north at each end;
+    a side hall opening south at the centre; a heavy closed bronze door set into the north wall;
+    grand, cold, foreboding.
+
+    '
+  rooms:
+  - SOUTH-CORRIDOR
+- id: Narrow Corridor
+  room: BEHIND-DOOR
+  slug: narrow-corridor
+  region: peril
+  anchors: []
+  scene_description: 'You are in a narrow north-south corridor. At the south end is a stout
+    door, and at the north end the passage meets an east-west corridor.
+
+    '
+  scene_core: 'A tight north-south corridor of hewn stone; a stout closed door at the south
+    end; the passage opening into a crossing corridor to the north; confining, tense, dim.
+
+    '
+  rooms:
+  - BEHIND-DOOR
+- id: Dungeon Entrance
+  room: FRONT-DOOR
+  slug: dungeon-entrance
+  region: peril
+  anchors:
+  - guardians-of-zork
+  scene_description: 'You stand before a heavy wooden door with a small barred panel set at
+    about head height. This is the entrance to the dungeon proper.
+
+    '
+  scene_core: 'A heavy iron-banded wooden door with a small barred viewing-panel at head height,
+    set in rough stone and flanked by grim carved guardians; the threshold of a dungeon; heavy,
+    shadowed, ominous.
+
+    '
+  rooms:
+  - FRONT-DOOR
+- id: North Corridor
+  room: NORTH-CORRIDOR
+  slug: north-corridor
+  region: peril
+  anchors: []
+  scene_description: 'This is a wide east-west corridor which opens onto a northern parapet
+    at its centre, where flames and smoke are visible. The corridor turns south at either end,
+    and in the centre of the south wall is a heavy wooden door with a small barred window.
+
+    '
+  scene_core: 'A wide east-west stone corridor; at its centre an opening onto a parapet beyond
+    which flames and smoke glow orange; a heavy barred wooden door in the south wall; ominous,
+    hot light, dread.
+
+    '
+  rooms:
+  - NORTH-CORRIDOR
+- id: Parapet
+  room: PARAPET
+  slug: parapet
+  region: peril
+  anchors: []
+  scene_description: 'You are standing behind a stone retaining wall rimming a parapet that
+    overlooks a fiery, seemingly bottomless pit some two hundred feet across, fashioned of roughly
+    hewn stone. The flames throw off considerable heat. Nearby stands an object like a sundial:
+    an indicator arrow surrounding a large button, its face numbered one through eight. To the
+    south, across a narrow corridor, is a prison cell.
+
+    '
+  scene_core: 'A stone parapet behind a low retaining wall, overlooking a vast circular pit
+    of roaring fire and smoke that seems bottomless; shimmering heat; a curious sundial-like
+    dial — an arrow around a central button, its face numbered one to eight — standing on the
+    parapet; hellish orange light, peril.
+
+    '
+  rooms:
+  - PARAPET
+- id: Prison Cell
+  room: PRISON-CELL
+  slug: prison-cell
+  region: peril
+  anchors:
+  - dungeon-master
+  scene_description: 'You are in a featureless prison cell. Through the small barred window
+    in the closed door you can see the parapet and, behind it, smoke and flames rising from
+    a fiery pit. The Dungeon Master stands at the parapet, leaning on his staff, his keen gaze
+    fixed on you as if waiting for something. Behind you, to the south, is a bronze door.
+
+    '
+  scene_core: 'A bare stone prison cell; through a small barred window in the iron door, a view
+    of a fiery pit and parapet beyond; on the parapet a tall robed figure — the Dungeon Master
+    — leaning on a staff, watching intently; a bronze door behind; tense, fire-lit gloom.
+
+    '
+  rooms:
+  - CELL
+  - PRISON-CELL
+  - GOOD-CELL
+- id: Treasury of Zork
+  room: NIRVANA
+  rooms:
+  - NIRVANA
+  slug: treasury-of-zork
+  region: wonder
+  anchors:
+  - dungeon-master
+  scene_description: This is a large room, richly appointed in a style that bespeaks exquisite
+    taste. To judge from its contents, it is the ultimate storehouse of the wealth of the Great
+    Underground Empire. There are chests containing precious jewels, mountains of zorkmids,
+    rare paintings, ancient statuary, and beguiling curios. On one wall is an annotated map
+    of the Empire, showing the locations of various troves of treasure, and of many superior
+    scenic views. On a desk at the far end of the room are stock certificates representing a
+    controlling interest in FrobozzCo International, the multinational conglomerate and parent
+    company of the Frobozz Magic Boat Co., etc.
+  scene_core: This is a large room, richly appointed in a style that bespeaks exquisite taste.
+    To judge from its contents, it is the ultimate storehouse of the wealth of the Great Underground
+    Empire. There are chests containing precious jewels, mountains of zorkmids, rare paintings,
+    ancient statuary, and beguiling curios. On one wall is an annotated map of the Empire, showing
+    the locations of various troves of treasure, and of many superior scenic views. On a desk
+    at the far end of the room are stock certificates representing a controlling interest in
+    FrobozzCo International, the multinational conglomerate and parent company of the Frobozz
+    Magic Boat Co., etc.
+- id: Tight Squeeze
+  room: TIGHT-SQUEEZE
+  rooms:
+  - TIGHT-SQUEEZE
+  slug: tight-squeeze
+  region: dread
+  anchors: []
+  scene_description: This is a very low and narrow passage leading east to west.
+  scene_core: This is a very low and narrow passage leading east to west.
+- id: Crystal Grotto
+  room: ROCKY-ROOM
+  rooms:
+  - ROCKY-ROOM
+  slug: crystal-grotto
+  region: wonder
+  anchors: []
+  scene_description: This is a chamber of breathtaking beauty. Mighty stalagmites form crystalline-encrusted
+    rock formations. Phosphorescent mosses, fed by a trickle of water from above, make the crystals
+    glow and sparkle with every color of the rainbow. There is an opening to the west, and a
+    man-made passage heads south.
+  scene_core: This is a chamber of breathtaking beauty. Mighty stalagmites form crystalline-encrusted
+    rock formations. Phosphorescent mosses, fed by a trickle of water from above, make the crystals
+    glow and sparkle with every color of the rainbow. There is an opening to the west, and a
+    man-made passage heads south.
+- id: Royal Hall
+  room: WIDE-HALL
+  rooms:
+  - WIDE-HALL
+  slug: royal-hall
+  region: wonder
+  anchors: []
+  scene_description: This is the north end of a large hall with a vaulted ceiling. A long, tiled
+    hallway leads north through a tall arch. Although the purpose of this room is unclear, there
+    is a large rendering of the Royal Seal of Lord Dimwit Flathead carved on the wall.
+  scene_core: This is the north end of a large hall with a vaulted ceiling. A long, tiled hallway
+    leads north through a tall arch. Although the purpose of this room is unclear, there is
+    a large rendering of the Royal Seal of Lord Dimwit Flathead carved on the wall.
+- id: Great Door
+  room: MUSEUM-ANTE
+  slug: great-door
+  region: peril
+  anchors: []
+  scene_description: 'This is the south end of a monumental hall, full of debris from a recent
+    earthquake. To the east stands a tremendous iron door, rusted shut; to its right a gaping
+    cleft has been torn in the rock, opening onto a cleared area beyond.
+
+    '
+  scene_core: 'The south end of a vast, ruined ceremonial hall strewn with earthquake debris
+    and fallen stone; a colossal rusted-shut iron door in the east wall; beside it a jagged
+    cleft torn through the rock; grand, broken, shadowed.
+
+    '
+  rooms:
+  - MUSEUM-ANTE
+- id: Museum Entrance
+  room: MUSEUM-ENTRANCE
+  slug: museum-entrance
+  region: wonder
+  anchors: []
+  scene_description: 'This is the entrance hall of the Royal Museum, the grandest in the Great
+    Underground Empire. A few wide steps lead south to the Royal Puzzle; a stone door to the
+    east opens on the Royal Jewel Collection; a wooden door to the north leads to the Museum
+    of Technology; and to the west stands a great iron door, rusted shut, with a cleft in the
+    rock beside it.
+
+    '
+  scene_core: 'The grand entrance hall of an underground royal museum; wide ceremonial steps
+    descending south; an ornate stone door east and a carved wooden door north; a massive rusted
+    iron door west with a cleft in the rock beside it; faded imperial grandeur, dim.
+
+    '
+  rooms:
+  - MUSEUM-ENTRANCE
+  - MID-MUSEUM-ENTRANCE
+  - OLD-MUSEUM-ENTRANCE
+- id: Jewel Room
+  room: JEWEL-ROOM
+  slug: jewel-room
+  region: wonder
+  anchors: []
+  scene_description: 'You are in a high-ceilinged chamber, in the middle of which stands a tall,
+    round steel cage, securely locked. Within the cage is a pedestal bearing the Crown Jewels
+    of the Great Underground Empire — a sceptre, a jewelled knife, and a golden ring. A small
+    bronze plaque, now tarnished, is fixed to the cage.
+
+    '
+  scene_core: 'A high-ceilinged museum chamber; at its centre a tall cylindrical steel cage,
+    locked; inside, a pedestal displaying crown jewels — a sceptre, a jewelled dagger, a golden
+    ring — glinting under focused light; a tarnished bronze plaque on the cage; hushed, reverent,
+    dim.
+
+    '
+  rooms:
+  - JEWEL-ROOM
+  - MID-JEWEL-ROOM
+  - OLD-JEWEL-ROOM
+- id: Technology Museum
+  room: TECH-MUSEUM
+  slug: technology-museum
+  region: wonder
+  anchors: []
+  scene_description: 'This is a large hall which once hosted the technological exhibits of the
+    Great Underground Empire. A wooden door leads south.
+
+    '
+  scene_core: 'A large exhibition hall of antique Great Underground Empire technology — strange
+    brass-and-iron contraptions and dusty glass display cases lining the walls; a wooden door
+    in the south wall; museum-quiet, dim, faintly wondrous.
+
+    '
+  rooms:
+  - TECH-MUSEUM
+  - MID-TECH-MUSEUM
+  - OLD-TECH-MUSEUM
+- id: Creepy Crawl
+  room: CREEPY-CRAWL
+  rooms:
+  - CREEPY-CRAWL
+  slug: creepy-crawl
+  region: dread
+  anchors: []
+  scene_description: You are in a dark and quite creepy crawlway with passages leaving to the
+    north, east, south, and southwest.
+  scene_core: You are in a dark and quite creepy crawlway with passages leaving to the north,
+    east, south, and southwest.
+- id: Land of Shadow
+  room: SHADOW-1
+  rooms:
+  - SHADOW-1
+  - SHADOW-2
+  - SHADOW-3
+  - SHADOW-4
+  - SHADOW-5
+  - SHADOW-6
+  - SHADOW-7
+  - SHADOW-8
+  slug: land-of-shadow
+  region: peril
+  anchors:
+  - hooded-figure
+  scene_description: You are at the eastern end of a dark, featureless landscape of shallow
+    hills. Paths to the east and southeast reenter the rock.
+  scene_core: You are at the eastern end of a dark, featureless landscape of shallow hills.
+    Paths to the east and southeast reenter the rock.
+- id: Flathead Ocean
+  room: FLATHEAD-OCEAN
+  slug: flathead-ocean
+  region: above_ground
+  anchors: []
+  scene_description: 'You are at the shore of an amazing underground sea, the topic of many
+    a legend among adventurers. A heavy surf rolls in and a breeze blows onshore. The land rises
+    steeply to the east, quicksand bars the way south, and a thick mist covers the ocean. A
+    path heads north along the beach. Far out on the misty water, an ancient Viking ship passes
+    along the shore, an old and crusty sailor standing at its prow.
+
+    '
+  scene_core: 'The misty shore of a vast underground sea; heavy surf breaking on a dark beach;
+    steep land rising east, a path heading north; far out on the fog-shrouded water an ancient
+    Viking longship glides past, a grizzled old sailor at its prow peering shoreward; legendary,
+    melancholy, wide.
+
+    '
+  rooms:
+  - FLATHEAD-OCEAN
+- id: Endless Stair
+  room: ZORK2-STAIR
+  rooms:
+  - ZORK2-STAIR
+  slug: endless-stair
+  region: underground
+  anchors: []
+  scene_description: You are at the bottom of a seemingly endless stair, winding its way upward
+    beyond your vision. An eerie light, coming from all around you, casts strange shadows on
+    the walls. To the south is a dark and winding trail.
+  scene_core: You are at the bottom of a seemingly endless stair, winding its way upward beyond
+    your vision. An eerie light, coming from all around you, casts strange shadows on the walls.
+    To the south is a dark and winding trail.
+- id: Junction
+  room: JUNCTION
+  rooms:
+  - JUNCTION
+  slug: junction
+  region: underground
+  anchors: []
+  scene_description: You are at the junction of a north-south passage and an east-west passage.
+    To the north, you can make out the bottom of a stairway. The ways to the east and south
+    are relatively cramped, but a wider trail leads to the west.
+  scene_core: You are at the junction of a north-south passage and an east-west passage. To
+    the north, you can make out the bottom of a stairway. The ways to the east and south are
+    relatively cramped, but a wider trail leads to the west.
+- id: Barren Area
+  room: CLEARING
+  rooms:
+  - CLEARING
+  slug: barren-area
+  region: underground
+  anchors: []
+  scene_description: You are west of the junction, where the rock-bound passage widens out into
+    a large, flat area. Although the land here is barren, you can see vegetation to the west.
+    South of here is a mighty wall of stone, ancient and crumbling. To the southwest the wall
+    has decayed enough to form an opening, through which seeps a thin mist. A trail dips sharply
+    into rocky terrain to the northwest.
+  scene_core: You are west of the junction, where the rock-bound passage widens out into a large,
+    flat area. Although the land here is barren, you can see vegetation to the west. South of
+    here is a mighty wall of stone, ancient and crumbling. To the southwest the wall has decayed
+    enough to form an opening, through which seeps a thin mist. A trail dips sharply into rocky
+    terrain to the northwest.
+- id: Hairpin Loop
+  room: SLOPE
+  rooms:
+  - SLOPE
+  slug: hairpin-loop
+  region: underground
+  anchors: []
+  scene_description: You are at a sharp turn on a narrow and steeply sloping path, strewn with
+    boulders of various sizes. The path climbs sharply toward a desolate plain to the southeast.
+    Southwest of here the path winds down to the base of a cliff.
+  scene_core: You are at a sharp turn on a narrow and steeply sloping path, strewn with boulders
+    of various sizes. The path climbs sharply toward a desolate plain to the southeast. Southwest
+    of here the path winds down to the base of a cliff.
+- id: Cliff Base
+  room: CLIFF-BASE
+  rooms:
+  - CLIFF-BASE
+  slug: cliff-base
+  region: above_ground
+  anchors: []
+  scene_description: You are at the base of a steep cliff. Directly above you is a wide ledge
+    and far above that some natural sunlight can be seen. To the northeast is a steeply climbing
+    path and the ground becomes sandy toward the south.
+  scene_core: You are at the base of a steep cliff. Directly above you is a wide ledge and far
+    above that some natural sunlight can be seen. To the northeast is a steeply climbing path
+    and the ground becomes sandy toward the south.
+- id: Cliff
+  room: CLIFF
+  rooms:
+  - CLIFF
+  slug: cliff
+  region: above_ground
+  anchors: []
+  scene_description: This is a remarkable spot in the dungeon. Perhaps two hundred feet above
+    you is a gaping hole in the earth's surface through which pours bright sunshine! A few seedlings
+    from the world above, nurtured by the sunlight and occasional rains, have grown into giant
+    trees, making this a virtual oasis in the desert of the Underground Empire. To the west
+    is a sheer precipice, dropping nearly fifty feet to jagged rocks below. The way south is
+    barred by a forbidding stone wall, crumbling from age. There is a jagged opening in the
+    wall to the southwest, through which leaks a fine mist. The land to the east looks lifeless
+    and barren. A rope is tied to one of the large trees here and is dangling over the side
+    of the cliff, reaching down to the shelf below. You catch, out of the corner of your eye,
+    some movement among the trees. You seem to hear, from the southwest, the sounds of the sea.
+  scene_core: This is a remarkable spot in the dungeon. Perhaps two hundred feet above you is
+    a gaping hole in the earth's surface through which pours bright sunshine! A few seedlings
+    from the world above, nurtured by the sunlight and occasional rains, have grown into giant
+    trees, making this a virtual oasis in the desert of the Underground Empire. To the west
+    is a sheer precipice, dropping nearly fifty feet to jagged rocks below. The way south is
+    barred by a forbidding stone wall, crumbling from age. There is a jagged opening in the
+    wall to the southwest, through which leaks a fine mist. The land to the east looks lifeless
+    and barren. A rope is tied to one of the large trees here and is dangling over the side
+    of the cliff, reaching down to the shelf below. You catch, out of the corner of your eye,
+    some movement among the trees. You seem to hear, from the southwest, the sounds of the sea.
+- id: Cliff Ledge
+  room: CLIFF-LEDGE
+  rooms:
+  - CLIFF-LEDGE
+  slug: cliff-ledge
+  region: above_ground
+  anchors: []
+  scene_description: This is a rock-strewn ledge near the base of a tall cliff. The bottom of
+    the cliff is another fifteen feet below. You have little hope of climbing up the cliff face,
+    but you might be able to scramble down from here (though it's doubtful you could return).
+    A long piece of rope is dangling down from the top of the cliff and is within your reach.
+  scene_core: This is a rock-strewn ledge near the base of a tall cliff. The bottom of the cliff
+    is another fifteen feet below. You have little hope of climbing up the cliff face, but you
+    might be able to scramble down from here (though it's doubtful you could return). A long
+    piece of rope is dangling down from the top of the cliff and is within your reach.
+- id: Foggy Room
+  room: FOGGY-ROOM
+  rooms:
+  - FOGGY-ROOM
+  slug: foggy-room
+  region: dread
+  anchors: []
+  scene_description: You are in a dank passage filled with a wispy fog. A spooky passageway
+    leads north and a wider path heads off to the south. To the west, the path leaves the rock
+    and enters an eerie, shadowy land.
+  scene_core: You are in a dank passage filled with a wispy fog. A spooky passageway leads north
+    and a wider path heads off to the south. To the west, the path leaves the rock and enters
+    an eerie, shadowy land.
+- id: Lake Shore
+  room: LAKE-SHORE
+  rooms:
+  - LAKE-SHORE
+  slug: lake-shore
+  region: above_ground
+  anchors: []
+  scene_description: You are in a wide cavern on the north shore of a small lake. Some polished
+    stone steps lead to the southeast and a sheer rock face prevents any movement around the
+    lake to the southwest. The cavern is dimly lit from above.
+  scene_core: You are in a wide cavern on the north shore of a small lake. Some polished stone
+    steps lead to the southeast and a sheer rock face prevents any movement around the lake
+    to the southwest. The cavern is dimly lit from above.
+- id: Aqueduct View
+  room: AQ-VIEW
+  rooms:
+  - AQ-VIEW
+  slug: aqueduct-view
+  region: above_ground
+  anchors: []
+  scene_description: This is a small balcony carved into a near-vertical cliff. To the east,
+    stretching from north to south, stands a monumental aqueduct supported by mighty stone pillars,
+    some of which are starting to crumble from age. You feel a sense of loss and sadness as
+    you ponder this once-proud structure and the failure of the Empire which created this and
+    other engineering marvels. Some stone steps lead up to the northwest.
+  scene_core: This is a small balcony carved into a near-vertical cliff. To the east, stretching
+    from north to south, stands a monumental aqueduct supported by mighty stone pillars, some
+    of which are starting to crumble from age. You feel a sense of loss and sadness as you ponder
+    this once-proud structure and the failure of the Empire which created this and other engineering
+    marvels. Some stone steps lead up to the northwest.
+- id: On the Lake
+  room: ON-LAKE
+  rooms:
+  - ON-LAKE
+  slug: on-the-lake
+  region: above_ground
+  anchors: []
+  scene_description: You are floating on the surface of the lake. The water is ice cold and
+    your ability to survive here for long is very questionable. A swim north puts you at your
+    starting point. Conditions to the east are poor where the lake turns into swamp. The west
+    and south shores are suitable for walking, however.
+  scene_core: You are floating on the surface of the lake. The water is ice cold and your ability
+    to survive here for long is very questionable. A swim north puts you at your starting point.
+    Conditions to the east are poor where the lake turns into swamp. The west and south shores
+    are suitable for walking, however.
+- id: Underwater
+  room: IN-LAKE
+  rooms:
+  - IN-LAKE
+  slug: underwater
+  region: underground
+  anchors: []
+  scene_description: You are below the surface of the lake. It turns out that the lake is quite
+    shallow and the bottom is only a few feet below you. Considering the frigid temperature
+    of the water, you should probably not plan an extended stay. The lake bottom is sandy and
+    a few hearty plants and algae live there.
+  scene_core: You are below the surface of the lake. It turns out that the lake is quite shallow
+    and the bottom is only a few feet below you. Considering the frigid temperature of the water,
+    you should probably not plan an extended stay. The lake bottom is sandy and a few hearty
+    plants and algae live there.
+- id: Western Shore
+  room: FAR-SHORE
+  rooms:
+  - FAR-SHORE
+  slug: western-shore
+  region: above_ground
+  anchors: []
+  scene_description: You are on the western shore of the lake. The ground here is quite hard,
+    but a few sickly reeds manage to grow near the water's edge. The only path leads into the
+    rock to the south.
+  scene_core: You are on the western shore of the lake. The ground here is quite hard, but a
+    few sickly reeds manage to grow near the water's edge. The only path leads into the rock
+    to the south.
+- id: Scenic Vista
+  room: VIEW-ROOM
+  slug: scenic-vista
+  region: wonder
+  anchors: []
+  scene_description: 'You are in a small chamber carved in the rock, with its sole exit to the
+    north. Mounted on one wall is a featureless table, angled toward you, of the kind used in
+    parks to indicate points of interest in a view — though your cramped surroundings are far
+    from scenic. An indicator above the table can be set to display different vistas.
+
+    '
+  scene_core: 'A small rock-hewn chamber with a single north exit; mounted on one wall an angled
+    stone viewing-table like a scenic-overlook marker, blank and featureless; a brass indicator
+    dial above it; cramped, mysterious, faintly magical, dim.
+
+    '
+  rooms:
+  - VIEW-ROOM
+- id: Ladder Top
+  room: LADDER-TOP
+  rooms:
+  - LADDER-TOP
+  slug: ladder-top
+  region: underground
+  anchors: []
+  scene_description: This is a very small room. In the corner is a rickety wooden ladder, leading
+    downward. It might be safe to descend. There is also a staircase leading upward.
+  scene_core: This is a very small room. In the corner is a rickety wooden ladder, leading downward.
+    It might be safe to descend. There is also a staircase leading upward.
+- id: Ladder Bottom
+  room: LADDER-BOTTOM
+  rooms:
+  - LADDER-BOTTOM
+  slug: ladder-bottom
+  region: underground
+  anchors: []
+  scene_description: This is a rather wide room. On one side is the bottom of a narrow wooden
+    ladder. To the west and the south are passages leaving the room.
+  scene_core: This is a rather wide room. On one side is the bottom of a narrow wooden ladder.
+    To the west and the south are passages leaving the room.
+- id: Timber Room
+  room: TIMBER-ROOM
+  rooms:
+  - TIMBER-ROOM
+  slug: timber-room
+  region: underground
+  anchors: []
+  scene_description: This is a long and narrow passage, which is cluttered with broken timbers.
+    A wide passage comes from the east and turns at the west end of the room into a very narrow
+    passageway. From the west comes a strong draft.
+  scene_core: This is a long and narrow passage, which is cluttered with broken timbers. A wide
+    passage comes from the east and turns at the west end of the room into a very narrow passageway.
+    From the west comes a strong draft.
+- id: Drafty Room
+  room: LOWER-SHAFT
+  slug: drafty-room
+  region: dread
+  anchors: []
+  scene_description: 'This is a small, drafty room at the bottom of a shaft. A cold draught
+    moves through the darkness, and a narrow passage leads onward.
+
+    '
+  scene_core: 'A small, cold chamber at the foot of a deep shaft; a perceptible draught stirring
+    dust in the dark; a narrow passage leading onward; bare, chilly, oppressive, dim.
+
+    '
+  rooms:
+  - LOWER-SHAFT
+- id: Machine Room
+  room: MACHINE-ROOM
+  slug: machine-room
+  region: dread
+  anchors: []
+  scene_description: 'This is a low room of rough stone, silent and bare. Rusted bolts and dark
+    stains on the floor mark where some great mechanism once stood, long since gone.
+
+    '
+  scene_core: 'A low, rough-hewn stone room, empty and silent; rusted mounting bolts and oil-dark
+    stains on the floor where a great machine once stood, now vanished; abandoned, melancholy,
+    dim.
+
+    '
+  rooms:
+  - MACHINE-ROOM
+- id: Room 8
+  room: ROOM-8
+  rooms:
+  - ROOM-8
+  slug: room-8
+  region: underground
+  anchors: []
+  scene_description: This is a small chamber carved out of the rock at the end of a short crawl.
+    On the wall is crudely chiseled the number
+  scene_core: This is a small chamber carved out of the rock at the end of a short crawl. On
+    the wall is crudely chiseled the number
+- id: Sacrificial Altar
+  room: ZORK-IV
+  slug: sacrificial-altar
+  region: dread
+  anchors: []
+  scene_description: 'You are in the interior of a huge temple, rudely constructed of basalt
+    blocks. Flickering torches cast a sallow light over a stone altar still wet with the blood
+    of human sacrifice, its velvet coverings stained and encrusted with gore.
+
+    '
+  scene_core: 'The interior of a huge, crude temple built of rough basalt blocks; flickering
+    torchlight casting a sickly glow over a stone sacrificial altar slick with fresh blood,
+    its velvet coverings stained and crusted with gore; ominous, barbaric, dread.
+
+    '
+  rooms:
+  - ZORK-IV
+- id: Southern Shore
+  room: SOUTH-SHORE
+  rooms:
+  - SOUTH-SHORE
+  slug: southern-shore
+  region: above_ground
+  anchors: []
+  scene_description: You are on the south shore of the lake. Rock formations prevent movement
+    to the west and thickening swamp to the east makes the going all but impossible. To the
+    south, where the beach meets a rock formation, you can make out a dark passage sloping steeply
+    upward into the rock.
+  scene_core: You are on the south shore of the lake. Rock formations prevent movement to the
+    west and thickening swamp to the east makes the going all but impossible. To the south,
+    where the beach meets a rock formation, you can make out a dark passage sloping steeply
+    upward into the rock.
+- id: Dark Place
+  room: DARK-1
+  slug: dark-place
+  region: dread
+  anchors: []
+  scene_description: 'It is pitch black. You are likely to be eaten by a grue.
+
+    '
+  scene_core: 'Near-total darkness; only the faintest suggestion of jagged rock walls at the
+    edge of perception, and a pair of dim glinting eyes watching from the black — the lurking
+    menace of a grue; an almost wholly black frame, claustrophobic and terrifying.
+
+    '
+  rooms:
+  - DARK-1
+  - DARK-2
+- id: Key Room
+  room: KEY-ROOM
+  slug: key-room
+  region: underground
+  anchors: []
+  scene_description: 'You are between a rock and a dark place. The room is lit dimly from above,
+    revealing a lone dark path sloping down to the west. A heavy manhole cover to one side has
+    been moved aside to reveal a dark passage below. In the focused light at the centre of the
+    room, a single key lies in the dust.
+
+    '
+  scene_core: 'A dim chamber lit by a shaft of light from above; a dark path sloping down to
+    the west; a heavy iron manhole cover shifted aside to reveal a black passage below; in the
+    pool of light at the centre, a single old key lying in the dust; quiet, expectant, shadowed.
+
+    '
+  rooms:
+  - KEY-ROOM
+- id: Aqueduct
+  room: AQ-1
+  rooms:
+  - AQ-1
+  slug: aqueduct
+  region: underground
+  anchors: []
+  scene_description: You are in a wide stone channel, part of the water supply system for the
+    Great Underground Empire. The source of water was a waterfall to the south, which has long
+    since dried up. Water flowed along the aqueduct to the north. This region is lit from above,
+    although the source of light is not apparent.
+  scene_core: You are in a wide stone channel, part of the water supply system for the Great
+    Underground Empire. The source of water was a waterfall to the south, which has long since
+    dried up. Water flowed along the aqueduct to the north. This region is lit from above, although
+    the source of light is not apparent.
+- id: High Arch
+  room: AQ-2
+  rooms:
+  - AQ-2
+  slug: high-arch
+  region: underground
+  anchors: []
+  scene_description: You are now on one of the tallest arches of the aqueduct, hundreds of feet
+    above a rocky chasm. The immensity of the aqueduct project is apparent from here. Stone
+    supports rise from the rock floor to form massive arches, which traverse the region from
+    north to south. The water-carrying channel here is wide and deep. To the west and far below,
+    you can make out a balcony which must command a wide view of the aqueduct. The channel ends
+    abruptly to your north where a supporting pillar has crumbled, casting the arch into the
+    chasm.
+  scene_core: You are now on one of the tallest arches of the aqueduct, hundreds of feet above
+    a rocky chasm. The immensity of the aqueduct project is apparent from here. Stone supports
+    rise from the rock floor to form massive arches, which traverse the region from north to
+    south. The water-carrying channel here is wide and deep. To the west and far below, you
+    can make out a balcony which must command a wide view of the aqueduct. The channel ends
+    abruptly to your north where a supporting pillar has crumbled, casting the arch into the
+    chasm.
+- id: Water Slide
+  room: AQ-3
+  rooms:
+  - AQ-3
+  slug: water-slide
+  region: underground
+  anchors: []
+  scene_description: You are near the northern end of this segment of the aqueduct system. To
+    the south and slightly uphill, the bulk of the aqueduct looms ominously, towering above
+    a gorge. To the north, the water channel drops precipitously and enters a rocky hole. The
+    damp moss and lichen would certainly make that a one-way trip. The southern part of the
+    aqueduct system is inaccessable due to the collapse of one of the water-bearing arches.
+    manhole cover
+  scene_core: You are near the northern end of this segment of the aqueduct system. To the south
+    and slightly uphill, the bulk of the aqueduct looms ominously, towering above a gorge. To
+    the north, the water channel drops precipitously and enters a rocky hole. The damp moss
+    and lichen would certainly make that a one-way trip. The southern part of the aqueduct system
+    is inaccessable due to the collapse of one of the water-bearing arches. manhole cover

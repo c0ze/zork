@@ -1,0 +1,23 @@
+# Recurring entities to keep visually consistent across Zork III scenes
+# ("The Dungeon Master").
+#
+# generate_images.py injects these into any scene prompt whose `anchors:` list
+# names them (see scene_anchors in extract_scenes.py + the hand-authored opening.yaml).
+
+anchors:
+  dungeon-master:
+    description: >
+      A tall, gaunt old man in a long hooded robe, with a flowing white beard and
+      deep, knowing eyes, leaning on a tall wooden staff. The enigmatic Dungeon
+      Master of Zork — calm, grave and watchful, keeper of the final secrets of
+      the Great Underground Empire.
+  hooded-figure:
+    description: >
+      A silent cloaked figure shrouded head to foot in a dark hooded robe that
+      hides its face, standing in a featureless grey void; its stance mirrors your
+      own with uncanny precision, and a sword glints beneath the cloak.
+  guardians-of-zork:
+    description: >
+      Two colossal stone statues of armoured warriors flanking a doorway, hewn
+      from dark rock — grim-faced, watchful, and seeming forever on the edge of
+      movement: the silent Guardians of Zork.

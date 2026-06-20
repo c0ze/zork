@@ -108,6 +108,45 @@ GAMES = {
             },
         },
     },
+    "zork3": {
+        "src": "sources/zork3",
+        "dungeon": ["3dungeon.zil", "3actions.zil"],  # ZIII splits room defs across both
+        "actions": "3actions.zil",
+        "opening": "zork3/scenes/opening.yaml",  # optional; merged only if present
+        "out": "zork3/scenes/zork3.yaml",
+        # Zork III ("The Dungeon Master") is wholly subterranean and the most
+        # melancholy of the trilogy; the lake/cliff/ocean are its only "open" notes.
+        "default_region": "underground",
+        "region_default": "underground",
+        "start_room": "Endless Stair",
+        "scene_anchors": {
+            "Land of Shadow": ["hooded-figure"],
+            "Dungeon Entrance": ["guardians-of-zork"],
+            "Parapet": ["guardians-of-zork"],
+            "Treasury of Zork": ["dungeon-master"],
+        },
+        "regions": {
+            "above_ground": {
+                "Lake Shore", "On the Lake", "Western Shore", "Southern Shore",
+                "Aqueduct View", "Cliff Base", "Cliff", "Cliff Ledge", "Flathead Ocean",
+            },
+            "peril": {
+                "Land of Shadow", "Dungeon Entrance", "Narrow Corridor", "North Corridor",
+                "South Corridor", "East Corridor", "West Corridor", "Parapet", "Prison Cell",
+                "Great Door",
+            },
+            "wonder": {
+                "Crystal Grotto", "Royal Hall", "Jewel Room", "Technology Museum",
+                "Museum Entrance", "Scenic Vista", "Inside Mirror", "Beam Room",
+                "Engravings Room", "Button Room", "Treasury of Zork", "Royal Puzzle Entrance",
+                "Room in a Puzzle", "Side Room",
+            },
+            "dread": {
+                "Creepy Crawl", "Dark Place", "Foggy Room", "Damp Passage", "Dead End",
+                "Tight Squeeze", "Drafty Room", "Machine Room", "Sacrificial Altar",
+            },
+        },
+    },
 }
 
 
@@ -175,8 +214,10 @@ def main():
     cfg = GAMES[args.game]
 
     src = ROOT / cfg["src"]
-    dungeon = src / cfg["dungeon"]
-    actions = src / cfg["actions"]
+    # Room definitions can span multiple ZIL files (Zork III splits them across
+    # 3dungeon.zil + 3actions.zil); accept a str or a list of filenames for both.
+    dungeon_files = cfg["dungeon"] if isinstance(cfg["dungeon"], list) else [cfg["dungeon"]]
+    action_files = cfg["actions"] if isinstance(cfg["actions"], list) else [cfg["actions"]]
     out = ROOT / cfg["out"]
     region_default = cfg["region_default"]
     regions = cfg["regions"]
@@ -188,8 +229,12 @@ def main():
         if opening_path.exists():  # keep the merge optional per game
             opening = {s["id"]: s for s in yaml.safe_load(opening_path.read_text())["scenes"]}
 
-    rooms = parse_rooms(dungeon.read_text())
-    action_descs = parse_action_descs(actions.read_text())
+    rooms = []
+    for df in dungeon_files:
+        rooms += parse_rooms((src / df).read_text())
+    action_descs = {}
+    for af in action_files:
+        action_descs.update(parse_action_descs((src / af).read_text()))
 
     scenes = []
     seen = {}  # desc -> index in scenes

@@ -1,0 +1,351 @@
+game: zork3
+slice: opening
+aspect: "16:9"
+default_region: underground
+
+# Hand-authored fixes merged verbatim into zork3.yaml by extract_scenes.py (keyed
+# by `id`). Zork III defines many rooms in action routines whose M-LOOK text is a
+# concatenation of conditional/endgame states (and occasional raw ZIL); these are
+# trimmed to a clean first-visit description, and the 5 textless rooms are written.
+#
+# scene_description = first-visit room text -> TTS. scene_core = image content.
+# anchors = recurring entities (anchors.yaml). region = music section.
+
+scenes:
+  # ---- The Mirror Box / Royal Puzzle area ----
+  - id: "Side Room"
+    room: CP-OUT
+    slug: side-room
+    region: wonder
+    anchors: []
+    scene_description: >
+      You are in a narrow room, lit from above. A flight of steps leads up to the
+      north, and a metal door leads to the east.
+    scene_core: >
+      A narrow stone room lit from above by a pale shaft of light; a flight of worn
+      steps rising to the north; a heavy metal door set in the east wall; quiet and
+      enclosed.
+
+  - id: "Hallway"
+    room: MRD
+    slug: hallway
+    region: wonder
+    anchors: []
+    scene_description: >
+      You are in a long, bare hallway of dark polished stone, eerily identical in
+      either direction. This is part of the strange maze surrounding the great
+      mirror.
+    scene_core: >
+      A long, featureless hallway of dark polished stone, unnervingly symmetrical
+      and identical in both directions; part of a disorienting mirror-maze; cold,
+      uncanny, dim.
+
+  - id: "Narrow Room"
+    room: MRDE
+    slug: narrow-room
+    region: wonder
+    anchors: []
+    scene_description: >
+      You are in a narrow room, one of several near-identical chambers arranged
+      around the great mirror, with confusingly similar passages leading off.
+    scene_core: >
+      A cramped, narrow stone chamber, one of many identical cells arranged around
+      a central mirror; confusingly similar passages branching away; claustrophobic
+      and uncanny.
+
+  - id: "Inside Mirror"
+    room: IN-MIRROR
+    slug: inside-mirror
+    region: wonder
+    anchors: []
+    scene_description: >
+      You are inside a rectangular wooden box of complicated structure: four sides
+      and the roof are filled in and the floor is open. Two short side-panels are of
+      carved and polished wood — mahogany on the left, pine on the right; the wall
+      you face is painted red and black, the wall behind white and yellow, and the
+      ceiling blue. A narrow channel runs north to south through the stone floor,
+      widening at the centre into a circular depression incised with a compass rose.
+      A carved wooden bar crosses the box at waist height, pierced by two wooden
+      poles — a short hand-grip pole at the left, and a long central pole ending in
+      a T-bar carved with an arrow.
+    scene_core: >
+      The interior of a strange wooden box like a sorcerer's cabinet: panelled walls
+      painted in bold blocks of red, black, white, yellow and blue, with two short
+      panels of mahogany and pine; an open stone floor cut by a north-south channel
+      that widens to a central circular compass-rose depression; a waist-high carved
+      bar threaded by two wooden poles, the central one ending in a T-bar carved with
+      an arrow; arcane, puzzling, dim.
+
+  - id: "Beam Room"
+    room: MREYE
+    slug: beam-room
+    region: wonder
+    anchors: []
+    scene_description: >
+      You are in the middle of a long north-south corridor of polished stone. A
+      narrow red beam of light crosses the room at the north end, only inches above
+      the floor.
+    scene_core: >
+      A long north-south corridor of polished dark stone; a taut, narrow beam of red
+      light crossing the floor at the far north end, mere inches above the ground;
+      tense, precise, dim.
+
+  # ---- The endgame: corridors, parapet, the fiery pit ----
+  - id: "South Corridor"
+    room: SOUTH-CORRIDOR
+    slug: south-corridor
+    region: peril
+    anchors: []
+    scene_description: >
+      You are in an east-west corridor of the finest marble, which turns north at
+      both its eastern and western ends. Another hall leads south at the centre, and
+      set into the north wall is a heavy bronze door.
+    scene_core: >
+      An echoing east-west corridor of polished marble that turns north at each end;
+      a side hall opening south at the centre; a heavy closed bronze door set into
+      the north wall; grand, cold, foreboding.
+
+  - id: "Narrow Corridor"
+    room: BEHIND-DOOR
+    slug: narrow-corridor
+    region: peril
+    anchors: []
+    scene_description: >
+      You are in a narrow north-south corridor. At the south end is a stout door,
+      and at the north end the passage meets an east-west corridor.
+    scene_core: >
+      A tight north-south corridor of hewn stone; a stout closed door at the south
+      end; the passage opening into a crossing corridor to the north; confining,
+      tense, dim.
+
+  - id: "Dungeon Entrance"
+    room: FRONT-DOOR
+    slug: dungeon-entrance
+    region: peril
+    anchors: [guardians-of-zork]
+    scene_description: >
+      You stand before a heavy wooden door with a small barred panel set at about
+      head height. This is the entrance to the dungeon proper.
+    scene_core: >
+      A heavy iron-banded wooden door with a small barred viewing-panel at head
+      height, set in rough stone and flanked by grim carved guardians; the threshold
+      of a dungeon; heavy, shadowed, ominous.
+
+  - id: "North Corridor"
+    room: NORTH-CORRIDOR
+    slug: north-corridor
+    region: peril
+    anchors: []
+    scene_description: >
+      This is a wide east-west corridor which opens onto a northern parapet at its
+      centre, where flames and smoke are visible. The corridor turns south at either
+      end, and in the centre of the south wall is a heavy wooden door with a small
+      barred window.
+    scene_core: >
+      A wide east-west stone corridor; at its centre an opening onto a parapet beyond
+      which flames and smoke glow orange; a heavy barred wooden door in the south
+      wall; ominous, hot light, dread.
+
+  - id: "Parapet"
+    room: PARAPET
+    slug: parapet
+    region: peril
+    anchors: []
+    scene_description: >
+      You are standing behind a stone retaining wall rimming a parapet that overlooks
+      a fiery, seemingly bottomless pit some two hundred feet across, fashioned of
+      roughly hewn stone. The flames throw off considerable heat. Nearby stands an
+      object like a sundial: an indicator arrow surrounding a large button, its face
+      numbered one through eight. To the south, across a narrow corridor, is a prison
+      cell.
+    scene_core: >
+      A stone parapet behind a low retaining wall, overlooking a vast circular pit of
+      roaring fire and smoke that seems bottomless; shimmering heat; a curious
+      sundial-like dial — an arrow around a central button, its face numbered one to
+      eight — standing on the parapet; hellish orange light, peril.
+
+  - id: "Prison Cell"
+    room: PRISON-CELL
+    slug: prison-cell
+    region: peril
+    anchors: [dungeon-master]
+    scene_description: >
+      You are in a featureless prison cell. Through the small barred window in the
+      closed door you can see the parapet and, behind it, smoke and flames rising
+      from a fiery pit. The Dungeon Master stands at the parapet, leaning on his
+      staff, his keen gaze fixed on you as if waiting for something. Behind you, to
+      the south, is a bronze door.
+    scene_core: >
+      A bare stone prison cell; through a small barred window in the iron door, a
+      view of a fiery pit and parapet beyond; on the parapet a tall robed figure —
+      the Dungeon Master — leaning on a staff, watching intently; a bronze door
+      behind; tense, fire-lit gloom.
+
+  # ---- The Royal Museum ----
+  - id: "Great Door"
+    room: MUSEUM-ANTE
+    slug: great-door
+    region: peril
+    anchors: []
+    scene_description: >
+      This is the south end of a monumental hall, full of debris from a recent
+      earthquake. To the east stands a tremendous iron door, rusted shut; to its
+      right a gaping cleft has been torn in the rock, opening onto a cleared area
+      beyond.
+    scene_core: >
+      The south end of a vast, ruined ceremonial hall strewn with earthquake debris
+      and fallen stone; a colossal rusted-shut iron door in the east wall; beside it
+      a jagged cleft torn through the rock; grand, broken, shadowed.
+
+  - id: "Museum Entrance"
+    room: MUSEUM-ENTRANCE
+    slug: museum-entrance
+    region: wonder
+    anchors: []
+    scene_description: >
+      This is the entrance hall of the Royal Museum, the grandest in the Great
+      Underground Empire. A few wide steps lead south to the Royal Puzzle; a stone
+      door to the east opens on the Royal Jewel Collection; a wooden door to the
+      north leads to the Museum of Technology; and to the west stands a great iron
+      door, rusted shut, with a cleft in the rock beside it.
+    scene_core: >
+      The grand entrance hall of an underground royal museum; wide ceremonial steps
+      descending south; an ornate stone door east and a carved wooden door north; a
+      massive rusted iron door west with a cleft in the rock beside it; faded
+      imperial grandeur, dim.
+
+  - id: "Jewel Room"
+    room: JEWEL-ROOM
+    slug: jewel-room
+    region: wonder
+    anchors: []
+    scene_description: >
+      You are in a high-ceilinged chamber, in the middle of which stands a tall,
+      round steel cage, securely locked. Within the cage is a pedestal bearing the
+      Crown Jewels of the Great Underground Empire — a sceptre, a jewelled knife, and
+      a golden ring. A small bronze plaque, now tarnished, is fixed to the cage.
+    scene_core: >
+      A high-ceilinged museum chamber; at its centre a tall cylindrical steel cage,
+      locked; inside, a pedestal displaying crown jewels — a sceptre, a jewelled
+      dagger, a golden ring — glinting under focused light; a tarnished bronze plaque
+      on the cage; hushed, reverent, dim.
+
+  - id: "Technology Museum"
+    room: TECH-MUSEUM
+    slug: technology-museum
+    region: wonder
+    anchors: []
+    scene_description: >
+      This is a large hall which once hosted the technological exhibits of the Great
+      Underground Empire. A wooden door leads south.
+    scene_core: >
+      A large exhibition hall of antique Great Underground Empire technology —
+      strange brass-and-iron contraptions and dusty glass display cases lining the
+      walls; a wooden door in the south wall; museum-quiet, dim, faintly wondrous.
+
+  # ---- The Lake / Ocean / Scenic Vista ----
+  - id: "Flathead Ocean"
+    room: FLATHEAD-OCEAN
+    slug: flathead-ocean
+    region: above_ground
+    anchors: []
+    scene_description: >
+      You are at the shore of an amazing underground sea, the topic of many a legend
+      among adventurers. A heavy surf rolls in and a breeze blows onshore. The land
+      rises steeply to the east, quicksand bars the way south, and a thick mist
+      covers the ocean. A path heads north along the beach. Far out on the misty
+      water, an ancient Viking ship passes along the shore, an old and crusty sailor
+      standing at its prow.
+    scene_core: >
+      The misty shore of a vast underground sea; heavy surf breaking on a dark beach;
+      steep land rising east, a path heading north; far out on the fog-shrouded water
+      an ancient Viking longship glides past, a grizzled old sailor at its prow
+      peering shoreward; legendary, melancholy, wide.
+
+  - id: "Scenic Vista"
+    room: VIEW-ROOM
+    slug: scenic-vista
+    region: wonder
+    anchors: []
+    scene_description: >
+      You are in a small chamber carved in the rock, with its sole exit to the north.
+      Mounted on one wall is a featureless table, angled toward you, of the kind used
+      in parks to indicate points of interest in a view — though your cramped
+      surroundings are far from scenic. An indicator above the table can be set to
+      display different vistas.
+    scene_core: >
+      A small rock-hewn chamber with a single north exit; mounted on one wall an
+      angled stone viewing-table like a scenic-overlook marker, blank and featureless;
+      a brass indicator dial above it; cramped, mysterious, faintly magical, dim.
+
+  - id: "Key Room"
+    room: KEY-ROOM
+    slug: key-room
+    region: underground
+    anchors: []
+    scene_description: >
+      You are between a rock and a dark place. The room is lit dimly from above,
+      revealing a lone dark path sloping down to the west. A heavy manhole cover to
+      one side has been moved aside to reveal a dark passage below. In the focused
+      light at the centre of the room, a single key lies in the dust.
+    scene_core: >
+      A dim chamber lit by a shaft of light from above; a dark path sloping down to
+      the west; a heavy iron manhole cover shifted aside to reveal a black passage
+      below; in the pool of light at the centre, a single old key lying in the dust;
+      quiet, expectant, shadowed.
+
+  # ---- The textless / atmospheric rooms ----
+  - id: "Drafty Room"
+    room: LOWER-SHAFT
+    slug: drafty-room
+    region: dread
+    anchors: []
+    scene_description: >
+      This is a small, drafty room at the bottom of a shaft. A cold draught moves
+      through the darkness, and a narrow passage leads onward.
+    scene_core: >
+      A small, cold chamber at the foot of a deep shaft; a perceptible draught
+      stirring dust in the dark; a narrow passage leading onward; bare, chilly,
+      oppressive, dim.
+
+  - id: "Machine Room"
+    room: MACHINE-ROOM
+    slug: machine-room
+    region: dread
+    anchors: []
+    scene_description: >
+      This is a low room of rough stone, silent and bare. Rusted bolts and dark
+      stains on the floor mark where some great mechanism once stood, long since
+      gone.
+    scene_core: >
+      A low, rough-hewn stone room, empty and silent; rusted mounting bolts and
+      oil-dark stains on the floor where a great machine once stood, now vanished;
+      abandoned, melancholy, dim.
+
+  - id: "Sacrificial Altar"
+    room: ZORK-IV
+    slug: sacrificial-altar
+    region: dread
+    anchors: []
+    scene_description: >
+      You are in the interior of a huge temple, rudely constructed of basalt blocks.
+      Flickering torches cast a sallow light over a stone altar still wet with the
+      blood of human sacrifice, its velvet coverings stained and encrusted with gore.
+    scene_core: >
+      The interior of a huge, crude temple built of rough basalt blocks; flickering
+      torchlight casting a sickly glow over a stone sacrificial altar slick with
+      fresh blood, its velvet coverings stained and crusted with gore; ominous,
+      barbaric, dread.
+
+  - id: "Dark Place"
+    room: DARK-1
+    slug: dark-place
+    region: dread
+    anchors: []
+    scene_description: >
+      It is pitch black. You are likely to be eaten by a grue.
+    scene_core: >
+      Near-total darkness; only the faintest suggestion of jagged rock walls at the
+      edge of perception, and a pair of dim glinting eyes watching from the black —
+      the lurking menace of a grue; an almost wholly black frame, claustrophobic and
+      terrifying.

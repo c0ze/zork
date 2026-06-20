@@ -6,9 +6,9 @@ site (GitHub Pages) — no backend, no API keys at runtime.
 
 ## Status
 
-- **Live at [zork.coze.org](https://zork.coze.org):** **Zork I** and **Zork II** — both fully
-  playable, illustrated (4 art styles), narrated (8 voices), and scored with regional music.
-- **Planned:** Zork III.
+- **Live at [zork.coze.org](https://zork.coze.org):** the complete **Zork I**, **Zork II**, and
+  **Zork III** trilogy — fully playable, illustrated (4 art styles), narrated (8 voices), and
+  scored with regional music.
 - **Sources** (`sources/`, reference only): Zork I/II/III (MIT, 2025) + Colossal Cave (Unlicense).
 - Per game: full-map scene/text extraction → Gemini batch art → pre-baked TTS narration →
   regional music → a static Parchment web shell with per-turn autosave / restart / death-reset.

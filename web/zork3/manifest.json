@@ -1,0 +1,756 @@
+{
+  "game": "zork3",
+  "styles": [
+    "ink_engraving",
+    "retro_pixel",
+    "painted_pulp",
+    "cinematic_painterly"
+  ],
+  "default_style": "ink_engraving",
+  "voices": [
+    {
+      "key": "us-aria",
+      "label": "US \u00b7 Aria (F)"
+    },
+    {
+      "key": "us-guy",
+      "label": "US \u00b7 Guy (M)"
+    },
+    {
+      "key": "gb-sonia",
+      "label": "UK \u00b7 Sonia (F)"
+    },
+    {
+      "key": "gb-ryan",
+      "label": "UK \u00b7 Ryan (M)"
+    },
+    {
+      "key": "au-natasha",
+      "label": "AU \u00b7 Natasha (F)"
+    },
+    {
+      "key": "au-william",
+      "label": "AU \u00b7 William (M)"
+    },
+    {
+      "key": "ca-clara",
+      "label": "CA \u00b7 Clara (F)"
+    },
+    {
+      "key": "ca-liam",
+      "label": "CA \u00b7 Liam (M)"
+    }
+  ],
+  "default_voice": "us-aria",
+  "audio_path": "assets/audio/{voice}/{slug}.mp3",
+  "default_region": "underground",
+  "start_room": "Endless Stair",
+  "music": {
+    "above_ground": [
+      "assets/music/above_ground-1.mp3",
+      "assets/music/above_ground-2.mp3"
+    ],
+    "underground": [
+      "assets/music/underground-1.mp3",
+      "assets/music/underground-2.mp3"
+    ],
+    "peril": [
+      "assets/music/peril-1.mp3",
+      "assets/music/peril-2.mp3"
+    ],
+    "wonder": [
+      "assets/music/wonder-1.mp3",
+      "assets/music/wonder-2.mp3"
+    ],
+    "dread": [
+      "assets/music/dread-1.mp3",
+      "assets/music/dread-2.mp3"
+    ]
+  },
+  "scenes": {
+    "Royal Puzzle Entrance": {
+      "slug": "royal-puzzle-entrance",
+      "room": "CP-ANTE",
+      "region": "wonder",
+      "narration": "This is a small square room, in the middle of which is a round hole which is blocked by smooth sandstone. through which you can discern the floor some ten feet below. The area under the hole is dark, but it appears to be completely enclosed in rock. In any event, it doesn't seem likely that you could climb back up. Exits are west and, up a few steps, north.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/royal-puzzle-entrance.webp",
+        "retro_pixel": "assets/images/retro_pixel/royal-puzzle-entrance.webp",
+        "painted_pulp": "assets/images/painted_pulp/royal-puzzle-entrance.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/royal-puzzle-entrance.webp"
+      }
+    },
+    "Side Room": {
+      "slug": "side-room",
+      "room": "CP-OUT",
+      "region": "wonder",
+      "narration": "You are in a narrow room, lit from above. A flight of steps leads up to the north, and a metal door leads to the east.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/side-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/side-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/side-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/side-room.webp"
+      }
+    },
+    "Room in a Puzzle": {
+      "slug": "room-in-a-puzzle",
+      "room": "CP",
+      "region": "wonder",
+      "narration": "You are in a small square room bounded to the north and west with marble walls and to the east and south with sandstone walls.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/room-in-a-puzzle.webp",
+        "retro_pixel": "assets/images/retro_pixel/room-in-a-puzzle.webp",
+        "painted_pulp": "assets/images/painted_pulp/room-in-a-puzzle.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/room-in-a-puzzle.webp"
+      }
+    },
+    "Hallway": {
+      "slug": "hallway",
+      "room": "MRD",
+      "region": "wonder",
+      "narration": "You are in a long, bare hallway of dark polished stone, eerily identical in either direction. This is part of the strange maze surrounding the great mirror.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/hallway.webp",
+        "retro_pixel": "assets/images/retro_pixel/hallway.webp",
+        "painted_pulp": "assets/images/painted_pulp/hallway.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/hallway.webp"
+      }
+    },
+    "Narrow Room": {
+      "slug": "narrow-room",
+      "room": "MRDE",
+      "region": "wonder",
+      "narration": "You are in a narrow room, one of several near-identical chambers arranged around the great mirror, with confusingly similar passages leading off.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/narrow-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/narrow-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/narrow-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/narrow-room.webp"
+      }
+    },
+    "Inside Mirror": {
+      "slug": "inside-mirror",
+      "room": "IN-MIRROR",
+      "region": "wonder",
+      "narration": "You are inside a rectangular wooden box of complicated structure: four sides and the roof are filled in and the floor is open. Two short side-panels are of carved and polished wood \u2014 mahogany on the left, pine on the right; the wall you face is painted red and black, the wall behind white and yellow, and the ceiling blue. A narrow channel runs north to south through the stone floor, widening at the centre into a circular depression incised with a compass rose. A carved wooden bar crosses the box at waist height, pierced by two wooden poles \u2014 a short hand-grip pole at the left, and a long central pole ending in a T-bar carved with an arrow.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/inside-mirror.webp",
+        "retro_pixel": "assets/images/retro_pixel/inside-mirror.webp",
+        "painted_pulp": "assets/images/painted_pulp/inside-mirror.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/inside-mirror.webp"
+      }
+    },
+    "Button Room": {
+      "slug": "button-room",
+      "room": "MR-ANTE",
+      "region": "wonder",
+      "narration": "You are at the southern end of a long hall. To the south, stairs ascend into darkness. To the north the corridor is illuminated by torches set high in the walls, out of reach. On one wall is a red button.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/button-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/button-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/button-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/button-room.webp"
+      }
+    },
+    "Beam Room": {
+      "slug": "beam-room",
+      "room": "MREYE",
+      "region": "wonder",
+      "narration": "You are in the middle of a long north-south corridor of polished stone. A narrow red beam of light crosses the room at the north end, only inches above the floor.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/beam-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/beam-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/beam-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/beam-room.webp"
+      }
+    },
+    "Engravings Room": {
+      "slug": "engravings-room",
+      "room": "MSTAIRS",
+      "region": "wonder",
+      "narration": "You are in a room with passages heading southwest and southeast. The north wall is ornately carved, filled with strange runes and writing in an unfamiliar language. The outline of a door is barely visible among the runes.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/engravings-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/engravings-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/engravings-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/engravings-room.webp"
+      }
+    },
+    "Dead End": {
+      "slug": "dead-end",
+      "room": "DEAD-END",
+      "region": "dread",
+      "narration": "You have come to the end of two adjoining passages to the west and the northwest.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/dead-end.webp",
+        "retro_pixel": "assets/images/retro_pixel/dead-end.webp",
+        "painted_pulp": "assets/images/painted_pulp/dead-end.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/dead-end.webp"
+      }
+    },
+    "Damp Passage": {
+      "slug": "damp-passage",
+      "room": "DAMP-PASSAGE",
+      "region": "dread",
+      "narration": "This is a particularly damp spot even by dungeon standards. You can see the junction to the west, and two similar passages to the east and northeast. A wide stone channel steeply descends into the room from the south. It is covered with slippery moss and lichen. The channel crosses the room, but the opening where it once continued north is now blocked by rubble.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/damp-passage.webp",
+        "retro_pixel": "assets/images/retro_pixel/damp-passage.webp",
+        "painted_pulp": "assets/images/painted_pulp/damp-passage.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/damp-passage.webp"
+      }
+    },
+    "East Corridor": {
+      "slug": "east-corridor",
+      "room": "EAST-CORRIDOR",
+      "region": "peril",
+      "narration": "This is a hall with polished marble walls. It widens slightly as it turns west at its northern and southern ends.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/east-corridor.webp",
+        "retro_pixel": "assets/images/retro_pixel/east-corridor.webp",
+        "painted_pulp": "assets/images/painted_pulp/east-corridor.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/east-corridor.webp"
+      }
+    },
+    "West Corridor": {
+      "slug": "west-corridor",
+      "room": "WEST-CORRIDOR",
+      "region": "peril",
+      "narration": "This is a hall with polished marble walls. It widens slightly as it turns east at its northern and southern ends.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/west-corridor.webp",
+        "retro_pixel": "assets/images/retro_pixel/west-corridor.webp",
+        "painted_pulp": "assets/images/painted_pulp/west-corridor.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/west-corridor.webp"
+      }
+    },
+    "South Corridor": {
+      "slug": "south-corridor",
+      "room": "SOUTH-CORRIDOR",
+      "region": "peril",
+      "narration": "You are in an east-west corridor of the finest marble, which turns north at both its eastern and western ends. Another hall leads south at the centre, and set into the north wall is a heavy bronze door.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/south-corridor.webp",
+        "retro_pixel": "assets/images/retro_pixel/south-corridor.webp",
+        "painted_pulp": "assets/images/painted_pulp/south-corridor.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/south-corridor.webp"
+      }
+    },
+    "Narrow Corridor": {
+      "slug": "narrow-corridor",
+      "room": "BEHIND-DOOR",
+      "region": "peril",
+      "narration": "You are in a narrow north-south corridor. At the south end is a stout door, and at the north end the passage meets an east-west corridor.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/narrow-corridor.webp",
+        "retro_pixel": "assets/images/retro_pixel/narrow-corridor.webp",
+        "painted_pulp": "assets/images/painted_pulp/narrow-corridor.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/narrow-corridor.webp"
+      }
+    },
+    "Dungeon Entrance": {
+      "slug": "dungeon-entrance",
+      "room": "FRONT-DOOR",
+      "region": "peril",
+      "narration": "You stand before a heavy wooden door with a small barred panel set at about head height. This is the entrance to the dungeon proper.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/dungeon-entrance.webp",
+        "retro_pixel": "assets/images/retro_pixel/dungeon-entrance.webp",
+        "painted_pulp": "assets/images/painted_pulp/dungeon-entrance.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/dungeon-entrance.webp"
+      }
+    },
+    "North Corridor": {
+      "slug": "north-corridor",
+      "room": "NORTH-CORRIDOR",
+      "region": "peril",
+      "narration": "This is a wide east-west corridor which opens onto a northern parapet at its centre, where flames and smoke are visible. The corridor turns south at either end, and in the centre of the south wall is a heavy wooden door with a small barred window.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/north-corridor.webp",
+        "retro_pixel": "assets/images/retro_pixel/north-corridor.webp",
+        "painted_pulp": "assets/images/painted_pulp/north-corridor.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/north-corridor.webp"
+      }
+    },
+    "Parapet": {
+      "slug": "parapet",
+      "room": "PARAPET",
+      "region": "peril",
+      "narration": "You are standing behind a stone retaining wall rimming a parapet that overlooks a fiery, seemingly bottomless pit some two hundred feet across, fashioned of roughly hewn stone. The flames throw off considerable heat. Nearby stands an object like a sundial: an indicator arrow surrounding a large button, its face numbered one through eight. To the south, across a narrow corridor, is a prison cell.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/parapet.webp",
+        "retro_pixel": "assets/images/retro_pixel/parapet.webp",
+        "painted_pulp": "assets/images/painted_pulp/parapet.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/parapet.webp"
+      }
+    },
+    "Prison Cell": {
+      "slug": "prison-cell",
+      "room": "PRISON-CELL",
+      "region": "peril",
+      "narration": "You are in a featureless prison cell. Through the small barred window in the closed door you can see the parapet and, behind it, smoke and flames rising from a fiery pit. The Dungeon Master stands at the parapet, leaning on his staff, his keen gaze fixed on you as if waiting for something. Behind you, to the south, is a bronze door.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/prison-cell.webp",
+        "retro_pixel": "assets/images/retro_pixel/prison-cell.webp",
+        "painted_pulp": "assets/images/painted_pulp/prison-cell.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/prison-cell.webp"
+      }
+    },
+    "Treasury of Zork": {
+      "slug": "treasury-of-zork",
+      "room": "NIRVANA",
+      "region": "wonder",
+      "narration": "This is a large room, richly appointed in a style that bespeaks exquisite taste. To judge from its contents, it is the ultimate storehouse of the wealth of the Great Underground Empire. There are chests containing precious jewels, mountains of zorkmids, rare paintings, ancient statuary, and beguiling curios. On one wall is an annotated map of the Empire, showing the locations of various troves of treasure, and of many superior scenic views. On a desk at the far end of the room are stock certificates representing a controlling interest in FrobozzCo International, the multinational conglomerate and parent company of the Frobozz Magic Boat Co., etc.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/treasury-of-zork.webp",
+        "retro_pixel": "assets/images/retro_pixel/treasury-of-zork.webp",
+        "painted_pulp": "assets/images/painted_pulp/treasury-of-zork.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/treasury-of-zork.webp"
+      }
+    },
+    "Tight Squeeze": {
+      "slug": "tight-squeeze",
+      "room": "TIGHT-SQUEEZE",
+      "region": "dread",
+      "narration": "This is a very low and narrow passage leading east to west.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/tight-squeeze.webp",
+        "retro_pixel": "assets/images/retro_pixel/tight-squeeze.webp",
+        "painted_pulp": "assets/images/painted_pulp/tight-squeeze.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/tight-squeeze.webp"
+      }
+    },
+    "Crystal Grotto": {
+      "slug": "crystal-grotto",
+      "room": "ROCKY-ROOM",
+      "region": "wonder",
+      "narration": "This is a chamber of breathtaking beauty. Mighty stalagmites form crystalline-encrusted rock formations. Phosphorescent mosses, fed by a trickle of water from above, make the crystals glow and sparkle with every color of the rainbow. There is an opening to the west, and a man-made passage heads south.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/crystal-grotto.webp",
+        "retro_pixel": "assets/images/retro_pixel/crystal-grotto.webp",
+        "painted_pulp": "assets/images/painted_pulp/crystal-grotto.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/crystal-grotto.webp"
+      }
+    },
+    "Royal Hall": {
+      "slug": "royal-hall",
+      "room": "WIDE-HALL",
+      "region": "wonder",
+      "narration": "This is the north end of a large hall with a vaulted ceiling. A long, tiled hallway leads north through a tall arch. Although the purpose of this room is unclear, there is a large rendering of the Royal Seal of Lord Dimwit Flathead carved on the wall.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/royal-hall.webp",
+        "retro_pixel": "assets/images/retro_pixel/royal-hall.webp",
+        "painted_pulp": "assets/images/painted_pulp/royal-hall.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/royal-hall.webp"
+      }
+    },
+    "Great Door": {
+      "slug": "great-door",
+      "room": "MUSEUM-ANTE",
+      "region": "peril",
+      "narration": "This is the south end of a monumental hall, full of debris from a recent earthquake. To the east stands a tremendous iron door, rusted shut; to its right a gaping cleft has been torn in the rock, opening onto a cleared area beyond.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/great-door.webp",
+        "retro_pixel": "assets/images/retro_pixel/great-door.webp",
+        "painted_pulp": "assets/images/painted_pulp/great-door.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/great-door.webp"
+      }
+    },
+    "Museum Entrance": {
+      "slug": "museum-entrance",
+      "room": "MUSEUM-ENTRANCE",
+      "region": "wonder",
+      "narration": "This is the entrance hall of the Royal Museum, the grandest in the Great Underground Empire. A few wide steps lead south to the Royal Puzzle; a stone door to the east opens on the Royal Jewel Collection; a wooden door to the north leads to the Museum of Technology; and to the west stands a great iron door, rusted shut, with a cleft in the rock beside it.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/museum-entrance.webp",
+        "retro_pixel": "assets/images/retro_pixel/museum-entrance.webp",
+        "painted_pulp": "assets/images/painted_pulp/museum-entrance.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/museum-entrance.webp"
+      }
+    },
+    "Jewel Room": {
+      "slug": "jewel-room",
+      "room": "JEWEL-ROOM",
+      "region": "wonder",
+      "narration": "You are in a high-ceilinged chamber, in the middle of which stands a tall, round steel cage, securely locked. Within the cage is a pedestal bearing the Crown Jewels of the Great Underground Empire \u2014 a sceptre, a jewelled knife, and a golden ring. A small bronze plaque, now tarnished, is fixed to the cage.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/jewel-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/jewel-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/jewel-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/jewel-room.webp"
+      }
+    },
+    "Technology Museum": {
+      "slug": "technology-museum",
+      "room": "TECH-MUSEUM",
+      "region": "wonder",
+      "narration": "This is a large hall which once hosted the technological exhibits of the Great Underground Empire. A wooden door leads south.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/technology-museum.webp",
+        "retro_pixel": "assets/images/retro_pixel/technology-museum.webp",
+        "painted_pulp": "assets/images/painted_pulp/technology-museum.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/technology-museum.webp"
+      }
+    },
+    "Creepy Crawl": {
+      "slug": "creepy-crawl",
+      "room": "CREEPY-CRAWL",
+      "region": "dread",
+      "narration": "You are in a dark and quite creepy crawlway with passages leaving to the north, east, south, and southwest.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/creepy-crawl.webp",
+        "retro_pixel": "assets/images/retro_pixel/creepy-crawl.webp",
+        "painted_pulp": "assets/images/painted_pulp/creepy-crawl.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/creepy-crawl.webp"
+      }
+    },
+    "Land of Shadow": {
+      "slug": "land-of-shadow",
+      "room": "SHADOW-1",
+      "region": "peril",
+      "narration": "You are at the eastern end of a dark, featureless landscape of shallow hills. Paths to the east and southeast reenter the rock.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/land-of-shadow.webp",
+        "retro_pixel": "assets/images/retro_pixel/land-of-shadow.webp",
+        "painted_pulp": "assets/images/painted_pulp/land-of-shadow.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/land-of-shadow.webp"
+      }
+    },
+    "Flathead Ocean": {
+      "slug": "flathead-ocean",
+      "room": "FLATHEAD-OCEAN",
+      "region": "above_ground",
+      "narration": "You are at the shore of an amazing underground sea, the topic of many a legend among adventurers. A heavy surf rolls in and a breeze blows onshore. The land rises steeply to the east, quicksand bars the way south, and a thick mist covers the ocean. A path heads north along the beach. Far out on the misty water, an ancient Viking ship passes along the shore, an old and crusty sailor standing at its prow.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/flathead-ocean.webp",
+        "retro_pixel": "assets/images/retro_pixel/flathead-ocean.webp",
+        "painted_pulp": "assets/images/painted_pulp/flathead-ocean.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/flathead-ocean.webp"
+      }
+    },
+    "Endless Stair": {
+      "slug": "endless-stair",
+      "room": "ZORK2-STAIR",
+      "region": "underground",
+      "narration": "You are at the bottom of a seemingly endless stair, winding its way upward beyond your vision. An eerie light, coming from all around you, casts strange shadows on the walls. To the south is a dark and winding trail.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/endless-stair.webp",
+        "retro_pixel": "assets/images/retro_pixel/endless-stair.webp",
+        "painted_pulp": "assets/images/painted_pulp/endless-stair.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/endless-stair.webp"
+      }
+    },
+    "Junction": {
+      "slug": "junction",
+      "room": "JUNCTION",
+      "region": "underground",
+      "narration": "You are at the junction of a north-south passage and an east-west passage. To the north, you can make out the bottom of a stairway. The ways to the east and south are relatively cramped, but a wider trail leads to the west.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/junction.webp",
+        "retro_pixel": "assets/images/retro_pixel/junction.webp",
+        "painted_pulp": "assets/images/painted_pulp/junction.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/junction.webp"
+      }
+    },
+    "Barren Area": {
+      "slug": "barren-area",
+      "room": "CLEARING",
+      "region": "underground",
+      "narration": "You are west of the junction, where the rock-bound passage widens out into a large, flat area. Although the land here is barren, you can see vegetation to the west. South of here is a mighty wall of stone, ancient and crumbling. To the southwest the wall has decayed enough to form an opening, through which seeps a thin mist. A trail dips sharply into rocky terrain to the northwest.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/barren-area.webp",
+        "retro_pixel": "assets/images/retro_pixel/barren-area.webp",
+        "painted_pulp": "assets/images/painted_pulp/barren-area.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/barren-area.webp"
+      }
+    },
+    "Hairpin Loop": {
+      "slug": "hairpin-loop",
+      "room": "SLOPE",
+      "region": "underground",
+      "narration": "You are at a sharp turn on a narrow and steeply sloping path, strewn with boulders of various sizes. The path climbs sharply toward a desolate plain to the southeast. Southwest of here the path winds down to the base of a cliff.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/hairpin-loop.webp",
+        "retro_pixel": "assets/images/retro_pixel/hairpin-loop.webp",
+        "painted_pulp": "assets/images/painted_pulp/hairpin-loop.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/hairpin-loop.webp"
+      }
+    },
+    "Cliff Base": {
+      "slug": "cliff-base",
+      "room": "CLIFF-BASE",
+      "region": "above_ground",
+      "narration": "You are at the base of a steep cliff. Directly above you is a wide ledge and far above that some natural sunlight can be seen. To the northeast is a steeply climbing path and the ground becomes sandy toward the south.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/cliff-base.webp",
+        "retro_pixel": "assets/images/retro_pixel/cliff-base.webp",
+        "painted_pulp": "assets/images/painted_pulp/cliff-base.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/cliff-base.webp"
+      }
+    },
+    "Cliff": {
+      "slug": "cliff",
+      "room": "CLIFF",
+      "region": "above_ground",
+      "narration": "This is a remarkable spot in the dungeon. Perhaps two hundred feet above you is a gaping hole in the earth's surface through which pours bright sunshine! A few seedlings from the world above, nurtured by the sunlight and occasional rains, have grown into giant trees, making this a virtual oasis in the desert of the Underground Empire. To the west is a sheer precipice, dropping nearly fifty feet to jagged rocks below. The way south is barred by a forbidding stone wall, crumbling from age. There is a jagged opening in the wall to the southwest, through which leaks a fine mist. The land to the east looks lifeless and barren. A rope is tied to one of the large trees here and is dangling over the side of the cliff, reaching down to the shelf below. You catch, out of the corner of your eye, some movement among the trees. You seem to hear, from the southwest, the sounds of the sea.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/cliff.webp",
+        "retro_pixel": "assets/images/retro_pixel/cliff.webp",
+        "painted_pulp": "assets/images/painted_pulp/cliff.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/cliff.webp"
+      }
+    },
+    "Cliff Ledge": {
+      "slug": "cliff-ledge",
+      "room": "CLIFF-LEDGE",
+      "region": "above_ground",
+      "narration": "This is a rock-strewn ledge near the base of a tall cliff. The bottom of the cliff is another fifteen feet below. You have little hope of climbing up the cliff face, but you might be able to scramble down from here (though it's doubtful you could return). A long piece of rope is dangling down from the top of the cliff and is within your reach.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/cliff-ledge.webp",
+        "retro_pixel": "assets/images/retro_pixel/cliff-ledge.webp",
+        "painted_pulp": "assets/images/painted_pulp/cliff-ledge.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/cliff-ledge.webp"
+      }
+    },
+    "Foggy Room": {
+      "slug": "foggy-room",
+      "room": "FOGGY-ROOM",
+      "region": "dread",
+      "narration": "You are in a dank passage filled with a wispy fog. A spooky passageway leads north and a wider path heads off to the south. To the west, the path leaves the rock and enters an eerie, shadowy land.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/foggy-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/foggy-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/foggy-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/foggy-room.webp"
+      }
+    },
+    "Lake Shore": {
+      "slug": "lake-shore",
+      "room": "LAKE-SHORE",
+      "region": "above_ground",
+      "narration": "You are in a wide cavern on the north shore of a small lake. Some polished stone steps lead to the southeast and a sheer rock face prevents any movement around the lake to the southwest. The cavern is dimly lit from above.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/lake-shore.webp",
+        "retro_pixel": "assets/images/retro_pixel/lake-shore.webp",
+        "painted_pulp": "assets/images/painted_pulp/lake-shore.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/lake-shore.webp"
+      }
+    },
+    "Aqueduct View": {
+      "slug": "aqueduct-view",
+      "room": "AQ-VIEW",
+      "region": "above_ground",
+      "narration": "This is a small balcony carved into a near-vertical cliff. To the east, stretching from north to south, stands a monumental aqueduct supported by mighty stone pillars, some of which are starting to crumble from age. You feel a sense of loss and sadness as you ponder this once-proud structure and the failure of the Empire which created this and other engineering marvels. Some stone steps lead up to the northwest.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/aqueduct-view.webp",
+        "retro_pixel": "assets/images/retro_pixel/aqueduct-view.webp",
+        "painted_pulp": "assets/images/painted_pulp/aqueduct-view.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/aqueduct-view.webp"
+      }
+    },
+    "On the Lake": {
+      "slug": "on-the-lake",
+      "room": "ON-LAKE",
+      "region": "above_ground",
+      "narration": "You are floating on the surface of the lake. The water is ice cold and your ability to survive here for long is very questionable. A swim north puts you at your starting point. Conditions to the east are poor where the lake turns into swamp. The west and south shores are suitable for walking, however.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/on-the-lake.webp",
+        "retro_pixel": "assets/images/retro_pixel/on-the-lake.webp",
+        "painted_pulp": "assets/images/painted_pulp/on-the-lake.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/on-the-lake.webp"
+      }
+    },
+    "Underwater": {
+      "slug": "underwater",
+      "room": "IN-LAKE",
+      "region": "underground",
+      "narration": "You are below the surface of the lake. It turns out that the lake is quite shallow and the bottom is only a few feet below you. Considering the frigid temperature of the water, you should probably not plan an extended stay. The lake bottom is sandy and a few hearty plants and algae live there.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/underwater.webp",
+        "retro_pixel": "assets/images/retro_pixel/underwater.webp",
+        "painted_pulp": "assets/images/painted_pulp/underwater.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/underwater.webp"
+      }
+    },
+    "Western Shore": {
+      "slug": "western-shore",
+      "room": "FAR-SHORE",
+      "region": "above_ground",
+      "narration": "You are on the western shore of the lake. The ground here is quite hard, but a few sickly reeds manage to grow near the water's edge. The only path leads into the rock to the south.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/western-shore.webp",
+        "retro_pixel": "assets/images/retro_pixel/western-shore.webp",
+        "painted_pulp": "assets/images/painted_pulp/western-shore.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/western-shore.webp"
+      }
+    },
+    "Scenic Vista": {
+      "slug": "scenic-vista",
+      "room": "VIEW-ROOM",
+      "region": "wonder",
+      "narration": "You are in a small chamber carved in the rock, with its sole exit to the north. Mounted on one wall is a featureless table, angled toward you, of the kind used in parks to indicate points of interest in a view \u2014 though your cramped surroundings are far from scenic. An indicator above the table can be set to display different vistas.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/scenic-vista.webp",
+        "retro_pixel": "assets/images/retro_pixel/scenic-vista.webp",
+        "painted_pulp": "assets/images/painted_pulp/scenic-vista.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/scenic-vista.webp"
+      }
+    },
+    "Ladder Top": {
+      "slug": "ladder-top",
+      "room": "LADDER-TOP",
+      "region": "underground",
+      "narration": "This is a very small room. In the corner is a rickety wooden ladder, leading downward. It might be safe to descend. There is also a staircase leading upward.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/ladder-top.webp",
+        "retro_pixel": "assets/images/retro_pixel/ladder-top.webp",
+        "painted_pulp": "assets/images/painted_pulp/ladder-top.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/ladder-top.webp"
+      }
+    },
+    "Ladder Bottom": {
+      "slug": "ladder-bottom",
+      "room": "LADDER-BOTTOM",
+      "region": "underground",
+      "narration": "This is a rather wide room. On one side is the bottom of a narrow wooden ladder. To the west and the south are passages leaving the room.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/ladder-bottom.webp",
+        "retro_pixel": "assets/images/retro_pixel/ladder-bottom.webp",
+        "painted_pulp": "assets/images/painted_pulp/ladder-bottom.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/ladder-bottom.webp"
+      }
+    },
+    "Timber Room": {
+      "slug": "timber-room",
+      "room": "TIMBER-ROOM",
+      "region": "underground",
+      "narration": "This is a long and narrow passage, which is cluttered with broken timbers. A wide passage comes from the east and turns at the west end of the room into a very narrow passageway. From the west comes a strong draft.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/timber-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/timber-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/timber-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/timber-room.webp"
+      }
+    },
+    "Drafty Room": {
+      "slug": "drafty-room",
+      "room": "LOWER-SHAFT",
+      "region": "dread",
+      "narration": "This is a small, drafty room at the bottom of a shaft. A cold draught moves through the darkness, and a narrow passage leads onward.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/drafty-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/drafty-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/drafty-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/drafty-room.webp"
+      }
+    },
+    "Machine Room": {
+      "slug": "machine-room",
+      "room": "MACHINE-ROOM",
+      "region": "dread",
+      "narration": "This is a low room of rough stone, silent and bare. Rusted bolts and dark stains on the floor mark where some great mechanism once stood, long since gone.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/machine-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/machine-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/machine-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/machine-room.webp"
+      }
+    },
+    "Room 8": {
+      "slug": "room-8",
+      "room": "ROOM-8",
+      "region": "underground",
+      "narration": "This is a small chamber carved out of the rock at the end of a short crawl. On the wall is crudely chiseled the number",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/room-8.webp",
+        "retro_pixel": "assets/images/retro_pixel/room-8.webp",
+        "painted_pulp": "assets/images/painted_pulp/room-8.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/room-8.webp"
+      }
+    },
+    "Sacrificial Altar": {
+      "slug": "sacrificial-altar",
+      "room": "ZORK-IV",
+      "region": "dread",
+      "narration": "You are in the interior of a huge temple, rudely constructed of basalt blocks. Flickering torches cast a sallow light over a stone altar still wet with the blood of human sacrifice, its velvet coverings stained and encrusted with gore.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/sacrificial-altar.webp",
+        "retro_pixel": "assets/images/retro_pixel/sacrificial-altar.webp",
+        "painted_pulp": "assets/images/painted_pulp/sacrificial-altar.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/sacrificial-altar.webp"
+      }
+    },
+    "Southern Shore": {
+      "slug": "southern-shore",
+      "room": "SOUTH-SHORE",
+      "region": "above_ground",
+      "narration": "You are on the south shore of the lake. Rock formations prevent movement to the west and thickening swamp to the east makes the going all but impossible. To the south, where the beach meets a rock formation, you can make out a dark passage sloping steeply upward into the rock.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/southern-shore.webp",
+        "retro_pixel": "assets/images/retro_pixel/southern-shore.webp",
+        "painted_pulp": "assets/images/painted_pulp/southern-shore.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/southern-shore.webp"
+      }
+    },
+    "Dark Place": {
+      "slug": "dark-place",
+      "room": "DARK-1",
+      "region": "dread",
+      "narration": "It is pitch black. You are likely to be eaten by a grue.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/dark-place.webp",
+        "retro_pixel": "assets/images/retro_pixel/dark-place.webp",
+        "painted_pulp": "assets/images/painted_pulp/dark-place.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/dark-place.webp"
+      }
+    },
+    "Key Room": {
+      "slug": "key-room",
+      "room": "KEY-ROOM",
+      "region": "underground",
+      "narration": "You are between a rock and a dark place. The room is lit dimly from above, revealing a lone dark path sloping down to the west. A heavy manhole cover to one side has been moved aside to reveal a dark passage below. In the focused light at the centre of the room, a single key lies in the dust.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/key-room.webp",
+        "retro_pixel": "assets/images/retro_pixel/key-room.webp",
+        "painted_pulp": "assets/images/painted_pulp/key-room.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/key-room.webp"
+      }
+    },
+    "Aqueduct": {
+      "slug": "aqueduct",
+      "room": "AQ-1",
+      "region": "underground",
+      "narration": "You are in a wide stone channel, part of the water supply system for the Great Underground Empire. The source of water was a waterfall to the south, which has long since dried up. Water flowed along the aqueduct to the north. This region is lit from above, although the source of light is not apparent.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/aqueduct.webp",
+        "retro_pixel": "assets/images/retro_pixel/aqueduct.webp",
+        "painted_pulp": "assets/images/painted_pulp/aqueduct.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/aqueduct.webp"
+      }
+    },
+    "High Arch": {
+      "slug": "high-arch",
+      "room": "AQ-2",
+      "region": "underground",
+      "narration": "You are now on one of the tallest arches of the aqueduct, hundreds of feet above a rocky chasm. The immensity of the aqueduct project is apparent from here. Stone supports rise from the rock floor to form massive arches, which traverse the region from north to south. The water-carrying channel here is wide and deep. To the west and far below, you can make out a balcony which must command a wide view of the aqueduct. The channel ends abruptly to your north where a supporting pillar has crumbled, casting the arch into the chasm.",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/high-arch.webp",
+        "retro_pixel": "assets/images/retro_pixel/high-arch.webp",
+        "painted_pulp": "assets/images/painted_pulp/high-arch.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/high-arch.webp"
+      }
+    },
+    "Water Slide": {
+      "slug": "water-slide",
+      "room": "AQ-3",
+      "region": "underground",
+      "narration": "You are near the northern end of this segment of the aqueduct system. To the south and slightly uphill, the bulk of the aqueduct looms ominously, towering above a gorge. To the north, the water channel drops precipitously and enters a rocky hole. The damp moss and lichen would certainly make that a one-way trip. The southern part of the aqueduct system is inaccessable due to the collapse of one of the water-bearing arches. manhole cover",
+      "images": {
+        "ink_engraving": "assets/images/ink_engraving/water-slide.webp",
+        "retro_pixel": "assets/images/retro_pixel/water-slide.webp",
+        "painted_pulp": "assets/images/painted_pulp/water-slide.webp",
+        "cinematic_painterly": "assets/images/cinematic_painterly/water-slide.webp"
+      }
+    }
+  }
+}
