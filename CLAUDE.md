@@ -1,79 +1,93 @@
-# Zork — graphic text adventure (agent guide)
+# CLAUDE.md
 
-Web-playable Zork ports — the full Zork trilogy (zork1, zork2, zork3) is live. The Z-machine story
-runs in-browser via **Parchment**, dressed with AI scene art (4 styles), pre-baked
-**TTS narration** (8 voices), and regional music. Fully static; deployed to GitHub
-Pages (**zork.coze.org**) on every push to `main`. Project backstory: `README.md`.
+These rules apply to every task in this repository unless explicitly overridden.
+Bias: caution over speed on non-trivial work. Use judgment on trivial tasks.
 
-## Layout
-- `styles.yaml` — the 4 art-style "bibles" (shared across games) + world preamble + global negative.
-- `voices.yaml` — the 8 baked narration voices (`key`, `short`, `label`).
-- `zork<N>/scenes/<game>.yaml` — extracted scenes. Per scene: `slug`, `region`,
-  `scene_description` (**TTS source**), `scene_core` (**image-prompt source**), `anchors`.
-- `zork<N>/anchors.yaml` — recurring character/object/location descriptions injected into prompts.
-- `scripts/` — `extract_scenes.py`, `generate_images.py`, `build_audio.py`, `build_manifest.py`, `check_scenes.py`.
-- `web/<game>/` — the deployed site: `index.html` (shell + controls), `app.js` (scene
-  controller), `play.html` (Parchment iframe), `manifest.json`, `assets/{images/<style>,audio/<voice>}/<slug>.{webp,mp3}`.
+This file is generic and identical across projects. **It contains no project-specific
+information.** `AGENTS.md` is a symlink to this file, so Claude Code, Codex, Kimi, Cursor
+and anything else reading either name get the same rules.
 
-## Running the scripts
-Use the venv at `~/.venvs/zork` (`~/.venvs/zork/bin/pip install -r scripts/requirements.txt`).
-Secrets live in `.env` (gitignored, **never commit**): `GEMINI_API_KEY`, `TTS_TOKEN`.
+## Where knowledge lives
 
-Pipeline per game: `extract_scenes.py` (parse ZIL in `sources/<game>/`) → `generate_images.py`
-→ `build_audio.py` → `build_manifest.py` → **`check_scenes.py`** → commit + tag + push.
+Read in this order. Stop as soon as you have what you need.
 
-## Handling image / voice inconsistencies — READ THIS
+| Layer | File | Contains |
+|---|---|---|
+| 1. Rules | `CLAUDE.md` = `AGENTS.md` (this file) | How to work. Generic, never project-specific. |
+| 2. Project | [PROJECT.md](PROJECT.md) | This project: architecture, constraints, key files, how to run and validate. |
+| 3. Wiki | `llm-wiki/index.md` (if present) | Compounding knowledge: decisions, entities, sources. |
 
-Two failure classes have bitten this project. Handle them deliberately.
+**Before changing project behavior, read `PROJECT.md`.** It is the handoff document and
+takes precedence over anything you infer from the code.
 
-### 1. Image mis-mapping (the "scramble")
-**Symptom:** a room shows the wrong scene and/or wrong art style (e.g. the "ink engraving"
-option renders pixel art; "Studio" shows a treasure vault).
-**Cause:** the Gemini **Batch API returns `inlined_responses` out of order and drops
-image-less entries.** Mapping results to requests by list position (`responses[i] → meta[i]`)
-silently mis-files every image after the first gap.
-**Fix (already in `generate_images.py` — do not regress):** each request carries
-`{style, slug}` **metadata**; `save_images` routes every result by that metadata, never by
-position, and reports image-less requests as `missing`. **Never go back to index-based mapping.**
-**After any (re)generation:**
-- Confirm the run reports `0 failed / 0 missing`; retry stragglers with `--only <slugs> --overwrite`.
-- **Eyeball a few `.webp` per style folder** — `ink_engraving/` must be ink line-art,
-  `retro_pixel/` chunky pixels, etc. (the mapping is proven, but verify visually, especially
-  any room a user flags). Style correctness can't be auto-checked.
-- Run `check_scenes.py` (missing/tiny files).
-- **Cache-bust:** bump `IMG_VER` in `app.js` *and* `app.js?v=` in `index.html`, or re-rendered
-  images are served stale at the same path.
+If a project has an `llm-wiki/`, it follows the Karpathy LLM-wiki pattern: raw sources are
+compiled once into interlinked pages, and you query the wiki rather than re-deriving from
+sources. Start at `index.md` and `agent-rules.md`. Append to `log.md` when you change it.
+Treat archived pages as historical only — never cite them as current.
 
-### 2. TTS / narration inconsistencies
-**Symptom:** narration reads differently from the room text (e.g. a trailing "…you can see."
-stub), or a voice is silent.
-**Mapping is safe here** — `build_audio.py` is a per-`(voice, slug)` loop writing straight to
-`<voice>/<slug>.mp3` from that scene's `scene_description`; it can't scramble like the image batch.
-So inconsistencies are in the **source text**, not the mapping:
-- `scene_description` is extracted from ZIL room text. A dynamic object-list
-  ("…you can see: <runtime list>") can leave a **dangling stub** once the list is stripped.
-  `extract_scenes.py`'s `clean()` removes these; after extraction run `check_scenes.py` to confirm none remain.
-- Narration is the **static** room text by design — it won't include dynamic objects
-  (the jewelled egg in Up a Tree, etc.). That's expected, not a bug.
-- The hand-authored opening rooms have `scene_description` ≠ `scene_core` on purpose
-  (polished narration vs image prompt) — not an issue.
-- **TLS:** `build_audio.py` verifies against `certifi`; a fresh macOS/venv Python otherwise
-  fails `CERTIFICATE_VERIFY_FAILED` against the TTS host.
-- Re-bake targeted scenes with `build_audio.py --only <slugs> --overwrite`.
-- **Cache-bust:** bump `AUDIO_VER` in `app.js` (and `app.js?v=`) after re-baking.
+Keep the layers honest: a fact that is true of every project belongs here; a fact true of
+this project belongs in `PROJECT.md`; a fact that took real work to establish belongs in
+the wiki. Duplicating across layers is how they drift.
 
-## Verify-before-ship checklist
-1. `~/.venvs/zork/bin/python scripts/check_scenes.py --scenes zork<N>/scenes/<game>.yaml` is clean.
-2. Spot-check a few images per style by eye (style ≠ scramble), incl. any user-flagged room.
-3. Bump `IMG_VER` / `AUDIO_VER` and `app.js?v=` / `play.html?v=` whenever assets or front-end change.
-4. Commit → `git tag vX.Y.Z` → push `main` (→ Pages). Cut the release with `gh release create`.
+## Rule 1 — Think before coding
+State assumptions explicitly. If uncertain, ask rather than guess.
+Present multiple interpretations when ambiguity exists.
+Push back when a simpler approach exists.
+Stop when confused. Name what's unclear.
 
-## Conventions
-- End commit messages with: `Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>`.
-- Never commit `.env`, `sources/`, or a venv. `scripts/.batch_jobs/` is gitignored.
-- Continuity (zork1/zork2/zork3): Parchment `do_vm_autosave: true` resumes per-turn; `visited` is persisted
-  (`zork-visited`); Restart wipes `dialog_*` + progress and reloads; death is detected from the
-  buffer banner and resets `visited` so the start scene re-renders/re-narrates.
-- Releases: v1.0 launch · v1.0.1 interpreter/theme · v1.0.2 image-scramble fix ·
-  v1.1.0 autosave/restart/death-reset · v1.1.1 narration fix · v1.2.0 Zork II port (The Wizard of Frobozz) ·
-  v1.3.0 Zork III port (The Dungeon Master) — trilogy complete.
+## Rule 2 — Simplicity first
+Minimum code that solves the problem. Nothing speculative.
+No features beyond what was asked. No abstractions for single-use code.
+Test: would a senior engineer say this is overcomplicated? If yes, simplify.
+
+## Rule 3 — Surgical changes
+Touch only what you must. Clean up only your own mess.
+Don't "improve" adjacent code, comments, or formatting.
+Don't refactor what isn't broken. Match existing style.
+
+## Rule 4 — Goal-driven execution
+Define success criteria. Loop until verified.
+Don't follow steps. Define success and iterate.
+Strong success criteria let you loop independently.
+
+## Rule 5 — Use the model only for judgment calls
+Use the model for: classification, drafting, summarization, extraction.
+Do NOT use it for: routing, retries, deterministic transforms.
+If code can answer, code answers.
+
+## Rule 6 — Token budgets are not advisory
+Per-task: 4,000 tokens. Per-session: 30,000 tokens.
+If approaching budget, summarize and start fresh.
+Surface the breach. Do not silently overrun.
+
+## Rule 7 — Surface conflicts, don't average them
+If two patterns contradict, pick one (more recent / more tested).
+Explain why. Flag the other for cleanup.
+Don't blend conflicting patterns.
+
+## Rule 8 — Read before you write
+Before adding code, read exports, immediate callers, shared utilities.
+"Looks orthogonal" is dangerous. If unsure why code is structured a way, ask.
+
+## Rule 9 — Tests verify intent, not just behavior
+Tests must encode WHY behavior matters, not just WHAT it does.
+A test that can't fail when business logic changes is wrong.
+
+## Rule 10 — Checkpoint after every significant step
+Summarize what was done, what's verified, what's left.
+Don't continue from a state you can't describe back.
+If you lose track, stop and restate.
+
+## Rule 11 — Match the codebase's conventions, even if you disagree
+Conformance > taste inside the codebase.
+If you genuinely think a convention is harmful, surface it. Don't fork silently.
+
+## Rule 12 — Fail loud
+"Completed" is wrong if anything was skipped silently.
+"Tests pass" is wrong if any were skipped.
+Default to surfacing uncertainty, not hiding it.
+
+## Rule 13 — Keep these documents current
+When you learn something that contradicts `PROJECT.md`, fix `PROJECT.md` in the same
+change. A stale handoff document is worse than none — the next agent will trust it.
+Never edit `AGENTS.md`: it is a symlink to this file.
